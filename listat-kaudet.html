@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Listat vaalikausittain – Edustajaseuranta, eduskunnan avoin data.">
+<link rel="canonical" href="https://edustajaseuranta.fi/listat-kaudet.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fi_FI">
+<meta property="og:site_name" content="Edustajaseuranta">
+<meta property="og:title" content="Listat vaalikausittain">
+<meta property="og:description" content="Listat vaalikausittain – Edustajaseuranta, eduskunnan avoin data.">
+<meta property="og:url" content="https://edustajaseuranta.fi/listat-kaudet.html">
+<meta property="og:image" content="https://edustajaseuranta.fi/kuvake-512.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Listat vaalikausittain – Edustajaseuranta</title>
+<link rel="stylesheet" href="tyyli.css">
+<link rel="stylesheet" href="listat.css">
+<script src="teema.js"></script>
+<link rel="icon" href="kuvake.svg" type="image/svg+xml">
+<style>
+/* Entiset kansanedustajat -osio (luonnos 1.10.2026). */
+#entiset .entiset-haku { margin:12px 0 8px; }
+#entiset .entiset-haku label { font-weight:600; }
+#entiset .hakurivi { position:relative; }
+#entiset .hakukuvake { position:absolute; left:14px; top:50%; width:22px; height:22px; margin-top:-11px; color:var(--himmea); pointer-events:none; }
+#entiset .entiset-haku input { display:block; width:100%; max-width:100%; box-sizing:border-box; min-height:52px; font-size:18px; padding:12px 14px 12px 46px; border-radius:10px; }
+#entiset .entiset-haku input:focus { outline:3px solid var(--korostus); outline-offset:2px; }
+#entiset .osumalista a { flex-wrap:wrap; }
+#entiset .osumalista .osuma-lisa { display:block; flex-basis:100%; order:2; font-weight:400; font-size:13.5px; color:var(--himmea); }
+#entiset .entiset-kirjaimet { margin-top:8px; }
+#entiset details.entiset-kirjain { border-top:1px solid var(--viiva); }
+#entiset details.entiset-kirjain > summary { cursor:pointer; padding:10px 4px; font-weight:700; font-size:17px; color:var(--korostus); }
+#entiset details.entiset-kirjain > summary .lukumaara { color:var(--himmea); font-weight:400; font-size:.85em; margin-left:4px; }
+#entiset details.entiset-kirjain .nimilista { margin:0 0 8px; }
+#entiset .nimilista a, #entiset .nimilista .lisa { overflow-wrap:anywhere; }
+</style>
+</head>
+<body>
+<a class="ohitus" href="#sisalto">Siirry sisältöön</a>
+<div class="sisalto"><a class="sanamerkki-linkki" href="index.html" aria-label="Edustajaseuranta – etusivulle"></a>
+<p class="takaisin"><a href="index.html">← Etusivu</a></p>
+<header class="listapaa" id="alku">
+<p class="listapaa-merkki">Top-listat</p>
+<h1 id="sisalto" tabindex="-1">Listat vaalikausittain</h1>
+<p class="listapaa-teksti">Läsnäolo täysistuntojen äänestyksissä ja poikkeamat oman ryhmän linjasta jokaiselta vaalikaudelta, jolta äänestysaineistoa on. Luvut lasketaan samalla tavalla kaikille kausille ja kaikille edustajille.</p>
+</header>
+<nav class="listanav" aria-label="Top-listat"><span class="listanav-otsikko">Top-listat</span><a href="listat-poissaolot.html">Läsnäolo</a><a href="listat-poikkeamat.html">Poikkeamat ryhmälinjasta</a><a href="listat-kulut.html">Kampanjakulut</a><a href="lobbaus-eduskunnassa.html">Lobbaus</a><a href="vaalirahoittajat.html">Vaalirahoittajat</a><a href="listat-kaudet.html" aria-current="page">Aiemmat kaudet</a></nav>
+<section class="kortti" id="kaudet">
+<h2>Vaalikaudet</h2>
+<ul class="kaudet">
+<li class="nykyinen"><div class="kl-otsikko"><span class="kl-nimi">Vaalikausi 2023–2027</span><span class="tagi">nykyinen kausi</span></div><div class="kl-linkit"><a href="listat-poissaolot.html">Läsnäolo äänestyksissä</a><a href="listat-poikkeamat.html">Poikkeamat ryhmälinjasta</a></div><span class="kl-selite">2&nbsp;787 äänestystä 20.6.2023 alkaen.</span></li>
+<li><a class="kausilinkki" href="listat-2019-2023.html"><span class="kl-otsikko"><span class="kl-nimi">Vaalikausi 2019–2023</span></span><span class="kl-selite">Läsnäolo ja poikkeamat ryhmän linjasta. 3&nbsp;634 äänestystä 7.5.2019–3.3.2023.</span></a></li>
+<li><a class="kausilinkki" href="listat-2015-2019.html"><span class="kl-otsikko"><span class="kl-nimi">Vaalikausi 2015–2019</span></span><span class="kl-selite">Läsnäolo ja poikkeamat ryhmän linjasta. 3&nbsp;836 äänestystä 28.5.2015–19.3.2019.</span></a></li>
+<li><a class="kausilinkki" href="listat-2011-2015.html"><span class="kl-otsikko"><span class="kl-nimi">Vaalikausi 2011–2015</span></span><span class="kl-selite">Läsnäolo ja poikkeamat ryhmän linjasta. 2&nbsp;681 äänestystä 25.5.2011–14.3.2015.</span></a></li>
+<li><a class="kausilinkki" href="listat-2007-2011.html"><span class="kl-otsikko"><span class="kl-nimi">Vaalikausi 2007–2011</span></span><span class="kl-selite">Läsnäolo ja poikkeamat ryhmän linjasta. 3&nbsp;408 äänestystä 17.4.2007–13.4.2011.</span></a></li>
+<li><a class="kausilinkki" href="listat-2003-2007.html"><span class="kl-otsikko"><span class="kl-nimi">Vaalikausi 2003–2007</span></span><span class="kl-selite">Läsnäolo ja poikkeamat ryhmän linjasta. 3&nbsp;052 äänestystä 15.4.2003–16.2.2007.</span></a></li>
+<li><a class="kausilinkki" href="listat-1999-2003.html"><span class="kl-otsikko"><span class="kl-nimi">Vaalikausi 1999–2003</span></span><span class="kl-selite">Läsnäolo ja poikkeamat ryhmän linjasta. 1&nbsp;260 äänestystä 23.4.1999–18.2.2003.</span></a></li>
+<li><a class="kausilinkki" href="listat-1995-1999.html"><span class="kl-otsikko"><span class="kl-nimi">Vaalikausi 1995–1999</span></span><span class="kl-selite">Läsnäolo ja poikkeamat ryhmän linjasta. 995 äänestystä 12.6.1996–17.2.1999.</span></a></li>
+</ul>
+</section>
+<section class="kortti" id="entiset">
+<h2>Entiset kansanedustajat</h2>
+<p>519 kansanedustajaa, jotka olivat eduskunnassa 24.3.1995 jälkeen ja ovat sittemmin lähteneet. Jokaisella on oma sivu: ura, äänestäminen kausittain, omat aloitteet ja vastalauseet.</p>
+<form class="haku entiset-haku" id="entiset-haku" role="search" hidden>
+  <label for="entiset-kentta">Kirjoita entisen kansanedustajan sukunimi</label>
+  <div class="hakurivi"><svg class="hakukuvake" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><input id="entiset-kentta" type="search" autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="search" placeholder="esimerkiksi Marin"></div>
+  <p id="entiset-tulos" class="vinkki" aria-live="polite"></p>
+  <ul id="entiset-osumat" class="osumalista" hidden></ul>
+</form>
+<p class="vinkki">Aakkosittain sukunimen mukaan. Avaa kirjain napauttamalla.</p>
+<div class="entiset-kirjaimet">
+<details class="entiset-kirjain" id="ent-A"><summary>A <span class="lukumaara">28</span></summary>
+<ul class="nimilista">
+<li data-etunimi="Touko" data-sukunimi="Aalto" data-lisa="2015–2019 · Vihreät"><a href="entiset/1346.html"><span class="sukunimi">Aalto</span>, Touko<span class="lisa">2015–2019 · Vihreät</span></a></li>
+<li data-etunimi="Markus" data-sukunimi="Aaltonen" data-lisa="1975–1991, 1995–1999 · SDP"><a href="entiset/102.html"><span class="sukunimi">Aaltonen</span>, Markus<span class="lisa">1975–1991, 1995–1999 · SDP</span></a></li>
+<li data-etunimi="Matti" data-sukunimi="Ahde" data-lisa="1970–1990, 2003–2011 · SDP · kuolinvuosi 2019"><a href="entiset/103.html"><span class="sukunimi">Ahde</span>, Matti<span class="lisa">1970–1990, 2003–2011 · SDP · kuolinvuosi 2019</span></a></li>
+<li data-etunimi="Esko" data-sukunimi="Aho" data-lisa="1983–2003 · Keskusta"><a href="entiset/104.html"><span class="sukunimi">Aho</span>, Esko<span class="lisa">1983–2003 · Keskusta</span></a></li>
+<li data-etunimi="Hannu" data-sukunimi="Aho" data-lisa="1999–2003 · Keskusta · kuolinvuosi 2024"><a href="entiset/557.html"><span class="sukunimi">Aho</span>, Hannu<span class="lisa">1999–2003 · Keskusta · kuolinvuosi 2024</span></a></li>
+<li data-etunimi="Esko" data-sukunimi="Ahonen" data-lisa="2003–2011 · Keskusta · kuolinvuosi 2025"><a href="entiset/804.html"><span class="sukunimi">Ahonen</span>, Esko<span class="lisa">2003–2011 · Keskusta · kuolinvuosi 2025</span></a></li>
+<li data-etunimi="Sauli" data-sukunimi="Ahvenjärvi" data-lisa="2011–2015 · Kristillisdemokraatit"><a href="entiset/1086.html"><span class="sukunimi">Ahvenjärvi</span>, Sauli<span class="lisa">2011–2015 · Kristillisdemokraatit</span></a></li>
+<li data-etunimi="Sulo" data-sukunimi="Aittoniemi" data-lisa="1987–2003 · SMP, Keskusta, Alkiolainen keskustaryhmä · kuolinvuosi 2016"><a href="entiset/107.html"><span class="sukunimi">Aittoniemi</span>, Sulo<span class="lisa">1987–2003 · SMP, Keskusta, Alkiolainen keskustaryhmä · kuolinvuosi 2016</span></a></li>
+<li data-etunimi="Eero" data-sukunimi="Akaan-Penttilä" data-lisa="1999–2011 · Kokoomus"><a href="entiset/558.html"><span class="sukunimi">Akaan-Penttilä</span>, Eero<span class="lisa">1999–2011 · Kokoomus</span></a></li>
+<li data-etunimi="Hussein" data-sukunimi="al-Taee" data-lisa="2019–2023 · SDP"><a href="entiset/1397.html"><span class="sukunimi">al-Taee</span>, Hussein<span class="lisa">2019–2023 · SDP</span></a></li>
+<li data-etunimi="Kirsti" data-sukunimi="Ala-Harja" data-lisa="1987–1999 · Kokoomus"><a href="entiset/113.html"><span class="sukunimi">Ala-Harja</span>, Kirsti<span class="lisa">1987–1999 · Kokoomus</span></a></li>
+<li data-etunimi="Olavi" data-sukunimi="Ala-Nissilä" data-lisa="1991–2006, 2015–2019 · Keskusta"><a href="entiset/392.html"><span class="sukunimi">Ala-Nissilä</span>, Olavi<span class="lisa">1991–2006, 2015–2019 · Keskusta</span></a></li>
+<li data-etunimi="Outi" data-sukunimi="Alanko-Kahiluoto" data-lisa="2007–2023 · Vihreät"><a href="entiset/914.html"><span class="sukunimi">Alanko-Kahiluoto</span>, Outi<span class="lisa">2007–2023 · Vihreät</span></a></li>
+<li data-etunimi="Juhani" data-sukunimi="Alaranta" data-lisa="1983–1999 · Keskusta"><a href="entiset/117.html"><span class="sukunimi">Alaranta</span>, Juhani<span class="lisa">1983–1999 · Keskusta</span></a></li>
+<li data-etunimi="Mikko" data-sukunimi="Alatalo" data-lisa="2003–2019 · Keskusta"><a href="entiset/786.html"><span class="sukunimi">Alatalo</span>, Mikko<span class="lisa">2003–2019 · Keskusta</span></a></li>
+<li data-etunimi="Arja" data-sukunimi="Alho" data-lisa="1983–1999, 2003–2007 · SDP"><a href="entiset/111.html"><span class="sukunimi">Alho</span>, Arja<span class="lisa">1983–1999, 2003–2007 · SDP</span></a></li>
+<li data-etunimi="Claes" data-sukunimi="Andersson" data-lisa="1987–1999, 2007–2008 · Vasemmistoliitto · kuolinvuosi 2019"><a href="entiset/121.html"><span class="sukunimi">Andersson</span>, Claes<span class="lisa">1987–1999, 2007–2008 · Vasemmistoliitto · kuolinvuosi 2019</span></a></li>
+<li data-etunimi="Janina" data-sukunimi="Andersson" data-lisa="1995–2011 · Vihreät"><a href="entiset/446.html"><span class="sukunimi">Andersson</span>, Janina<span class="lisa">1995–2011 · Vihreät</span></a></li>
+<li data-etunimi="Li" data-sukunimi="Andersson" data-lisa="2015–2024 · Vasemmistoliitto · Euroopan parlamentin jäsen 16.7.2024 alkaen"><a href="entiset/1310.html"><span class="sukunimi">Andersson</span>, Li<span class="lisa">2015–2024 · Vasemmistoliitto · Euroopan parlamentin jäsen 16.7.2024 alkaen</span></a></li>
+<li data-etunimi="Sirkka-Liisa" data-sukunimi="Anttila" data-lisa="1983–2019 · Keskusta"><a href="entiset/127.html"><span class="sukunimi">Anttila</span>, Sirkka-Liisa<span class="lisa">1983–2019 · Keskusta</span></a></li>
+<li data-etunimi="Ulla" data-sukunimi="Anttila" data-lisa="1991–2007 · Vihreät"><a href="entiset/404.html"><span class="sukunimi">Anttila</span>, Ulla<span class="lisa">1991–2007 · Vihreät</span></a></li>
+<li data-etunimi="Pirjo-Riitta" data-sukunimi="Antvuori" data-lisa="1987–1995, 1996–2003 · Kokoomus"><a href="entiset/129.html"><span class="sukunimi">Antvuori</span>, Pirjo-Riitta<span class="lisa">1987–1995, 1996–2003 · Kokoomus</span></a></li>
+<li data-etunimi="Asko" data-sukunimi="Apukka" data-lisa="1987–1998 · Vasemmistoliitto"><a href="entiset/130.html"><span class="sukunimi">Apukka</span>, Asko<span class="lisa">1987–1998 · Vasemmistoliitto</span></a></li>
+<li data-etunimi="Paavo" data-sukunimi="Arhinmäki" data-lisa="2007–2021 · Vasemmistoliitto"><a href="entiset/917.html"><span class="sukunimi">Arhinmäki</span>, Paavo<span class="lisa">2007–2021 · Vasemmistoliitto</span></a></li>
+<li data-etunimi="Sirpa" data-sukunimi="Asko-Seljavaara" data-lisa="2003–2011 · Kokoomus"><a href="entiset/764.html"><span class="sukunimi">Asko-Seljavaara</span>, Sirpa<span class="lisa">2003–2011 · Kokoomus</span></a></li>
+<li data-etunimi="Maria Kaisa" data-sukunimi="Aula" data-lisa="1991–2003 · Keskusta"><a href="entiset/380.html"><span class="sukunimi">Aula</span>, Maria Kaisa<span class="lisa">1991–2003 · Keskusta</span></a></li>
+<li data-etunimi="Matti" data-sukunimi="Aura" data-lisa="1995–1999 · Kokoomus · kuolinvuosi 2011"><a href="entiset/447.html"><span class="sukunimi">Aura</span>, Matti<span class="lisa">1995–1999 · Kokoomus · kuolinvuosi 2011</span></a></li>
+<li data-etunimi="Risto" data-sukunimi="Autio" data-lisa="2007–2011 · Keskusta"><a href="entiset/966.html"><span class="sukunimi">Autio</span>, Risto<span class="lisa">2007–2011 · Keskusta</span></a></li>
+</ul>
+</details>
+<details class="entiset-kirjain" id="ent-B"><summary>B <span class="lukumaara">6</span></summary>
+<ul class="nimilista">
+<li data-etunimi="Jouni" data-sukunimi="Backman" data-lisa="1987–2007, 2011–2015 · SDP"><a href="entiset/133.html"><span class="sukunimi">Backman</span>, Jouni<span class="lisa">1987–2007, 2011–2015 · SDP</span></a></li>
+<li data-etunimi="Anne" data-sukunimi="Berner" data-lisa="2015–2019 · Keskusta"><a href="entiset/1313.html"><span class="sukunimi">Berner</span>, Anne<span class="lisa">2015–2019 · Keskusta</span></a></li>
+<li data-etunimi="Thomas" data-sukunimi="Blomqvist" data-lisa="2007–2023 · RKP"><a href="entiset/923.html"><span class="sukunimi">Blomqvist</span>, Thomas<span class="lisa">2007–2023 · RKP</span></a></li>
+<li data-etunimi="Tuija" data-sukunimi="Brax" data-lisa="1995–2015 · Vihreät"><a href="entiset/448.html"><span class="sukunimi">Brax</span>, Tuija<span class="lisa">1995–2015 · Vihreät</span></a></li>
+<li data-etunimi="Klaus" data-sukunimi="Bremer" data-lisa="1995–2003 · RKP"><a href="entiset/449.html"><span class="sukunimi">Bremer</span>, Klaus<span class="lisa">1995–2003 · RKP</span></a></li>
+<li data-etunimi="Arto" data-sukunimi="Bryggare" data-lisa="1995–1999, 2003–2007 · SDP"><a href="entiset/450.html"><span class="sukunimi">Bryggare</span>, Arto<span class="lisa">1995–1999, 2003–2007 · SDP</span></a></li>
+</ul>
+</details>
+<details class="entiset-kirjain" id="ent-C"><summary>C <span class="lukumaara">1</span></summary>
+<ul class="nimilista">
+<li data-etunimi="Tarja" data-sukunimi="Cronberg" data-lisa="2003–2007 · Vihreät"><a href="entiset/795.html"><span class="sukunimi">Cronberg</span>, Tarja<span class="lisa">2003–2007 · Vihreät</span></a></li>
+</ul>
+</details>
+<details class="entiset-kirjain" id="ent-D"><summary>D <span class="lukumaara">2</span></summary>
+<ul class="nimilista">
+<li data-etunimi="Jörn" data-sukunimi="Donner" data-lisa="1987–1995, 2007, 2013–2015 · RKP · kuolinvuosi 2020"><a href="entiset/109.html"><span class="sukunimi">Donner</span>, Jörn<span class="lisa">1987–1995, 2007, 2013–2015 · RKP · kuolinvuosi 2020</span></a></li>
+<li data-etunimi="Kaarina" data-sukunimi="Dromberg" data-lisa="1983–2007 · Kokoomus"><a href="entiset/110.html"><span class="sukunimi">Dromberg</span>, Kaarina<span class="lisa">1983–2007 · Kokoomus</span></a></li>
+</ul>
+</details>
+<details class="entiset-kirjain" id="ent-E"><summary>E <span class="lukumaara">5</span></summary>
+<ul class="nimilista">
+<li data-etunimi="Mikko" data-sukunimi="Elo" data-lisa="1979–1991, 1995–2007 · SDP"><a href="entiset/112.html"><span class="sukunimi">Elo</span>, Mikko<span class="lisa">1979–1991, 1995–2007 · SDP</span></a></li>
+<li data-etunimi="Simon" data-sukunimi="Elo" data-lisa="2015–2019 · Perussuomalaiset, Siniset"><a href="entiset/1317.html"><span class="sukunimi">Elo</span>, Simon<span class="lisa">2015–2019 · Perussuomalaiset, Siniset</span></a></li>
+<li data-etunimi="Tiina" data-sukunimi="Elovaara" data-lisa="2015–2019 · Perussuomalaiset, Siniset"><a href="entiset/1320.html"><span class="sukunimi">Elovaara</span>, Tiina<span class="lisa">2015–2019 · Perussuomalaiset, Siniset</span></a></li>
+<li data-etunimi="Jan-Erik" data-sukunimi="Enestam" data-lisa="1991–2007 · RKP"><a href="entiset/393.html"><span class="sukunimi">Enestam</span>, Jan-Erik<span class="lisa">1991–2007 · RKP</span></a></li>
+<li data-etunimi="Rainer" data-sukunimi="Erlund" data-lisa="1999–2000 · RKP, Ryhmä Erlund · kuolinvuosi 2000"><a href="entiset/559.html"><span class="sukunimi">Erlund</span>, Rainer<span class="lisa">1999–2000 · RKP, Ryhmä Erlund · kuolinvuosi 2000</span></a></li>
+</ul>
+</details>
+<details class="entiset-kirjain" id="ent-F"><summary>F <span class="lukumaara">2</span></summary>
+<ul class="nimilista">
+<li data-etunimi="Maarit" data-sukunimi="Feldt-Ranta" data-lisa="2007–2019 · SDP · kuolinvuosi 2019"><a href="entiset/931.html"><span class="sukunimi">Feldt-Ranta</span>, Maarit<span class="lisa">2007–2019 · SDP · kuolinvuosi 2019</span></a></li>
+<li data-etunimi="Merikukka" data-sukunimi="Forsius" data-lisa="1999–2011 · Vihreät, Kokoomus"><a href="entiset/560.html"><span class="sukunimi">Forsius</span>, Merikukka<span class="lisa">1999–2011 · Vihreät, Kokoomus</span></a></li>
+</ul>
+</details>
+<details class="entiset-kirjain" id="ent-G"><summary>G <span class="lukumaara">5</span></summary>
+<ul class="nimilista">
+<li data-etunimi="Christina" data-sukunimi="Gestrin" data-lisa="2000–2015 · RKP"><a href="entiset/623.html"><span class="sukunimi">Gestrin</span>, Christina<span class="lisa">2000–2015 · RKP</span></a></li>
+<li data-etunimi="Nils-Anders" data-sukunimi="Granvik" data-lisa="1999–2007 · RKP · kuolinvuosi 2021"><a href="entiset/561.html"><span class="sukunimi">Granvik</span>, Nils-Anders<span class="lisa">1999–2007 · RKP · kuolinvuosi 2021</span></a></li>
+<li data-etunimi="Jukka" data-sukunimi="Gustafsson" data-lisa="1987–2023 · SDP"><a href="entiset/116.html"><span class="sukunimi">Gustafsson</span>, Jukka<span class="lisa">1987–2023 · SDP</span></a></li>
+<li data-etunimi="Maria" data-sukunimi="Guzenina" data-lisa="2007–2024 · SDP · Euroopan parlamentin jäsen 16.7.2024 alkaen"><a href="entiset/926.html"><span class="sukunimi">Guzenina</span>, Maria<span class="lisa">2007–2024 · SDP · Euroopan parlamentin jäsen 16.7.2024 alkaen</span></a></li>
+<li data-etunimi="Lars Erik" data-sukunimi="Gästgivars" data-lisa="2011–2015 · RKP"><a href="entiset/1103.html"><span class="sukunimi">Gästgivars</span>, Lars Erik<span class="lisa">2011–2015 · RKP</span></a></li>
+</ul>
+</details>
+<details class="entiset-kirjain" id="ent-H"><summary>H <span class="lukumaara">40</span></summary>
+<ul class="nimilista">
+<li data-etunimi="Satu" data-sukunimi="Haapanen" data-lisa="2011–2015 · Vihreät"><a href="entiset/1104.html"><span class="sukunimi">Haapanen</span>, Satu<span class="lisa">2011–2015 · Vihreät</span></a></li>
+<li data-etunimi="Susanna" data-sukunimi="Haapoja" data-lisa="2003–2009 · Keskusta · kuolinvuosi 2009"><a href="entiset/806.html"><span class="sukunimi">Haapoja</span>, Susanna<span class="lisa">2003–2009 · Keskusta · kuolinvuosi 2009</span></a></li>
+<li data-etunimi="Pekka" data-sukunimi="Haavisto" data-lisa="1987–1995, 2007–2026 · Vihreät"><a href="entiset/118.html"><span class="sukunimi">Haavisto</span>, Pekka<span class="lisa">1987–1995, 2007–2026 · Vihreät</span></a></li>
+<li data-etunimi="Carl" data-sukunimi="Haglund" data-lisa="2015–2016 · RKP"><a href="entiset/1217.html"><span class="sukunimi">Haglund</span>, Carl<span class="lisa">2015–2016 · RKP</span></a></li>
+<li data-etunimi="Pertti" data-sukunimi="Hakanen" data-lisa="2015–2019 · Keskusta"><a href="entiset/1322.html"><span class="sukunimi">Hakanen</span>, Pertti<span class="lisa">2015–2019 · Keskusta</span></a></li>
+<li data-etunimi="Teuvo" data-sukunimi="Hakkarainen" data-lisa="2011–2023 · Perussuomalaiset"><a href="entiset/1107.html"><span class="sukunimi">Hakkarainen</span>, Teuvo<span class="lisa">2011–2023 · Perussuomalaiset</span></a></li>
+<li data-etunimi="Juha" data-sukunimi="Hakola" data-lisa="2007–2011 · Kokoomus"><a href="entiset/916.html"><span class="sukunimi">Hakola</span>, Juha<span class="lisa">2007–2011 · Kokoomus</span></a></li>
+<li data-etunimi="Tony" data-sukunimi="Halme" data-lisa="2003–2007 · Perussuomalaiset · kuolinvuosi 2010"><a href="entiset/763.html"><span class="sukunimi">Halme</span>, Tony<span class="lisa">2003–2007 · Perussuomalaiset · kuolinvuosi 2010</span></a></li>
+<li data-etunimi="Hanna" data-sukunimi="Halmeenpää" data-lisa="2015–2019 · Vihreät"><a href="entiset/1324.html"><span class="sukunimi">Halmeenpää</span>, Hanna<span class="lisa">2015–2019 · Vihreät</span></a></li>
+<li data-etunimi="Tarja" data-sukunimi="Halonen" data-lisa="1979–2000 · SDP"><a href="entiset/122.html"><span class="sukunimi">Halonen</span>, Tarja<span class="lisa">1979–2000 · SDP</span></a></li>
+<li data-etunimi="Leena" data-sukunimi="Harkimo" data-lisa="1999–2015 · Kokoomus"><a href="entiset/562.html"><span class="sukunimi">Harkimo</span>, Leena<span class="lisa">1999–2015 · Kokoomus</span></a></li>
+<li data-etunimi="Satu" data-sukunimi="Hassi" data-lisa="1991–2007, 2015–2023 · Vihreät"><a href="entiset/363.html"><span class="sukunimi">Hassi</span>, Satu<span class="lisa">1991–2007, 2015–2023 · Vihreät</span></a></li>
+<li data-etunimi="Heidi" data-sukunimi="Hautala" data-lisa="1991–1995, 2003–2011 · Vihreät"><a href="entiset/352.html"><span class="sukunimi">Hautala</span>, Heidi<span class="lisa">1991–1995, 2003–2011 · Vihreät</span></a></li>
+<li data-etunimi="Lasse" data-sukunimi="Hautala" data-lisa="2003–2007, 2009–2019 · Keskusta"><a href="entiset/805.html"><span class="sukunimi">Hautala</span>, Lasse<span class="lisa">2003–2007, 2009–2019 · Keskusta</span></a></li>
+<li data-etunimi="Lauri" data-sukunimi="Heikkilä" data-lisa="2011–2015 · Perussuomalaiset · kuolinvuosi 2024"><a href="entiset/1115.html"><span class="sukunimi">Heikkilä</span>, Lauri<span class="lisa">2011–2015 · Perussuomalaiset · kuolinvuosi 2024</span></a></li>
+<li data-etunimi="Hannakaisa" data-sukunimi="Heikkinen" data-lisa="2007–2011, 2015–2023 · Keskusta"><a href="entiset/938.html"><span class="sukunimi">Heikkinen</span>, Hannakaisa<span class="lisa">2007–2011, 2015–2023 · Keskusta</span></a></li>
+<li data-etunimi="Olli-Pekka" data-sukunimi="Heinonen" data-lisa="1995–2002 · Kokoomus"><a href="entiset/420.html"><span class="sukunimi">Heinonen</span>, Olli-Pekka<span class="lisa">1995–2002 · Kokoomus</span></a></li>
+<li data-etunimi="Eero" data-sukunimi="Heinäluoma" data-lisa="2003–2019 · SDP"><a href="entiset/768.html"><span class="sukunimi">Heinäluoma</span>, Eero<span class="lisa">2003–2019 · SDP</span></a></li>
+<li data-etunimi="Klaus" data-sukunimi="Hellberg" data-lisa="1995–2007 · SDP"><a href="entiset/452.html"><span class="sukunimi">Hellberg</span>, Klaus<span class="lisa">1995–2007 · SDP</span></a></li>
+<li data-etunimi="Esko" data-sukunimi="Helle" data-lisa="1983–2003 · Vasemmistoliitto · kuolinvuosi 2014"><a href="entiset/125.html"><span class="sukunimi">Helle</span>, Esko<span class="lisa">1983–2003 · Vasemmistoliitto · kuolinvuosi 2014</span></a></li>
+<li data-etunimi="Hanna-Leena" data-sukunimi="Hemming" data-lisa="2003–2011 · Kokoomus"><a href="entiset/777.html"><span class="sukunimi">Hemming</span>, Hanna-Leena<span class="lisa">2003–2011 · Kokoomus</span></a></li>
+<li data-etunimi="Anna-Maja" data-sukunimi="Henriksson" data-lisa="2007–2024 · RKP · Euroopan parlamentin jäsen 16.7.2024 alkaen"><a href="entiset/941.html"><span class="sukunimi">Henriksson</span>, Anna-Maja<span class="lisa">2007–2024 · RKP · Euroopan parlamentin jäsen 16.7.2024 alkaen</span></a></li>
+<li data-etunimi="Leea" data-sukunimi="Hiltunen" data-lisa="1991–1995, 1999–2003 · SKL, Kristillisdemokraatit"><a href="entiset/401.html"><span class="sukunimi">Hiltunen</span>, Leea<span class="lisa">1991–1995, 1999–2003 · SKL, Kristillisdemokraatit</span></a></li>
+<li data-etunimi="Rakel" data-sukunimi="Hiltunen" data-lisa="1999–2015 · SDP"><a href="entiset/564.html"><span class="sukunimi">Hiltunen</span>, Rakel<span class="lisa">1999–2015 · SDP</span></a></li>
+<li data-etunimi="James" data-sukunimi="Hirvisaari" data-lisa="2011–2015 · Perussuomalaiset, Muutos 2011"><a href="entiset/1117.html"><span class="sukunimi">Hirvisaari</span>, James<span class="lisa">2011–2015 · Perussuomalaiset, Muutos 2011</span></a></li>
+<li data-etunimi="Anne" data-sukunimi="Holmlund" data-lisa="2002–2015 · Kokoomus"><a href="entiset/630.html"><span class="sukunimi">Holmlund</span>, Anne<span class="lisa">2002–2015 · Kokoomus</span></a></li>
+<li data-etunimi="Raimo" data-sukunimi="Holopainen" data-lisa="1996–1999 · SDP · kuolinvuosi 2024"><a href="entiset/531.html"><span class="sukunimi">Holopainen</span>, Raimo<span class="lisa">1996–1999 · SDP · kuolinvuosi 2024</span></a></li>
+<li data-etunimi="Reijo" data-sukunimi="Hongisto" data-lisa="2011–2019 · Perussuomalaiset, Siniset"><a href="entiset/1119.html"><span class="sukunimi">Hongisto</span>, Reijo<span class="lisa">2011–2019 · Perussuomalaiset, Siniset</span></a></li>
+<li data-etunimi="Anne" data-sukunimi="Huotari" data-lisa="1995–2007 · Vasemmistoliitto"><a href="entiset/453.html"><span class="sukunimi">Huotari</span>, Anne<span class="lisa">1995–2007 · Vasemmistoliitto</span></a></li>
+<li data-etunimi="Susanna" data-sukunimi="Huovinen" data-lisa="1999–2018 · SDP"><a href="entiset/565.html"><span class="sukunimi">Huovinen</span>, Susanna<span class="lisa">1999–2018 · SDP</span></a></li>
+<li data-etunimi="Sinikka" data-sukunimi="Hurskainen" data-lisa="1983–1999, 2003–2011 · SDP"><a href="entiset/136.html"><span class="sukunimi">Hurskainen</span>, Sinikka<span class="lisa">1983–1999, 2003–2011 · SDP</span></a></li>
+<li data-etunimi="Terttu" data-sukunimi="Huttu-Juntunen" data-lisa="1995–1999 · Vasemmistoliitto"><a href="entiset/454.html"><span class="sukunimi">Huttu-Juntunen</span>, Terttu<span class="lisa">1995–1999 · Vasemmistoliitto</span></a></li>
+<li data-etunimi="Jorma" data-sukunimi="Huuhtanen" data-lisa="1987–2000 · Keskusta"><a href="entiset/137.html"><span class="sukunimi">Huuhtanen</span>, Jorma<span class="lisa">1987–2000 · Keskusta</span></a></li>
+<li data-etunimi="Matti" data-sukunimi="Huutola" data-lisa="1998–2003 · Vasemmistoliitto"><a href="entiset/553.html"><span class="sukunimi">Huutola</span>, Matti<span class="lisa">1998–2003 · Vasemmistoliitto</span></a></li>
+<li data-etunimi="Liisa" data-sukunimi="Hyssälä" data-lisa="1995–2010 · Keskusta"><a href="entiset/455.html"><span class="sukunimi">Hyssälä</span>, Liisa<span class="lisa">1995–2010 · Keskusta</span></a></li>
+<li data-etunimi="Jyri" data-sukunimi="Häkämies" data-lisa="1999–2012 · Kokoomus"><a href="entiset/566.html"><span class="sukunimi">Häkämies</span>, Jyri<span class="lisa">1999–2012 · Kokoomus</span></a></li>
+<li data-etunimi="Kari" data-sukunimi="Häkämies" data-lisa="1987–1998 · Kokoomus"><a href="entiset/138.html"><span class="sukunimi">Häkämies</span>, Kari<span class="lisa">1987–1998 · Kokoomus</span></a></li>
+<li data-etunimi="Tuulikki" data-sukunimi="Hämäläinen" data-lisa="1983–1999 · SDP · kuolinvuosi 2023"><a href="entiset/139.html"><span class="sukunimi">Hämäläinen</span>, Tuulikki<span class="lisa">1983–1999 · SDP · kuolinvuosi 2023</span></a></li>
+<li data-etunimi="Katja" data-sukunimi="Hänninen" data-lisa="2014–2023 · Vasemmistoliitto"><a href="entiset/1276.html"><span class="sukunimi">Hänninen</span>, Katja<span class="lisa">2014–2023 · Vasemmistoliitto</span></a></li>
+<li data-etunimi="Tuomo" data-sukunimi="Hänninen" data-lisa="2003–2011 · Keskusta"><a href="entiset/799.html"><span class="sukunimi">Hänninen</span>, Tuomo<span class="lisa">2003–2011 · Keskusta</span></a></li>
+</ul>
+</details>
+<details class="entiset-kirjain" id="ent-I"><summary>I <span class="lukumaara">6</span></summary>
+<ul class="nimilista">
+<li data-etunimi="Lauri" data-sukunimi="Ihalainen" data-lisa="2011–2019 · SDP"><a href="entiset/1121.html"><span class="sukunimi">Ihalainen</span>, Lauri<span class="lisa">2011–2019 · SDP</span></a></li>
+<li data-etunimi="Timo" data-sukunimi="Ihamäki" data-lisa="1979–1983, 1993–2003 · Kokoomus · kuolinvuosi 2014"><a href="entiset/430.html"><span class="sukunimi">Ihamäki</span>, Timo<span class="lisa">1979–1983, 1993–2003 · Kokoomus · kuolinvuosi 2014</span></a></li>
+<li data-etunimi="Mikko" data-sukunimi="Immonen" data-lisa="1995–2007 · Vasemmistoliitto"><a href="entiset/456.html"><span class="sukunimi">Immonen</span>, Mikko<span class="lisa">1995–2007 · Vasemmistoliitto</span></a></li>
+<li data-etunimi="Olli" data-sukunimi="Immonen" data-lisa="2011–2023 · Perussuomalaiset, Eduskuntaryhmä Immonen"><a href="entiset/1122.html"><span class="sukunimi">Immonen</span>, Olli<span class="lisa">2011–2023 · Perussuomalaiset, Eduskuntaryhmä Immonen</span></a></li>
+<li data-etunimi="Tytti" data-sukunimi="Isohookana-Asunmaa" data-lisa="1983–2003 · Keskusta"><a href="entiset/145.html"><span class="sukunimi">Isohookana-Asunmaa</span>, Tytti<span class="lisa">1983–2003 · Keskusta</span></a></li>
+<li data-etunimi="Ville" data-sukunimi="Itälä" data-lisa="1995–2007 · Kokoomus"><a href="entiset/457.html"><span class="sukunimi">Itälä</span>, Ville<span class="lisa">1995–2007 · Kokoomus</span></a></li>
+</ul>
+</details>
+<details class="entiset-kirjain" id="ent-J"><summary>J <span class="lukumaara">20</span></summary>
+<ul class="nimilista">
+<li data-etunimi="Liisa" data-sukunimi="Jaakonsaari" data-lisa="1979–2011 · SDP"><a href="entiset/147.html"><span class="sukunimi">Jaakonsaari</span>, Liisa<span class="lisa">1979–2011 · SDP</span></a></li>
+<li data-etunimi="Ari" data-sukunimi="Jalonen" data-lisa="2011–2019 · Perussuomalaiset, Siniset"><a href="entiset/1124.html"><span class="sukunimi">Jalonen</span>, Ari<span class="lisa">2011–2019 · Perussuomalaiset, Siniset</span></a></li>
+<li data-etunimi="Gunnar" data-sukunimi="Jansson" data-lisa="1983–2003 · RKP"><a href="entiset/148.html"><span class="sukunimi">Jansson</span>, Gunnar<span class="lisa">1983–2003 · RKP</span></a></li>
+<li data-etunimi="Roger" data-sukunimi="Jansson" data-lisa="2003–2007 · RKP"><a href="entiset/780.html"><span class="sukunimi">Jansson</span>, Roger<span class="lisa">2003–2007 · RKP</span></a></li>
+<li data-etunimi="Marisanna" data-sukunimi="Jarva" data-lisa="2015–2019 · Keskusta"><a href="entiset/1335.html"><span class="sukunimi">Jarva</span>, Marisanna<span class="lisa">2015–2019 · Keskusta</span></a></li>
+<li data-etunimi="Harri" data-sukunimi="Jaskari" data-lisa="2007–2019 · Kokoomus"><a href="entiset/972.html"><span class="sukunimi">Jaskari</span>, Harri<span class="lisa">2007–2019 · Kokoomus</span></a></li>
+<li data-etunimi="Ilkka" data-sukunimi="Joenpalo" data-lisa="1987–1991, 1995–1997 · SDP"><a href="entiset/149.html"><span class="sukunimi">Joenpalo</span>, Ilkka<span class="lisa">1987–1991, 1995–1997 · SDP</span></a></li>
+<li data-etunimi="Kalle" data-sukunimi="Jokinen" data-lisa="2009–2023 · Kokoomus"><a href="entiset/1056.html"><span class="sukunimi">Jokinen</span>, Kalle<span class="lisa">2009–2023 · Kokoomus</span></a></li>
+<li data-etunimi="Anssi" data-sukunimi="Joutsenlahti" data-lisa="1979–1987, 2011–2015 · SMP, Perussuomalaiset"><a href="entiset/910615.html"><span class="sukunimi">Joutsenlahti</span>, Anssi<span class="lisa">1979–1987, 2011–2015 · SMP, Perussuomalaiset</span></a></li>
+<li data-etunimi="Kauko" data-sukunimi="Juhantalo" data-lisa="1979–1993, 1995–1999, 2003–2007, 2015–2019 · Keskusta · kuolinvuosi 2020"><a href="entiset/157.html"><span class="sukunimi">Juhantalo</span>, Kauko<span class="lisa">1979–1993, 1995–1999, 2003–2007, 2015–2019 · Keskusta · kuolinvuosi 2020</span></a></li>
+<li data-etunimi="Mikael" data-sukunimi="Jungner" data-lisa="2011–2015 · SDP"><a href="entiset/1125.html"><span class="sukunimi">Jungner</span>, Mikael<span class="lisa">2011–2015 · SDP</span></a></li>
+<li data-etunimi="Johanna" data-sukunimi="Jurva" data-lisa="2011–2015 · Perussuomalaiset"><a href="entiset/1127.html"><span class="sukunimi">Jurva</span>, Johanna<span class="lisa">2011–2015 · Perussuomalaiset</span></a></li>
+<li data-etunimi="Timo" data-sukunimi="Juurikkala" data-lisa="2009–2011 · Vihreät"><a href="entiset/1053.html"><span class="sukunimi">Juurikkala</span>, Timo<span class="lisa">2009–2011 · Vihreät</span></a></li>
+<li data-etunimi="Ulla" data-sukunimi="Juurola" data-lisa="1995–2003 · SDP · kuolinvuosi 2019"><a href="entiset/458.html"><span class="sukunimi">Juurola</span>, Ulla<span class="lisa">1995–2003 · SDP · kuolinvuosi 2019</span></a></li>
+<li data-etunimi="Heikki" data-sukunimi="Järvenpää" data-lisa="1979–1991, 1998–1999 · Kokoomus"><a href="entiset/160.html"><span class="sukunimi">Järvenpää</span>, Heikki<span class="lisa">1979–1991, 1998–1999 · Kokoomus</span></a></li>
+<li data-etunimi="Timo" data-sukunimi="Järvilahti" data-lisa="1991–1999 · Keskusta"><a href="entiset/394.html"><span class="sukunimi">Järvilahti</span>, Timo<span class="lisa">1991–1999 · Keskusta</span></a></li>
+<li data-etunimi="Heli" data-sukunimi="Järvinen" data-lisa="2007–2011, 2015–2023 · Vihreät"><a href="entiset/930.html"><span class="sukunimi">Järvinen</span>, Heli<span class="lisa">2007–2011, 2015–2023 · Vihreät</span></a></li>
+<li data-etunimi="Jouko" data-sukunimi="Jääskeläinen" data-lisa="1991–2003, 2011–2015 · Kristillisdemokraatit"><a href="entiset/405.html"><span class="sukunimi">Jääskeläinen</span>, Jouko<span class="lisa">1991–2003, 2011–2015 · Kristillisdemokraatit</span></a></li>
+<li data-etunimi="Pietari" data-sukunimi="Jääskeläinen" data-lisa="2009–2015 · Perussuomalaiset"><a href="entiset/1052.html"><span class="sukunimi">Jääskeläinen</span>, Pietari<span class="lisa">2009–2015 · Perussuomalaiset</span></a></li>
+<li data-etunimi="Anneli" data-sukunimi="Jäätteenmäki" data-lisa="1987–2007 · Keskusta"><a href="entiset/189.html"><span class="sukunimi">Jäätteenmäki</span>, Anneli<span class="lisa">1987–2007 · Keskusta</span></a></li>
+</ul>
+</details>
+<details class="entiset-kirjain" id="ent-K"><summary>K <span class="lukumaara">88</span></summary>
+<ul class="nimilista">
+<li data-etunimi="Marjut" data-sukunimi="Kaarilahti" data-lisa="1991–1999 · Kokoomus"><a href="entiset/395.html"><span class="sukunimi">Kaarilahti</span>, Marjut<span class="lisa">1991–1999 · Kokoomus</span></a></li>
+<li data-etunimi="Timo" data-sukunimi="Kalli" data-lisa="1991–2019 · Keskusta"><a href="entiset/402.html"><span class="sukunimi">Kalli</span>, Timo<span class="lisa">1991–2019 · Keskusta</span></a></li>
+<li data-etunimi="Reijo" data-sukunimi="Kallio" data-lisa="1995–2011 · SDP"><a href="entiset/459.html"><span class="sukunimi">Kallio</span>, Reijo<span class="lisa">1995–2011 · SDP</span></a></li>
+<li data-etunimi="Antti" data-sukunimi="Kalliomäki" data-lisa="1983–2011 · SDP"><a href="entiset/166.html"><span class="sukunimi">Kalliomäki</span>, Antti<span class="lisa">1983–2011 · SDP</span></a></li>
+<li data-etunimi="Risto" data-sukunimi="Kalliorinne" data-lisa="2011–2015, 2019 · Vasemmistoliitto"><a href="entiset/1132.html"><span class="sukunimi">Kalliorinne</span>, Risto<span class="lisa">2011–2015, 2019 · Vasemmistoliitto</span></a></li>
+<li data-etunimi="Bjarne" data-sukunimi="Kallis" data-lisa="1991–2011 · Kristillisdemokraatit"><a href="entiset/417.html"><span class="sukunimi">Kallis</span>, Bjarne<span class="lisa">1991–2011 · Kristillisdemokraatit</span></a></li>
+<li data-etunimi="Oiva" data-sukunimi="Kaltiokumpu" data-lisa="2007–2011 · Keskusta"><a href="entiset/964.html"><span class="sukunimi">Kaltiokumpu</span>, Oiva<span class="lisa">2007–2011 · Keskusta</span></a></li>
+<li data-etunimi="Erkki" data-sukunimi="Kanerva" data-lisa="1999–2003 · SDP · kuolinvuosi 2013"><a href="entiset/567.html"><span class="sukunimi">Kanerva</span>, Erkki<span class="lisa">1999–2003 · SDP · kuolinvuosi 2013</span></a></li>
+<li data-etunimi="Ilkka" data-sukunimi="Kanerva" data-lisa="1975–2022 · Kokoomus · kuolinvuosi 2022"><a href="entiset/170.html"><span class="sukunimi">Kanerva</span>, Ilkka<span class="lisa">1975–2022 · Kokoomus · kuolinvuosi 2022</span></a></li>
+<li data-etunimi="Seppo" data-sukunimi="Kanerva" data-lisa="1996–2003 · Kokoomus, Keskusta, Liberaalit"><a href="entiset/539.html"><span class="sukunimi">Kanerva</span>, Seppo<span class="lisa">1996–2003 · Kokoomus, Keskusta, Liberaalit</span></a></li>
+<li data-etunimi="Matti" data-sukunimi="Kangas" data-lisa="1999–2011 · Vasemmistoliitto"><a href="entiset/614.html"><span class="sukunimi">Kangas</span>, Matti<span class="lisa">1999–2011 · Vasemmistoliitto</span></a></li>
+<li data-etunimi="Toimi" data-sukunimi="Kankaanniemi" data-lisa="1987–2011, 2015–2019, 2019–2023 · Kristillisdemokraatit, Perussuomalaiset"><a href="entiset/175.html"><span class="sukunimi">Kankaanniemi</span>, Toimi<span class="lisa">1987–2011, 2015–2019, 2019–2023 · Kristillisdemokraatit, Perussuomalaiset</span></a></li>
+<li data-etunimi="Kari" data-sukunimi="Kantalainen" data-lisa="1995–2003 · Kokoomus"><a href="entiset/460.html"><span class="sukunimi">Kantalainen</span>, Kari<span class="lisa">1995–2003 · Kokoomus</span></a></li>
+<li data-etunimi="Ilkka" data-sukunimi="Kantola" data-lisa="2007–2019 · SDP"><a href="entiset/954.html"><span class="sukunimi">Kantola</span>, Ilkka<span class="lisa">2007–2019 · SDP</span></a></li>
+<li data-etunimi="Saara" data-sukunimi="Karhu" data-lisa="1999–2015 · SDP"><a href="entiset/568.html"><span class="sukunimi">Karhu</span>, Saara<span class="lisa">1999–2015 · SDP</span></a></li>
+<li data-etunimi="Minna" data-sukunimi="Karhunen" data-lisa="1991–1999 · Kokoomus"><a href="entiset/406.html"><span class="sukunimi">Karhunen</span>, Minna<span class="lisa">1991–1999 · Kokoomus</span></a></li>
+<li data-etunimi="Arja" data-sukunimi="Karhuvaara" data-lisa="2007–2011 · Kokoomus"><a href="entiset/918.html"><span class="sukunimi">Karhuvaara</span>, Arja<span class="lisa">2007–2011 · Kokoomus</span></a></li>
+<li data-etunimi="Emma" data-sukunimi="Kari" data-lisa="2015–2023 · Vihreät"><a href="entiset/1336.html"><span class="sukunimi">Kari</span>, Emma<span class="lisa">2015–2023 · Vihreät</span></a></li>
+<li data-etunimi="Johanna" data-sukunimi="Karimäki" data-lisa="2007–2019 · Vihreät"><a href="entiset/921.html"><span class="sukunimi">Karimäki</span>, Johanna<span class="lisa">2007–2019 · Vihreät</span></a></li>
+<li data-etunimi="Tapio" data-sukunimi="Karjalainen" data-lisa="1995–2003 · SDP"><a href="entiset/461.html"><span class="sukunimi">Karjalainen</span>, Tapio<span class="lisa">1995–2003 · SDP</span></a></li>
+<li data-etunimi="Kyösti" data-sukunimi="Karjula" data-lisa="1995–2011 · Keskusta"><a href="entiset/462.html"><span class="sukunimi">Karjula</span>, Kyösti<span class="lisa">1995–2011 · Keskusta</span></a></li>
+<li data-etunimi="Tanja" data-sukunimi="Karpela" data-lisa="1999–2011 · Keskusta"><a href="entiset/569.html"><span class="sukunimi">Karpela</span>, Tanja<span class="lisa">1999–2011 · Keskusta</span></a></li>
+<li data-etunimi="Juha" data-sukunimi="Karpio" data-lisa="1995–2003 · Kokoomus · kuolinvuosi 2018"><a href="entiset/463.html"><span class="sukunimi">Karpio</span>, Juha<span class="lisa">1995–2003 · Kokoomus · kuolinvuosi 2018</span></a></li>
+<li data-etunimi="Marjukka" data-sukunimi="Karttunen" data-lisa="1999–2007 · Kokoomus"><a href="entiset/570.html"><span class="sukunimi">Karttunen</span>, Marjukka<span class="lisa">1999–2007 · Kokoomus</span></a></li>
+<li data-etunimi="Ulla" data-sukunimi="Karvo" data-lisa="2007–2011 · Kokoomus"><a href="entiset/969.html"><span class="sukunimi">Karvo</span>, Ulla<span class="lisa">2007–2011 · Kokoomus</span></a></li>
+<li data-etunimi="Tatja" data-sukunimi="Karvonen" data-lisa="2004–2007 · Keskusta"><a href="entiset/849.html"><span class="sukunimi">Karvonen</span>, Tatja<span class="lisa">2004–2007 · Keskusta</span></a></li>
+<li data-etunimi="Jyrki" data-sukunimi="Kasvi" data-lisa="2003–2011, 2015–2019 · Vihreät · kuolinvuosi 2021"><a href="entiset/771.html"><span class="sukunimi">Kasvi</span>, Jyrki<span class="lisa">2003–2011, 2015–2019 · Vihreät · kuolinvuosi 2021</span></a></li>
+<li data-etunimi="Elsi" data-sukunimi="Katainen" data-lisa="2007–2019 · Keskusta"><a href="entiset/939.html"><span class="sukunimi">Katainen</span>, Elsi<span class="lisa">2007–2019 · Keskusta</span></a></li>
+<li data-etunimi="Jyrki" data-sukunimi="Katainen" data-lisa="1999–2014 · Kokoomus"><a href="entiset/571.html"><span class="sukunimi">Katainen</span>, Jyrki<span class="lisa">1999–2014 · Kokoomus</span></a></li>
+<li data-etunimi="Sampsa" data-sukunimi="Kataja" data-lisa="2007–2015 · Kokoomus"><a href="entiset/958.html"><span class="sukunimi">Kataja</span>, Sampsa<span class="lisa">2007–2015 · Kokoomus</span></a></li>
+<li data-etunimi="Timo" data-sukunimi="Kaunisto" data-lisa="2007–2011 · Keskusta"><a href="entiset/950.html"><span class="sukunimi">Kaunisto</span>, Timo<span class="lisa">2007–2011 · Keskusta</span></a></li>
+<li data-etunimi="Matti" data-sukunimi="Kauppila" data-lisa="2003–2011 · Vasemmistoliitto"><a href="entiset/781.html"><span class="sukunimi">Kauppila</span>, Matti<span class="lisa">2003–2011 · Vasemmistoliitto</span></a></li>
+<li data-etunimi="Juho" data-sukunimi="Kautto" data-lisa="2019–2023 · Vasemmistoliitto"><a href="entiset/1444.html"><span class="sukunimi">Kautto</span>, Juho<span class="lisa">2019–2023 · Vasemmistoliitto</span></a></li>
+<li data-etunimi="Tarja" data-sukunimi="Kautto" data-lisa="1989–2003 · SDP"><a href="entiset/307.html"><span class="sukunimi">Kautto</span>, Tarja<span class="lisa">1989–2003 · SDP</span></a></li>
+<li data-etunimi="Antero" data-sukunimi="Kekkonen" data-lisa="1987–2007 · SDP"><a href="entiset/179.html"><span class="sukunimi">Kekkonen</span>, Antero<span class="lisa">1987–2007 · SDP</span></a></li>
+<li data-etunimi="Hannu" data-sukunimi="Kemppainen" data-lisa="1983–1987, 1991–1999 · Keskusta"><a href="entiset/322.html"><span class="sukunimi">Kemppainen</span>, Hannu<span class="lisa">1983–1987, 1991–1999 · Keskusta</span></a></li>
+<li data-etunimi="Marja-Leena" data-sukunimi="Kemppainen" data-lisa="1999–2003 · Kristillisdemokraatit"><a href="entiset/572.html"><span class="sukunimi">Kemppainen</span>, Marja-Leena<span class="lisa">1999–2003 · Kristillisdemokraatit</span></a></li>
+<li data-etunimi="Inkeri" data-sukunimi="Kerola" data-lisa="1999–2015 · Keskusta"><a href="entiset/613.html"><span class="sukunimi">Kerola</span>, Inkeri<span class="lisa">1999–2015 · Keskusta</span></a></li>
+<li data-etunimi="Niilo" data-sukunimi="Keränen" data-lisa="1999–2003, 2015–2019 · Keskusta"><a href="entiset/573.html"><span class="sukunimi">Keränen</span>, Niilo<span class="lisa">1999–2003, 2015–2019 · Keskusta</span></a></li>
+<li data-etunimi="Pentti" data-sukunimi="Kettunen" data-lisa="1983–1987, 1989–1991, 2011–2015 · SMP, Perussuomalaiset"><a href="entiset/306.html"><span class="sukunimi">Kettunen</span>, Pentti<span class="lisa">1983–1987, 1989–1991, 2011–2015 · SMP, Perussuomalaiset</span></a></li>
+<li data-etunimi="Rauno" data-sukunimi="Kettunen" data-lisa="2003–2007 · Keskusta"><a href="entiset/792.html"><span class="sukunimi">Kettunen</span>, Rauno<span class="lisa">2003–2007 · Keskusta</span></a></li>
+<li data-etunimi="Anneli" data-sukunimi="Kiljunen" data-lisa="2003–2023 · SDP"><a href="entiset/791.html"><span class="sukunimi">Kiljunen</span>, Anneli<span class="lisa">2003–2023 · SDP</span></a></li>
+<li data-etunimi="Jari" data-sukunimi="Kinnunen" data-lisa="2021–2023 · Kokoomus"><a href="entiset/1480.html"><span class="sukunimi">Kinnunen</span>, Jari<span class="lisa">2021–2023 · Kokoomus</span></a></li>
+<li data-etunimi="Mikko" data-sukunimi="Kinnunen" data-lisa="2019–2023 · Keskusta"><a href="entiset/1453.html"><span class="sukunimi">Kinnunen</span>, Mikko<span class="lisa">2019–2023 · Keskusta</span></a></li>
+<li data-etunimi="Kimmo" data-sukunimi="Kivelä" data-lisa="2011–2019 · Perussuomalaiset, Siniset"><a href="entiset/1138.html"><span class="sukunimi">Kivelä</span>, Kimmo<span class="lisa">2011–2019 · Perussuomalaiset, Siniset</span></a></li>
+<li data-etunimi="Mari" data-sukunimi="Kiviniemi" data-lisa="1995–2014 · Keskusta"><a href="entiset/465.html"><span class="sukunimi">Kiviniemi</span>, Mari<span class="lisa">1995–2014 · Keskusta</span></a></li>
+<li data-etunimi="Esko" data-sukunimi="Kiviranta" data-lisa="2003–2023 · Keskusta"><a href="entiset/779.html"><span class="sukunimi">Kiviranta</span>, Esko<span class="lisa">2003–2023 · Keskusta</span></a></li>
+<li data-etunimi="Pasi" data-sukunimi="Kivisaari" data-lisa="2019–2023 · Keskusta"><a href="entiset/1442.html"><span class="sukunimi">Kivisaari</span>, Pasi<span class="lisa">2019–2023 · Keskusta</span></a></li>
+<li data-etunimi="Anne" data-sukunimi="Knaapi-Lamminen" data-lisa="1995–1999 · Kokoomus"><a href="entiset/466.html"><span class="sukunimi">Knaapi-Lamminen</span>, Anne<span class="lisa">1995–1999 · Kokoomus</span></a></li>
+<li data-etunimi="Annikki" data-sukunimi="Koistinen" data-lisa="1987–1999 · Keskusta"><a href="entiset/192.html"><span class="sukunimi">Koistinen</span>, Annikki<span class="lisa">1987–1999 · Keskusta</span></a></li>
+<li data-etunimi="Osmo" data-sukunimi="Kokko" data-lisa="2011–2015 · Perussuomalaiset"><a href="entiset/1140.html"><span class="sukunimi">Kokko</span>, Osmo<span class="lisa">2011–2015 · Perussuomalaiset</span></a></li>
+<li data-etunimi="Paula" data-sukunimi="Kokkonen" data-lisa="1995–2003 · Kokoomus"><a href="entiset/467.html"><span class="sukunimi">Kokkonen</span>, Paula<span class="lisa">1995–2003 · Kokoomus</span></a></li>
+<li data-etunimi="Armas" data-sukunimi="Komi" data-lisa="1991–1999 · Keskusta"><a href="entiset/384.html"><span class="sukunimi">Komi</span>, Armas<span class="lisa">1991–1999 · Keskusta</span></a></li>
+<li data-etunimi="Katri" data-sukunimi="Komi" data-lisa="1999–2015 · Keskusta"><a href="entiset/574.html"><span class="sukunimi">Komi</span>, Katri<span class="lisa">1999–2015 · Keskusta</span></a></li>
+<li data-etunimi="Noora" data-sukunimi="Koponen" data-lisa="2019–2023 · Vihreät"><a href="entiset/1404.html"><span class="sukunimi">Koponen</span>, Noora<span class="lisa">2019–2023 · Vihreät</span></a></li>
+<li data-etunimi="Martti" data-sukunimi="Korhonen" data-lisa="1991–2015 · Vasemmistoliitto"><a href="entiset/386.html"><span class="sukunimi">Korhonen</span>, Martti<span class="lisa">1991–2015 · Vasemmistoliitto</span></a></li>
+<li data-etunimi="Riitta" data-sukunimi="Korhonen" data-lisa="1995–2003 · Kokoomus"><a href="entiset/468.html"><span class="sukunimi">Korhonen</span>, Riitta<span class="lisa">1995–2003 · Kokoomus</span></a></li>
+<li data-etunimi="Timo V." data-sukunimi="Korhonen" data-lisa="2007–2019 · Keskusta"><a href="entiset/959.html"><span class="sukunimi">Korhonen</span>, Timo V.<span class="lisa">2007–2019 · Keskusta</span></a></li>
+<li data-etunimi="Juha" data-sukunimi="Korkeaoja" data-lisa="1991–2011 · Keskusta"><a href="entiset/403.html"><span class="sukunimi">Korkeaoja</span>, Juha<span class="lisa">1991–2011 · Keskusta</span></a></li>
+<li data-etunimi="Ossi" data-sukunimi="Korteniemi" data-lisa="1994–2001 · Keskusta · kuolinvuosi 2002"><a href="entiset/442.html"><span class="sukunimi">Korteniemi</span>, Ossi<span class="lisa">1994–2001 · Keskusta · kuolinvuosi 2002</span></a></li>
+<li data-etunimi="Timo E." data-sukunimi="Korva" data-lisa="1991–1995, 2001–2003 · Keskusta"><a href="entiset/381.html"><span class="sukunimi">Korva</span>, Timo E.<span class="lisa">1991–1995, 2001–2003 · Keskusta</span></a></li>
+<li data-etunimi="Laila" data-sukunimi="Koskela" data-lisa="2011–2015 · Perussuomalaiset, Keskusta"><a href="entiset/1143.html"><span class="sukunimi">Koskela</span>, Laila<span class="lisa">2011–2015 · Perussuomalaiset, Keskusta</span></a></li>
+<li data-etunimi="Markku" data-sukunimi="Koski" data-lisa="1991–1999, 2003–2007 · Keskusta"><a href="entiset/387.html"><span class="sukunimi">Koski</span>, Markku<span class="lisa">1991–1999, 2003–2007 · Keskusta</span></a></li>
+<li data-etunimi="Susanna" data-sukunimi="Koski" data-lisa="2015–2019 · Kokoomus"><a href="entiset/1337.html"><span class="sukunimi">Koski</span>, Susanna<span class="lisa">2015–2019 · Kokoomus</span></a></li>
+<li data-etunimi="Valto" data-sukunimi="Koski" data-lisa="1995–2011 · SDP"><a href="entiset/469.html"><span class="sukunimi">Koski</span>, Valto<span class="lisa">1995–2011 · SDP</span></a></li>
+<li data-etunimi="Heikki" data-sukunimi="Koskinen" data-lisa="1995–1999 · Kokoomus"><a href="entiset/470.html"><span class="sukunimi">Koskinen</span>, Heikki<span class="lisa">1995–1999 · Kokoomus</span></a></li>
+<li data-etunimi="Jari" data-sukunimi="Koskinen" data-lisa="1996–2009 · Kokoomus"><a href="entiset/532.html"><span class="sukunimi">Koskinen</span>, Jari<span class="lisa">1996–2009 · Kokoomus</span></a></li>
+<li data-etunimi="Marjaana" data-sukunimi="Koskinen" data-lisa="1995–2011 · SDP"><a href="entiset/471.html"><span class="sukunimi">Koskinen</span>, Marjaana<span class="lisa">1995–2011 · SDP</span></a></li>
+<li data-etunimi="Jouni" data-sukunimi="Kotiaho" data-lisa="2019–2023 · Perussuomalaiset"><a href="entiset/1448.html"><span class="sukunimi">Kotiaho</span>, Jouni<span class="lisa">2019–2023 · Perussuomalaiset</span></a></li>
+<li data-etunimi="Irina" data-sukunimi="Krohn" data-lisa="1995–2006 · Vihreät"><a href="entiset/472.html"><span class="sukunimi">Krohn</span>, Irina<span class="lisa">1995–2006 · Vihreät</span></a></li>
+<li data-etunimi="Risto" data-sukunimi="Kuisma" data-lisa="1995–2007, 2010–2011 · SDP, Nuorsuomalaiset, Remonttiryhmä"><a href="entiset/473.html"><span class="sukunimi">Kuisma</span>, Risto<span class="lisa">1995–2007, 2010–2011 · SDP, Nuorsuomalaiset, Remonttiryhmä</span></a></li>
+<li data-etunimi="Jorma" data-sukunimi="Kukkonen" data-lisa="1995–1999 · SDP"><a href="entiset/474.html"><span class="sukunimi">Kukkonen</span>, Jorma<span class="lisa">1995–1999 · SDP</span></a></li>
+<li data-etunimi="Kari" data-sukunimi="Kulmala" data-lisa="2015–2019 · Perussuomalaiset, Siniset"><a href="entiset/1339.html"><span class="sukunimi">Kulmala</span>, Kari<span class="lisa">2015–2019 · Perussuomalaiset, Siniset</span></a></li>
+<li data-etunimi="Katri" data-sukunimi="Kulmuni" data-lisa="2015–2024 · Keskusta · Euroopan parlamentin jäsen 16.7.2024 alkaen"><a href="entiset/1340.html"><span class="sukunimi">Kulmuni</span>, Katri<span class="lisa">2015–2024 · Keskusta · Euroopan parlamentin jäsen 16.7.2024 alkaen</span></a></li>
+<li data-etunimi="Kalervo" data-sukunimi="Kummola" data-lisa="1999–2003 · Kokoomus"><a href="entiset/575.html"><span class="sukunimi">Kummola</span>, Kalervo<span class="lisa">1999–2003 · Kokoomus</span></a></li>
+<li data-etunimi="Miapetra" data-sukunimi="Kumpula-Natri" data-lisa="2003–2015, 2023–2026 · SDP"><a href="entiset/807.html"><span class="sukunimi">Kumpula-Natri</span>, Miapetra<span class="lisa">2003–2015, 2023–2026 · SDP</span></a></li>
+<li data-etunimi="Mikko" data-sukunimi="Kuoppa" data-lisa="1979–1987, 1995–2011 · SKDL, Demokraattinen vaihtoehto, Vasemmistoliitto, Vasemmistoryhmä"><a href="entiset/444.html"><span class="sukunimi">Kuoppa</span>, Mikko<span class="lisa">1979–1987, 1995–2011 · SKDL, Demokraattinen vaihtoehto, Vasemmistoliitto, Vasemmistoryhmä</span></a></li>
+<li data-etunimi="Pekka" data-sukunimi="Kuosmanen" data-lisa="1995–2007 · Kokoomus"><a href="entiset/476.html"><span class="sukunimi">Kuosmanen</span>, Pekka<span class="lisa">1995–2007 · Kokoomus</span></a></li>
+<li data-etunimi="Osmo" data-sukunimi="Kurola" data-lisa="1995–1999 · Kokoomus"><a href="entiset/477.html"><span class="sukunimi">Kurola</span>, Osmo<span class="lisa">1995–1999 · Kokoomus</span></a></li>
+<li data-etunimi="Esko" data-sukunimi="Kurvinen" data-lisa="1999–2007, 2011–2015 · Kokoomus"><a href="entiset/576.html"><span class="sukunimi">Kurvinen</span>, Esko<span class="lisa">1999–2007, 2011–2015 · Kokoomus</span></a></li>
+<li data-etunimi="Merja" data-sukunimi="Kuusisto" data-lisa="2007–2015 · SDP"><a href="entiset/927.html"><span class="sukunimi">Kuusisto</span>, Merja<span class="lisa">2007–2015 · SDP</span></a></li>
+<li data-etunimi="Merja" data-sukunimi="Kyllönen" data-lisa="2007–2015, 2019–2024 · Vasemmistoliitto · Euroopan parlamentin jäsen 16.7.2024 alkaen"><a href="entiset/963.html"><span class="sukunimi">Kyllönen</span>, Merja<span class="lisa">2007–2015, 2019–2024 · Vasemmistoliitto · Euroopan parlamentin jäsen 16.7.2024 alkaen</span></a></li>
+<li data-etunimi="Lauri" data-sukunimi="Kähkönen" data-lisa="1999–2011 · SDP · kuolinvuosi 2016"><a href="entiset/577.html"><span class="sukunimi">Kähkönen</span>, Lauri<span class="lisa">1999–2011 · SDP · kuolinvuosi 2016</span></a></li>
+<li data-etunimi="Kari" data-sukunimi="Kärkkäinen" data-lisa="1999–2011 · Kristillisdemokraatit"><a href="entiset/578.html"><span class="sukunimi">Kärkkäinen</span>, Kari<span class="lisa">1999–2011 · Kristillisdemokraatit</span></a></li>
+<li data-etunimi="Jukka" data-sukunimi="Kärnä" data-lisa="2011–2015 · SDP"><a href="entiset/1145.html"><span class="sukunimi">Kärnä</span>, Jukka<span class="lisa">2011–2015 · SDP</span></a></li>
+<li data-etunimi="Mikko" data-sukunimi="Kärnä" data-lisa="2015–2018, 2019–2023 · Keskusta"><a href="entiset/1348.html"><span class="sukunimi">Kärnä</span>, Mikko<span class="lisa">2015–2018, 2019–2023 · Keskusta</span></a></li>
+<li data-etunimi="Seppo" data-sukunimi="Kääriäinen" data-lisa="1987–2019 · Keskusta"><a href="entiset/202.html"><span class="sukunimi">Kääriäinen</span>, Seppo<span class="lisa">1987–2019 · Keskusta</span></a></li>
+<li data-etunimi="Joonas" data-sukunimi="Könttä" data-lisa="2019–2023 · Keskusta"><a href="entiset/1446.html"><span class="sukunimi">Könttä</span>, Joonas<span class="lisa">2019–2023 · Keskusta</span></a></li>
+</ul>
+</details>
+<details class="entiset-kirjain" id="ent-L"><summary>L <span class="lukumaara">42</span></summary>
+<ul class="nimilista">
+<li data-etunimi="Jaakko" data-sukunimi="Laakso" data-lisa="1991–2011 · Vasemmistoliitto"><a href="entiset/407.html"><span class="sukunimi">Laakso</span>, Jaakko<span class="lisa">1991–2011 · Vasemmistoliitto</span></a></li>
+<li data-etunimi="Timo" data-sukunimi="Laaksonen" data-lisa="1983–1999 · Vasemmistoliitto · kuolinvuosi 2008"><a href="entiset/146.html"><span class="sukunimi">Laaksonen</span>, Timo<span class="lisa">1983–1999 · Vasemmistoliitto · kuolinvuosi 2008</span></a></li>
+<li data-etunimi="Esa" data-sukunimi="Lahtela" data-lisa="1995–2011 · SDP"><a href="entiset/478.html"><span class="sukunimi">Lahtela</span>, Esa<span class="lisa">1995–2011 · SDP</span></a></li>
+<li data-etunimi="Seppo" data-sukunimi="Lahtela" data-lisa="1999–2007 · Keskusta, Kokoomus"><a href="entiset/579.html"><span class="sukunimi">Lahtela</span>, Seppo<span class="lisa">1999–2007 · Keskusta, Kokoomus</span></a></li>
+<li data-etunimi="Jere" data-sukunimi="Lahti" data-lisa="2003–2007 · Kokoomus · kuolinvuosi 2020"><a href="entiset/765.html"><span class="sukunimi">Lahti</span>, Jere<span class="lisa">2003–2007 · Kokoomus · kuolinvuosi 2020</span></a></li>
+<li data-etunimi="Reino" data-sukunimi="Laine" data-lisa="1996–1999 · Vasemmistoliitto"><a href="entiset/540.html"><span class="sukunimi">Laine</span>, Reino<span class="lisa">1996–1999 · Vasemmistoliitto</span></a></li>
+<li data-etunimi="Reijo" data-sukunimi="Laitinen" data-lisa="1991–2011 · SDP"><a href="entiset/370.html"><span class="sukunimi">Laitinen</span>, Reijo<span class="lisa">1991–2011 · SDP</span></a></li>
+<li data-etunimi="Jaana" data-sukunimi="Laitinen-Pesola" data-lisa="2015–2019 · Kokoomus"><a href="entiset/1342.html"><span class="sukunimi">Laitinen-Pesola</span>, Jaana<span class="lisa">2015–2019 · Kokoomus</span></a></li>
+<li data-etunimi="Kalevi" data-sukunimi="Lamminen" data-lisa="1987–1999, 2003–2007 · Kokoomus · kuolinvuosi 2021"><a href="entiset/161.html"><span class="sukunimi">Lamminen</span>, Kalevi<span class="lisa">1987–1999, 2003–2007 · Kokoomus · kuolinvuosi 2021</span></a></li>
+<li data-etunimi="Eero" data-sukunimi="Lankia" data-lisa="2003–2007 · Keskusta"><a href="entiset/774.html"><span class="sukunimi">Lankia</span>, Eero<span class="lisa">2003–2007 · Keskusta</span></a></li>
+<li data-etunimi="Annika" data-sukunimi="Lapintie" data-lisa="1995–2019 · Vasemmistoliitto"><a href="entiset/479.html"><span class="sukunimi">Lapintie</span>, Annika<span class="lisa">1995–2019 · Vasemmistoliitto</span></a></li>
+<li data-etunimi="Arto" data-sukunimi="Lapiolahti" data-lisa="1987–1991, 1997–1999 · SDP"><a href="entiset/162.html"><span class="sukunimi">Lapiolahti</span>, Arto<span class="lisa">1987–1991, 1997–1999 · SDP</span></a></li>
+<li data-etunimi="Jari" data-sukunimi="Larikka" data-lisa="2007–2011 · Kokoomus"><a href="entiset/924.html"><span class="sukunimi">Larikka</span>, Jari<span class="lisa">2007–2011 · Kokoomus</span></a></li>
+<li data-etunimi="Antero" data-sukunimi="Laukkanen" data-lisa="2015–2023 · Kristillisdemokraatit · kuolinvuosi 2024"><a href="entiset/1343.html"><span class="sukunimi">Laukkanen</span>, Antero<span class="lisa">2015–2023 · Kristillisdemokraatit · kuolinvuosi 2024</span></a></li>
+<li data-etunimi="Markku" data-sukunimi="Laukkanen" data-lisa="1991–1995, 1999–2011 · Keskusta"><a href="entiset/376.html"><span class="sukunimi">Laukkanen</span>, Markku<span class="lisa">1991–1995, 1999–2011 · Keskusta</span></a></li>
+<li data-etunimi="Sanna" data-sukunimi="Lauslahti" data-lisa="2007–2018 · Kokoomus"><a href="entiset/934.html"><span class="sukunimi">Lauslahti</span>, Sanna<span class="lisa">2007–2018 · Kokoomus</span></a></li>
+<li data-etunimi="Henrik" data-sukunimi="Lax" data-lisa="1987–2007 · RKP"><a href="entiset/165.html"><span class="sukunimi">Lax</span>, Henrik<span class="lisa">1987–2007 · RKP</span></a></li>
+<li data-etunimi="Jouko" data-sukunimi="Laxell" data-lisa="2004–2011 · Kokoomus"><a href="entiset/847.html"><span class="sukunimi">Laxell</span>, Jouko<span class="lisa">2004–2011 · Kokoomus</span></a></li>
+<li data-etunimi="Eero" data-sukunimi="Lehti" data-lisa="2007–2019 · Kokoomus"><a href="entiset/935.html"><span class="sukunimi">Lehti</span>, Eero<span class="lisa">2007–2019 · Kokoomus</span></a></li>
+<li data-etunimi="Jouni" data-sukunimi="Lehtimäki" data-lisa="1999–2003 · Kokoomus"><a href="entiset/580.html"><span class="sukunimi">Lehtimäki</span>, Jouni<span class="lisa">1999–2003 · Kokoomus</span></a></li>
+<li data-etunimi="Rami" data-sukunimi="Lehto" data-lisa="2015–2023 · Perussuomalaiset"><a href="entiset/1344.html"><span class="sukunimi">Lehto</span>, Rami<span class="lisa">2015–2023 · Perussuomalaiset</span></a></li>
+<li data-etunimi="Paula" data-sukunimi="Lehtomäki" data-lisa="1999–2015, 2017 · Keskusta"><a href="entiset/581.html"><span class="sukunimi">Lehtomäki</span>, Paula<span class="lisa">1999–2015, 2017 · Keskusta</span></a></li>
+<li data-etunimi="Markku" data-sukunimi="Lehtosaari" data-lisa="1987–1999 · Keskusta"><a href="entiset/167.html"><span class="sukunimi">Lehtosaari</span>, Markku<span class="lisa">1987–1999 · Keskusta</span></a></li>
+<li data-etunimi="Sirkka" data-sukunimi="Lekman" data-lisa="1998–1999 · Kokoomus"><a href="entiset/555.html"><span class="sukunimi">Lekman</span>, Sirkka<span class="lisa">1998–1999 · Kokoomus</span></a></li>
+<li data-etunimi="Jari" data-sukunimi="Leppä" data-lisa="1999–2023 · Keskusta"><a href="entiset/582.html"><span class="sukunimi">Leppä</span>, Jari<span class="lisa">1999–2023 · Keskusta</span></a></li>
+<li data-etunimi="Johannes" data-sukunimi="Leppänen" data-lisa="1991–2003 · Keskusta"><a href="entiset/371.html"><span class="sukunimi">Leppänen</span>, Johannes<span class="lisa">1991–2003 · Keskusta</span></a></li>
+<li data-etunimi="Pekka" data-sukunimi="Leppänen" data-lisa="1983–1999 · Vasemmistoliitto · kuolinvuosi 2016"><a href="entiset/168.html"><span class="sukunimi">Leppänen</span>, Pekka<span class="lisa">1983–1999 · Vasemmistoliitto · kuolinvuosi 2016</span></a></li>
+<li data-etunimi="Raimo" data-sukunimi="Liikkanen" data-lisa="1991–1999 · Keskusta · kuolinvuosi 2011"><a href="entiset/377.html"><span class="sukunimi">Liikkanen</span>, Raimo<span class="lisa">1991–1999 · Keskusta · kuolinvuosi 2011</span></a></li>
+<li data-etunimi="Suvi" data-sukunimi="Lindén" data-lisa="1995–2011 · Kokoomus"><a href="entiset/480.html"><span class="sukunimi">Lindén</span>, Suvi<span class="lisa">1995–2011 · Kokoomus</span></a></li>
+<li data-etunimi="Maija-Liisa" data-sukunimi="Lindqvist" data-lisa="1991–1999, 2003–2007 · Keskusta"><a href="entiset/359.html"><span class="sukunimi">Lindqvist</span>, Maija-Liisa<span class="lisa">1991–1999, 2003–2007 · Keskusta</span></a></li>
+<li data-etunimi="Reijo" data-sukunimi="Lindroos" data-lisa="1983–1999 · SDP · kuolinvuosi 2015"><a href="entiset/172.html"><span class="sukunimi">Lindroos</span>, Reijo<span class="lisa">1983–1999 · SDP · kuolinvuosi 2015</span></a></li>
+<li data-etunimi="Jari" data-sukunimi="Lindström" data-lisa="2011–2019 · Perussuomalaiset, Siniset"><a href="entiset/1146.html"><span class="sukunimi">Lindström</span>, Jari<span class="lisa">2011–2019 · Perussuomalaiset, Siniset</span></a></li>
+<li data-etunimi="Tuula" data-sukunimi="Linnainmaa" data-lisa="1987–1997 · Kokoomus"><a href="entiset/173.html"><span class="sukunimi">Linnainmaa</span>, Tuula<span class="lisa">1987–1997 · Kokoomus</span></a></li>
+<li data-etunimi="Minna" data-sukunimi="Lintonen" data-lisa="2003–2007 · SDP"><a href="entiset/783.html"><span class="sukunimi">Lintonen</span>, Minna<span class="lisa">2003–2007 · SDP</span></a></li>
+<li data-etunimi="Paavo" data-sukunimi="Lipponen" data-lisa="1983–1987, 1991–2007 · SDP"><a href="entiset/353.html"><span class="sukunimi">Lipponen</span>, Paavo<span class="lisa">1983–1987, 1991–2007 · SDP</span></a></li>
+<li data-etunimi="Päivi" data-sukunimi="Lipponen" data-lisa="2007–2015 · SDP"><a href="entiset/915.html"><span class="sukunimi">Lipponen</span>, Päivi<span class="lisa">2007–2015 · SDP</span></a></li>
+<li data-etunimi="Maria" data-sukunimi="Lohela" data-lisa="2011–2019 · Perussuomalaiset, Siniset, Liike Nyt"><a href="entiset/1148.html"><span class="sukunimi">Lohela</span>, Maria<span class="lisa">2011–2019 · Perussuomalaiset, Siniset, Liike Nyt</span></a></li>
+<li data-etunimi="Matti" data-sukunimi="Louekoski" data-lisa="1976–1979, 1983–1996 · SDP"><a href="entiset/174.html"><span class="sukunimi">Louekoski</span>, Matti<span class="lisa">1976–1979, 1983–1996 · SDP</span></a></li>
+<li data-etunimi="Anne" data-sukunimi="Louhelainen" data-lisa="2011–2019 · Perussuomalaiset, Siniset"><a href="entiset/1150.html"><span class="sukunimi">Louhelainen</span>, Anne<span class="lisa">2011–2019 · Perussuomalaiset, Siniset</span></a></li>
+<li data-etunimi="Leena" data-sukunimi="Luhtanen" data-lisa="1991–2007 · SDP"><a href="entiset/409.html"><span class="sukunimi">Luhtanen</span>, Leena<span class="lisa">1991–2007 · SDP</span></a></li>
+<li data-etunimi="Eero" data-sukunimi="Lämsä" data-lisa="1995–2007 · Keskusta"><a href="entiset/481.html"><span class="sukunimi">Lämsä</span>, Eero<span class="lisa">1995–2007 · Keskusta</span></a></li>
+<li data-etunimi="Pehr" data-sukunimi="Löv" data-lisa="1995–2007 · RKP"><a href="entiset/482.html"><span class="sukunimi">Löv</span>, Pehr<span class="lisa">1995–2007 · RKP</span></a></li>
+</ul>
+</details>
+<details class="entiset-kirjain" id="ent-M"><summary>M <span class="lukumaara">34</span></summary>
+<ul class="nimilista">
+<li data-etunimi="Eeva-Maria" data-sukunimi="Maijala" data-lisa="2011–2019 · Keskusta"><a href="entiset/1151.html"><span class="sukunimi">Maijala</span>, Eeva-Maria<span class="lisa">2011–2019 · Keskusta</span></a></li>
+<li data-etunimi="Håkan" data-sukunimi="Malm" data-lisa="1975–1999 · RKP · kuolinvuosi 2018"><a href="entiset/188.html"><span class="sukunimi">Malm</span>, Håkan<span class="lisa">1975–1999 · RKP · kuolinvuosi 2018</span></a></li>
+<li data-etunimi="Hannes" data-sukunimi="Manninen" data-lisa="1995–2011 · Keskusta"><a href="entiset/483.html"><span class="sukunimi">Manninen</span>, Hannes<span class="lisa">1995–2011 · Keskusta</span></a></li>
+<li data-etunimi="Sanna" data-sukunimi="Marin" data-lisa="2015–2023 · SDP"><a href="entiset/1297.html"><span class="sukunimi">Marin</span>, Sanna<span class="lisa">2015–2023 · SDP</span></a></li>
+<li data-etunimi="Markku" data-sukunimi="Markkula" data-lisa="1995–2003 · Kokoomus"><a href="entiset/484.html"><span class="sukunimi">Markkula</span>, Markku<span class="lisa">1995–2003 · Kokoomus</span></a></li>
+<li data-etunimi="Hanna" data-sukunimi="Markkula-Kivisilta" data-lisa="1991–2003 · Kokoomus"><a href="entiset/410.html"><span class="sukunimi">Markkula-Kivisilta</span>, Hanna<span class="lisa">1991–2003 · Kokoomus</span></a></li>
+<li data-etunimi="Marjo" data-sukunimi="Matikainen-Kallström" data-lisa="2003–2015 · Kokoomus"><a href="entiset/775.html"><span class="sukunimi">Matikainen-Kallström</span>, Marjo<span class="lisa">2003–2015 · Kokoomus</span></a></li>
+<li data-etunimi="Pirkko" data-sukunimi="Mattila" data-lisa="2011–2019 · Perussuomalaiset, Siniset"><a href="entiset/1152.html"><span class="sukunimi">Mattila</span>, Pirkko<span class="lisa">2011–2019 · Perussuomalaiset, Siniset</span></a></li>
+<li data-etunimi="Rosa" data-sukunimi="Meriläinen" data-lisa="2003–2007 · Vihreät"><a href="entiset/787.html"><span class="sukunimi">Meriläinen</span>, Rosa<span class="lisa">2003–2007 · Vihreät</span></a></li>
+<li data-etunimi="Rauha-Maria" data-sukunimi="Mertjärvi" data-lisa="1998–2003 · Vihreät · kuolinvuosi 2015"><a href="entiset/552.html"><span class="sukunimi">Mertjärvi</span>, Rauha-Maria<span class="lisa">1998–2003 · Vihreät · kuolinvuosi 2015</span></a></li>
+<li data-etunimi="Lauri" data-sukunimi="Metsämäki" data-lisa="1987–1995, 1996–1999 · SDP"><a href="entiset/197.html"><span class="sukunimi">Metsämäki</span>, Lauri<span class="lisa">1987–1995, 1996–1999 · SDP</span></a></li>
+<li data-etunimi="Juha" data-sukunimi="Mieto" data-lisa="2007–2011 · Keskusta"><a href="entiset/944.html"><span class="sukunimi">Mieto</span>, Juha<span class="lisa">2007–2011 · Keskusta</span></a></li>
+<li data-etunimi="Jukka" data-sukunimi="Mikkola" data-lisa="1983–1987, 1995–2003 · SDP · kuolinvuosi 2018"><a href="entiset/445.html"><span class="sukunimi">Mikkola</span>, Jukka<span class="lisa">1983–1987, 1995–2003 · SDP · kuolinvuosi 2018</span></a></li>
+<li data-etunimi="Silvia" data-sukunimi="Modig" data-lisa="2011–2019 · Vasemmistoliitto"><a href="entiset/1153.html"><span class="sukunimi">Modig</span>, Silvia<span class="lisa">2011–2019 · Vasemmistoliitto</span></a></li>
+<li data-etunimi="Riikka" data-sukunimi="Moilanen" data-lisa="2003–2007 · Keskusta"><a href="entiset/798.html"><span class="sukunimi">Moilanen</span>, Riikka<span class="lisa">2003–2007 · Keskusta</span></a></li>
+<li data-etunimi="Markus" data-sukunimi="Mustajärvi" data-lisa="2003–2023 · Vasemmistoliitto, Eduskuntaryhmä Mustajärvi, Vasenryhmä"><a href="entiset/802.html"><span class="sukunimi">Mustajärvi</span>, Markus<span class="lisa">2003–2023 · Vasemmistoliitto, Eduskuntaryhmä Mustajärvi, Vasenryhmä</span></a></li>
+<li data-etunimi="Kai" data-sukunimi="Mykkänen" data-lisa="2015–2025 · Kokoomus"><a href="entiset/1300.html"><span class="sukunimi">Mykkänen</span>, Kai<span class="lisa">2015–2025 · Kokoomus</span></a></li>
+<li data-etunimi="Riitta" data-sukunimi="Myller" data-lisa="1987–1995, 2011–2019 · SDP"><a href="entiset/203.html"><span class="sukunimi">Myller</span>, Riitta<span class="lisa">1987–1995, 2011–2019 · SDP</span></a></li>
+<li data-etunimi="Jari" data-sukunimi="Myllykoski" data-lisa="2011–2023 · Vasemmistoliitto"><a href="entiset/1154.html"><span class="sukunimi">Myllykoski</span>, Jari<span class="lisa">2011–2023 · Vasemmistoliitto</span></a></li>
+<li data-etunimi="Kari" data-sukunimi="Myllyniemi" data-lisa="1995–2003 · Keskusta"><a href="entiset/530.html"><span class="sukunimi">Myllyniemi</span>, Kari<span class="lisa">1995–2003 · Keskusta</span></a></li>
+<li data-etunimi="Raimo" data-sukunimi="Mähönen" data-lisa="1995–2003 · SDP"><a href="entiset/485.html"><span class="sukunimi">Mähönen</span>, Raimo<span class="lisa">1995–2003 · SDP</span></a></li>
+<li data-etunimi="Jukka" data-sukunimi="Mäkelä" data-lisa="2007–2010 · Kokoomus"><a href="entiset/937.html"><span class="sukunimi">Mäkelä</span>, Jukka<span class="lisa">2007–2010 · Kokoomus</span></a></li>
+<li data-etunimi="Outi" data-sukunimi="Mäkelä" data-lisa="2007–2018 · Kokoomus"><a href="entiset/940.html"><span class="sukunimi">Mäkelä</span>, Outi<span class="lisa">2007–2018 · Kokoomus</span></a></li>
+<li data-etunimi="Pertti" data-sukunimi="Mäki-Hakola" data-lisa="1999–2003 · Kokoomus"><a href="entiset/584.html"><span class="sukunimi">Mäki-Hakola</span>, Pertti<span class="lisa">1999–2003 · Kokoomus</span></a></li>
+<li data-etunimi="Tapani" data-sukunimi="Mäkinen" data-lisa="2003–2004, 2007–2015 · Kokoomus"><a href="entiset/817.html"><span class="sukunimi">Mäkinen</span>, Tapani<span class="lisa">2003–2004, 2007–2015 · Kokoomus</span></a></li>
+<li data-etunimi="Lea" data-sukunimi="Mäkipää" data-lisa="1983–1995, 2011–2019 · SMP, Perussuomalaiset, Siniset"><a href="entiset/214.html"><span class="sukunimi">Mäkipää</span>, Lea<span class="lisa">1983–1995, 2011–2019 · SMP, Perussuomalaiset, Siniset</span></a></li>
+<li data-etunimi="Merja" data-sukunimi="Mäkisalo-Ropponen" data-lisa="2011–2023 · SDP"><a href="entiset/1087.html"><span class="sukunimi">Mäkisalo-Ropponen</span>, Merja<span class="lisa">2011–2023 · SDP</span></a></li>
+<li data-etunimi="Jukka" data-sukunimi="Mäkynen" data-lisa="2019–2023 · Perussuomalaiset"><a href="entiset/1438.html"><span class="sukunimi">Mäkynen</span>, Jukka<span class="lisa">2019–2023 · Perussuomalaiset</span></a></li>
+<li data-etunimi="Lasse" data-sukunimi="Männistö" data-lisa="2011–2015 · Kokoomus"><a href="entiset/1156.html"><span class="sukunimi">Männistö</span>, Lasse<span class="lisa">2011–2015 · Kokoomus</span></a></li>
+<li data-etunimi="Hanna" data-sukunimi="Mäntylä" data-lisa="2011–2017 · Perussuomalaiset, Uusi vaihtoehto"><a href="entiset/1088.html"><span class="sukunimi">Mäntylä</span>, Hanna<span class="lisa">2011–2017 · Perussuomalaiset, Uusi vaihtoehto</span></a></li>
+<li data-etunimi="Markku" data-sukunimi="Mäntymaa" data-lisa="2011–2015 · Kokoomus · kuolinvuosi 2015"><a href="entiset/1090.html"><span class="sukunimi">Mäntymaa</span>, Markku<span class="lisa">2011–2015 · Kokoomus · kuolinvuosi 2015</span></a></li>
+<li data-etunimi="Martti" data-sukunimi="Mölsä" data-lisa="2011–2019 · Perussuomalaiset, Siniset"><a href="entiset/1091.html"><span class="sukunimi">Mölsä</span>, Martti<span class="lisa">2011–2019 · Perussuomalaiset, Siniset</span></a></li>
+<li data-etunimi="Tero" data-sukunimi="Mölsä" data-lisa="1991–1995, 1995–1999, 1999–2003 · Keskusta"><a href="entiset/411.html"><span class="sukunimi">Mölsä</span>, Tero<span class="lisa">1991–1995, 1995–1999, 1999–2003 · Keskusta</span></a></li>
+<li data-etunimi="Sinikka" data-sukunimi="Mönkäre" data-lisa="1987–1991, 1995–2006 · SDP"><a href="entiset/218.html"><span class="sukunimi">Mönkäre</span>, Sinikka<span class="lisa">1987–1991, 1995–2006 · SDP</span></a></li>
+</ul>
+</details>
+<details class="entiset-kirjain" id="ent-N"><summary>N <span class="lukumaara">17</span></summary>
+<ul class="nimilista">
+<li data-etunimi="Elisabeth" data-sukunimi="Nauclér" data-lisa="2007–2015 · RKP"><a href="entiset/973.html"><span class="sukunimi">Nauclér</span>, Elisabeth<span class="lisa">2007–2015 · RKP</span></a></li>
+<li data-etunimi="Petri" data-sukunimi="Neittaanmäki" data-lisa="1999–2007 · Keskusta"><a href="entiset/611.html"><span class="sukunimi">Neittaanmäki</span>, Petri<span class="lisa">1999–2007 · Keskusta</span></a></li>
+<li data-etunimi="Olli" data-sukunimi="Nepponen" data-lisa="1999–2011 · Kokoomus"><a href="entiset/585.html"><span class="sukunimi">Nepponen</span>, Olli<span class="lisa">1999–2011 · Kokoomus</span></a></li>
+<li data-etunimi="Mika" data-sukunimi="Niikko" data-lisa="2011–2023 · Perussuomalaiset"><a href="entiset/1092.html"><span class="sukunimi">Niikko</span>, Mika<span class="lisa">2011–2023 · Perussuomalaiset</span></a></li>
+<li data-etunimi="Jussi" data-sukunimi="Niinistö" data-lisa="2011–2019 · Perussuomalaiset, Siniset"><a href="entiset/856.html"><span class="sukunimi">Niinistö</span>, Jussi<span class="lisa">2011–2019 · Perussuomalaiset, Siniset</span></a></li>
+<li data-etunimi="Sauli" data-sukunimi="Niinistö" data-lisa="1987–2003, 2007–2011 · Kokoomus"><a href="entiset/223.html"><span class="sukunimi">Niinistö</span>, Sauli<span class="lisa">1987–2003, 2007–2011 · Kokoomus</span></a></li>
+<li data-etunimi="Ville" data-sukunimi="Niinistö" data-lisa="2007–2019 · Vihreät"><a href="entiset/956.html"><span class="sukunimi">Niinistö</span>, Ville<span class="lisa">2007–2019 · Vihreät</span></a></li>
+<li data-etunimi="Paavo" data-sukunimi="Nikula" data-lisa="1991–1998 · Vihreät · kuolinvuosi 2024"><a href="entiset/412.html"><span class="sukunimi">Nikula</span>, Paavo<span class="lisa">1991–1998 · Vihreät · kuolinvuosi 2024</span></a></li>
+<li data-etunimi="Eija" data-sukunimi="Nivala" data-lisa="2018 · Keskusta"><a href="entiset/1381.html"><span class="sukunimi">Nivala</span>, Eija<span class="lisa">2018 · Keskusta</span></a></li>
+<li data-etunimi="Håkan" data-sukunimi="Nordman" data-lisa="1983–1995, 1999–2003, 2007–2011 · RKP"><a href="entiset/224.html"><span class="sukunimi">Nordman</span>, Håkan<span class="lisa">1983–1995, 1999–2003, 2007–2011 · RKP</span></a></li>
+<li data-etunimi="Ole" data-sukunimi="Norrback" data-lisa="1979–1987, 1991–1999 · RKP"><a href="entiset/304.html"><span class="sukunimi">Norrback</span>, Ole<span class="lisa">1979–1987, 1991–1999 · RKP</span></a></li>
+<li data-etunimi="Pekka" data-sukunimi="Nousiainen" data-lisa="1999–2007 · Keskusta"><a href="entiset/586.html"><span class="sukunimi">Nousiainen</span>, Pekka<span class="lisa">1999–2007 · Keskusta</span></a></li>
+<li data-etunimi="Tuija" data-sukunimi="Nurmi" data-lisa="1995–2011 · Kokoomus"><a href="entiset/486.html"><span class="sukunimi">Nurmi</span>, Tuija<span class="lisa">1995–2011 · Kokoomus</span></a></li>
+<li data-etunimi="Ilmari" data-sukunimi="Nurminen" data-lisa="2015–2025 · SDP"><a href="entiset/1302.html"><span class="sukunimi">Nurminen</span>, Ilmari<span class="lisa">2015–2025 · SDP</span></a></li>
+<li data-etunimi="Mats" data-sukunimi="Nyby" data-lisa="1983–1999 · SDP · kuolinvuosi 2021"><a href="entiset/225.html"><span class="sukunimi">Nyby</span>, Mats<span class="lisa">1983–1999 · SDP · kuolinvuosi 2021</span></a></li>
+<li data-etunimi="Mikaela" data-sukunimi="Nylander" data-lisa="2003–2019 · RKP"><a href="entiset/769.html"><span class="sukunimi">Nylander</span>, Mikaela<span class="lisa">2003–2019 · RKP</span></a></li>
+<li data-etunimi="Mats" data-sukunimi="Nylund" data-lisa="2007–2019 · RKP"><a href="entiset/943.html"><span class="sukunimi">Nylund</span>, Mats<span class="lisa">2007–2019 · RKP</span></a></li>
+</ul>
+</details>
+<details class="entiset-kirjain" id="ent-O"><summary>O <span class="lukumaara">9</span></summary>
+<ul class="nimilista">
+<li data-etunimi="Maria" data-sukunimi="Ohisalo" data-lisa="2019–2024 · Vihreät · Euroopan parlamentin jäsen 16.7.2024 alkaen"><a href="entiset/1387.html"><span class="sukunimi">Ohisalo</span>, Maria<span class="lisa">2019–2024 · Vihreät · Euroopan parlamentin jäsen 16.7.2024 alkaen</span></a></li>
+<li data-etunimi="Lauri" data-sukunimi="Oinonen" data-lisa="1999–2011 · Keskusta"><a href="entiset/587.html"><span class="sukunimi">Oinonen</span>, Lauri<span class="lisa">1999–2011 · Keskusta</span></a></li>
+<li data-etunimi="Pentti" data-sukunimi="Oinonen" data-lisa="2007–2019 · Perussuomalaiset, Siniset"><a href="entiset/936.html"><span class="sukunimi">Oinonen</span>, Pentti<span class="lisa">2007–2019 · Perussuomalaiset, Siniset</span></a></li>
+<li data-etunimi="Arja" data-sukunimi="Ojala" data-lisa="1991–1999 · SDP"><a href="entiset/366.html"><span class="sukunimi">Ojala</span>, Arja<span class="lisa">1991–1999 · SDP</span></a></li>
+<li data-etunimi="Outi" data-sukunimi="Ojala" data-lisa="1991–2007 · Vasemmistoliitto · kuolinvuosi 2017"><a href="entiset/355.html"><span class="sukunimi">Ojala</span>, Outi<span class="lisa">1991–2007 · Vasemmistoliitto · kuolinvuosi 2017</span></a></li>
+<li data-etunimi="Reino" data-sukunimi="Ojala" data-lisa="1995–1999, 2003–2007 · SDP"><a href="entiset/487.html"><span class="sukunimi">Ojala</span>, Reino<span class="lisa">1995–1999, 2003–2007 · SDP</span></a></li>
+<li data-etunimi="Kirsi" data-sukunimi="Ojansuu-Kaunisto" data-lisa="1999–2011 · Vihreät"><a href="entiset/588.html"><span class="sukunimi">Ojansuu-Kaunisto</span>, Kirsi<span class="lisa">1999–2011 · Vihreät</span></a></li>
+<li data-etunimi="Kalevi" data-sukunimi="Olin" data-lisa="1995–2007 · SDP · kuolinvuosi 2023"><a href="entiset/488.html"><span class="sukunimi">Olin</span>, Kalevi<span class="lisa">1995–2007 · SDP · kuolinvuosi 2023</span></a></li>
+<li data-etunimi="Heikki A." data-sukunimi="Ollila" data-lisa="1987–1995, 2003–2011 · Kokoomus"><a href="entiset/204.html"><span class="sukunimi">Ollila</span>, Heikki A.<span class="lisa">1987–1995, 2003–2011 · Kokoomus</span></a></li>
+</ul>
+</details>
+<details class="entiset-kirjain" id="ent-P"><summary>P <span class="lukumaara">45</span></summary>
+<ul class="nimilista">
+<li data-etunimi="Reijo" data-sukunimi="Paajanen" data-lisa="2003–2011 · Kokoomus"><a href="entiset/789.html"><span class="sukunimi">Paajanen</span>, Reijo<span class="lisa">2003–2011 · Kokoomus</span></a></li>
+<li data-etunimi="Reino" data-sukunimi="Paasilinna" data-lisa="1983–1989, 1995–1999 · SDP · kuolinvuosi 2022"><a href="entiset/206.html"><span class="sukunimi">Paasilinna</span>, Reino<span class="lisa">1983–1989, 1995–1999 · SDP · kuolinvuosi 2022</span></a></li>
+<li data-etunimi="Heli" data-sukunimi="Paasio" data-lisa="1999–2015 · SDP"><a href="entiset/589.html"><span class="sukunimi">Paasio</span>, Heli<span class="lisa">1999–2015 · SDP</span></a></li>
+<li data-etunimi="Pertti" data-sukunimi="Paasio" data-lisa="1975–1979, 1982–1999 · SDP · kuolinvuosi 2020"><a href="entiset/207.html"><span class="sukunimi">Paasio</span>, Pertti<span class="lisa">1975–1979, 1982–1999 · SDP · kuolinvuosi 2020</span></a></li>
+<li data-etunimi="Sirpa" data-sukunimi="Paatero" data-lisa="2006–2023 · SDP"><a href="entiset/887.html"><span class="sukunimi">Paatero</span>, Sirpa<span class="lisa">2006–2023 · SDP</span></a></li>
+<li data-etunimi="Tom" data-sukunimi="Packalén" data-lisa="2011–2023 · Perussuomalaiset"><a href="entiset/1095.html"><span class="sukunimi">Packalén</span>, Tom<span class="lisa">2011–2023 · Perussuomalaiset</span></a></li>
+<li data-etunimi="Markku" data-sukunimi="Pakkanen" data-lisa="2007–2011, 2015–2019 · Keskusta"><a href="entiset/925.html"><span class="sukunimi">Pakkanen</span>, Markku<span class="lisa">2007–2011, 2015–2019 · Keskusta</span></a></li>
+<li data-etunimi="Sari" data-sukunimi="Palm" data-lisa="2007–2015 · Kristillisdemokraatit"><a href="entiset/922.html"><span class="sukunimi">Palm</span>, Sari<span class="lisa">2007–2015 · Kristillisdemokraatit</span></a></li>
+<li data-etunimi="Mikael" data-sukunimi="Palola" data-lisa="2014–2015 · Kokoomus"><a href="entiset/1277.html"><span class="sukunimi">Palola</span>, Mikael<span class="lisa">2014–2015 · Kokoomus</span></a></li>
+<li data-etunimi="Aila" data-sukunimi="Paloniemi" data-lisa="2003–2019 · Keskusta"><a href="entiset/811.html"><span class="sukunimi">Paloniemi</span>, Aila<span class="lisa">2003–2019 · Keskusta</span></a></li>
+<li data-etunimi="Erkki" data-sukunimi="Partanen" data-lisa="1995–1999 · SDP · kuolinvuosi 2010"><a href="entiset/489.html"><span class="sukunimi">Partanen</span>, Erkki<span class="lisa">1995–1999 · SDP · kuolinvuosi 2010</span></a></li>
+<li data-etunimi="Olli-Poika" data-sukunimi="Parviainen" data-lisa="2015–2019 · Vihreät"><a href="entiset/1304.html"><span class="sukunimi">Parviainen</span>, Olli-Poika<span class="lisa">2015–2019 · Vihreät</span></a></li>
+<li data-etunimi="Ulla" data-sukunimi="Parviainen" data-lisa="2015–2019 · Keskusta"><a href="entiset/1303.html"><span class="sukunimi">Parviainen</span>, Ulla<span class="lisa">2015–2019 · Keskusta</span></a></li>
+<li data-etunimi="Tauno" data-sukunimi="Pehkonen" data-lisa="1995–1999 · SKL · kuolinvuosi 2013"><a href="entiset/490.html"><span class="sukunimi">Pehkonen</span>, Tauno<span class="lisa">1995–1999 · SKL · kuolinvuosi 2013</span></a></li>
+<li data-etunimi="Mauri" data-sukunimi="Pekkarinen" data-lisa="1979–2019 · Keskusta"><a href="entiset/212.html"><span class="sukunimi">Pekkarinen</span>, Mauri<span class="lisa">1979–2019 · Keskusta</span></a></li>
+<li data-etunimi="Jaana" data-sukunimi="Pelkonen" data-lisa="2011–2023 · Kokoomus"><a href="entiset/1098.html"><span class="sukunimi">Pelkonen</span>, Jaana<span class="lisa">2011–2023 · Kokoomus</span></a></li>
+<li data-etunimi="Terhi" data-sukunimi="Peltokorpi" data-lisa="2004–2007, 2014–2015 · Keskusta"><a href="entiset/848.html"><span class="sukunimi">Peltokorpi</span>, Terhi<span class="lisa">2004–2007, 2014–2015 · Keskusta</span></a></li>
+<li data-etunimi="Pirkko" data-sukunimi="Peltomo" data-lisa="1995–2007 · SDP"><a href="entiset/491.html"><span class="sukunimi">Peltomo</span>, Pirkko<span class="lisa">1995–2007 · SDP</span></a></li>
+<li data-etunimi="Eemeli" data-sukunimi="Peltonen" data-lisa="2023–2025 · SDP · kuolinvuosi 2025"><a href="entiset/1496.html"><span class="sukunimi">Peltonen</span>, Eemeli<span class="lisa">2023–2025 · SDP · kuolinvuosi 2025</span></a></li>
+<li data-etunimi="Tuula" data-sukunimi="Peltonen" data-lisa="2007–2015 · SDP"><a href="entiset/955.html"><span class="sukunimi">Peltonen</span>, Tuula<span class="lisa">2007–2015 · SDP</span></a></li>
+<li data-etunimi="Klaus" data-sukunimi="Pentti" data-lisa="2003–2011 · Keskusta"><a href="entiset/785.html"><span class="sukunimi">Pentti</span>, Klaus<span class="lisa">2003–2011 · Keskusta</span></a></li>
+<li data-etunimi="Risto" data-sukunimi="Penttilä" data-lisa="1995–1999 · Nuorsuomalaiset"><a href="entiset/492.html"><span class="sukunimi">Penttilä</span>, Risto<span class="lisa">1995–1999 · Nuorsuomalaiset</span></a></li>
+<li data-etunimi="Maija" data-sukunimi="Perho" data-lisa="1991–2007 · Kokoomus"><a href="entiset/397.html"><span class="sukunimi">Perho</span>, Maija<span class="lisa">1991–2007 · Kokoomus</span></a></li>
+<li data-etunimi="Sanna" data-sukunimi="Perkiö" data-lisa="2007–2011 · Kokoomus"><a href="entiset/919.html"><span class="sukunimi">Perkiö</span>, Sanna<span class="lisa">2007–2011 · Kokoomus</span></a></li>
+<li data-etunimi="Mikko" data-sukunimi="Pesälä" data-lisa="1975–1999 · Keskusta"><a href="entiset/219.html"><span class="sukunimi">Pesälä</span>, Mikko<span class="lisa">1975–1999 · Keskusta</span></a></li>
+<li data-etunimi="Pirkka-Pekka" data-sukunimi="Petelius" data-lisa="2019–2023 · Vihreät"><a href="entiset/1405.html"><span class="sukunimi">Petelius</span>, Pirkka-Pekka<span class="lisa">2019–2023 · Vihreät</span></a></li>
+<li data-etunimi="Margareta" data-sukunimi="Pietikäinen" data-lisa="1991–2003 · RKP"><a href="entiset/413.html"><span class="sukunimi">Pietikäinen</span>, Margareta<span class="lisa">1991–2003 · RKP</span></a></li>
+<li data-etunimi="Sirpa" data-sukunimi="Pietikäinen" data-lisa="1983–2003 · Kokoomus"><a href="entiset/227.html"><span class="sukunimi">Pietikäinen</span>, Sirpa<span class="lisa">1983–2003 · Kokoomus</span></a></li>
+<li data-etunimi="Kirsi" data-sukunimi="Piha" data-lisa="1994–2003 · Kokoomus"><a href="entiset/441.html"><span class="sukunimi">Piha</span>, Kirsi<span class="lisa">1994–2003 · Kokoomus</span></a></li>
+<li data-etunimi="Petri" data-sukunimi="Pihlajaniemi" data-lisa="2007–2011 · Kokoomus"><a href="entiset/951.html"><span class="sukunimi">Pihlajaniemi</span>, Petri<span class="lisa">2007–2011 · Kokoomus</span></a></li>
+<li data-etunimi="Raimo" data-sukunimi="Piirainen" data-lisa="2009–2015, 2019–2023 · SDP"><a href="entiset/1051.html"><span class="sukunimi">Piirainen</span>, Raimo<span class="lisa">2009–2015, 2019–2023 · SDP</span></a></li>
+<li data-etunimi="Arto" data-sukunimi="Pirttilahti" data-lisa="2011–2023 · Keskusta"><a href="entiset/1101.html"><span class="sukunimi">Pirttilahti</span>, Arto<span class="lisa">2011–2023 · Keskusta</span></a></li>
+<li data-etunimi="Markku" data-sukunimi="Pohjola" data-lisa="1987–1991, 1995–1999 · SDP"><a href="entiset/236.html"><span class="sukunimi">Pohjola</span>, Markku<span class="lisa">1987–1991, 1995–1999 · SDP</span></a></li>
+<li data-etunimi="Tuija" data-sukunimi="Pohjola" data-lisa="1995–1999 · SDP"><a href="entiset/493.html"><span class="sukunimi">Pohjola</span>, Tuija<span class="lisa">1995–1999 · SDP</span></a></li>
+<li data-etunimi="Iivo" data-sukunimi="Polvi" data-lisa="1991–1999, 2001–2007 · Vasemmistoliitto"><a href="entiset/374.html"><span class="sukunimi">Polvi</span>, Iivo<span class="lisa">1991–1999, 2001–2007 · Vasemmistoliitto</span></a></li>
+<li data-etunimi="Riitta" data-sukunimi="Prusti" data-lisa="1995–2003 · SDP"><a href="entiset/494.html"><span class="sukunimi">Prusti</span>, Riitta<span class="lisa">1995–2003 · SDP</span></a></li>
+<li data-etunimi="Matti" data-sukunimi="Puhakka" data-lisa="1975–1991, 1995–1996 · SDP · kuolinvuosi 2021"><a href="entiset/238.html"><span class="sukunimi">Puhakka</span>, Matti<span class="lisa">1975–1991, 1995–1996 · SDP · kuolinvuosi 2021</span></a></li>
+<li data-etunimi="Osmo" data-sukunimi="Puhakka" data-lisa="1999–2003 · Keskusta"><a href="entiset/590.html"><span class="sukunimi">Puhakka</span>, Osmo<span class="lisa">1999–2003 · Keskusta</span></a></li>
+<li data-etunimi="Veijo" data-sukunimi="Puhjo" data-lisa="1995–2011 · Vasemmistoliitto, Eduskuntaryhmä Puhjo, Vasemmistoryhmä · kuolinvuosi 2019"><a href="entiset/495.html"><span class="sukunimi">Puhjo</span>, Veijo<span class="lisa">1995–2011 · Vasemmistoliitto, Eduskuntaryhmä Puhjo, Vasemmistoryhmä · kuolinvuosi 2019</span></a></li>
+<li data-etunimi="Virpa" data-sukunimi="Puisto" data-lisa="1987–2007 · SDP · kuolinvuosi 2013"><a href="entiset/239.html"><span class="sukunimi">Puisto</span>, Virpa<span class="lisa">1987–2007 · SDP · kuolinvuosi 2013</span></a></li>
+<li data-etunimi="Erkki" data-sukunimi="Pulliainen" data-lisa="1987–2011 · Vihreät · kuolinvuosi 2022"><a href="entiset/240.html"><span class="sukunimi">Pulliainen</span>, Erkki<span class="lisa">1987–2011 · Vihreät · kuolinvuosi 2022</span></a></li>
+<li data-etunimi="Pekka" data-sukunimi="Puska" data-lisa="1987–1991, 2017–2019 · Keskusta"><a href="entiset/242.html"><span class="sukunimi">Puska</span>, Pekka<span class="lisa">1987–1991, 2017–2019 · Keskusta</span></a></li>
+<li data-etunimi="Tuomo" data-sukunimi="Puumala" data-lisa="2007–2019 · Keskusta"><a href="entiset/946.html"><span class="sukunimi">Puumala</span>, Tuomo<span class="lisa">2007–2019 · Keskusta</span></a></li>
+<li data-etunimi="Tuija Maaret" data-sukunimi="Pykäläinen" data-lisa="1991–1999 · Vihreät"><a href="entiset/379.html"><span class="sukunimi">Pykäläinen</span>, Tuija Maaret<span class="lisa">1991–1999 · Vihreät</span></a></li>
+<li data-etunimi="Juha" data-sukunimi="Pylväs" data-lisa="2015–2023 · Keskusta"><a href="entiset/1305.html"><span class="sukunimi">Pylväs</span>, Juha<span class="lisa">2015–2023 · Keskusta</span></a></li>
+</ul>
+</details>
+<details class="entiset-kirjain" id="ent-R"><summary>R <span class="lukumaara">29</span></summary>
+<ul class="nimilista">
+<li data-etunimi="Sari" data-sukunimi="Raassina" data-lisa="2015–2019 · Kokoomus"><a href="entiset/1307.html"><span class="sukunimi">Raassina</span>, Sari<span class="lisa">2015–2019 · Kokoomus</span></a></li>
+<li data-etunimi="Mika" data-sukunimi="Raatikainen" data-lisa="2014–2019 · Perussuomalaiset"><a href="entiset/1275.html"><span class="sukunimi">Raatikainen</span>, Mika<span class="lisa">2014–2019 · Perussuomalaiset</span></a></li>
+<li data-etunimi="Susanna" data-sukunimi="Rahkonen" data-lisa="1999–2007 · SDP"><a href="entiset/591.html"><span class="sukunimi">Rahkonen</span>, Susanna<span class="lisa">1999–2007 · SDP</span></a></li>
+<li data-etunimi="Lyly" data-sukunimi="Rajala" data-lisa="2003–2011 · Kristillisdemokraatit, Kokoomus"><a href="entiset/801.html"><span class="sukunimi">Rajala</span>, Lyly<span class="lisa">2003–2011 · Kristillisdemokraatit, Kokoomus</span></a></li>
+<li data-etunimi="Kari" data-sukunimi="Rajamäki" data-lisa="1983–2015 · SDP"><a href="entiset/228.html"><span class="sukunimi">Rajamäki</span>, Kari<span class="lisa">1983–2015 · SDP</span></a></li>
+<li data-etunimi="Jussi" data-sukunimi="Ranta" data-lisa="1983–1995, 1999–2003 · SDP"><a href="entiset/229.html"><span class="sukunimi">Ranta</span>, Jussi<span class="lisa">1983–1995, 1999–2003 · SDP</span></a></li>
+<li data-etunimi="Aulis" data-sukunimi="Ranta-Muotio" data-lisa="1995–2007 · Keskusta"><a href="entiset/496.html"><span class="sukunimi">Ranta-Muotio</span>, Aulis<span class="lisa">1995–2007 · Keskusta</span></a></li>
+<li data-etunimi="Antti" data-sukunimi="Rantakangas" data-lisa="1999–2019 · Keskusta · kuolinvuosi 2019"><a href="entiset/592.html"><span class="sukunimi">Rantakangas</span>, Antti<span class="lisa">1999–2019 · Keskusta · kuolinvuosi 2019</span></a></li>
+<li data-etunimi="Jorma" data-sukunimi="Rantanen" data-lisa="1983–1991, 1995–1999 · SDP"><a href="entiset/230.html"><span class="sukunimi">Rantanen</span>, Jorma<span class="lisa">1983–1991, 1995–1999 · SDP</span></a></li>
+<li data-etunimi="Maija" data-sukunimi="Rask" data-lisa="1991–2007 · SDP"><a href="entiset/383.html"><span class="sukunimi">Rask</span>, Maija<span class="lisa">1991–2007 · SDP</span></a></li>
+<li data-etunimi="Leena" data-sukunimi="Rauhala" data-lisa="1999–2015 · Kristillisdemokraatit · kuolinvuosi 2024"><a href="entiset/593.html"><span class="sukunimi">Rauhala</span>, Leena<span class="lisa">1999–2015 · Kristillisdemokraatit · kuolinvuosi 2024</span></a></li>
+<li data-etunimi="Anssi" data-sukunimi="Rauramo" data-lisa="1987–1998 · Kokoomus"><a href="entiset/232.html"><span class="sukunimi">Rauramo</span>, Anssi<span class="lisa">1987–1998 · Kokoomus</span></a></li>
+<li data-etunimi="Pekka" data-sukunimi="Ravi" data-lisa="1999–2003, 2007–2015 · Kokoomus"><a href="entiset/594.html"><span class="sukunimi">Ravi</span>, Pekka<span class="lisa">1999–2003, 2007–2015 · Kokoomus</span></a></li>
+<li data-etunimi="Olli" data-sukunimi="Rehn" data-lisa="1991–1995, 2015–2017 · Keskusta"><a href="entiset/356.html"><span class="sukunimi">Rehn</span>, Olli<span class="lisa">1991–1995, 2015–2017 · Keskusta</span></a></li>
+<li data-etunimi="Vuokko" data-sukunimi="Rehn" data-lisa="1995–1999 · Keskusta · kuolinvuosi 2011"><a href="entiset/497.html"><span class="sukunimi">Rehn</span>, Vuokko<span class="lisa">1995–1999 · Keskusta · kuolinvuosi 2011</span></a></li>
+<li data-etunimi="Veronica" data-sukunimi="Rehn-Kivi" data-lisa="2016–2023 · RKP"><a href="entiset/1374.html"><span class="sukunimi">Rehn-Kivi</span>, Veronica<span class="lisa">2016–2023 · RKP</span></a></li>
+<li data-etunimi="Juha" data-sukunimi="Rehula" data-lisa="1996–2019 · Keskusta"><a href="entiset/541.html"><span class="sukunimi">Rehula</span>, Juha<span class="lisa">1996–2019 · Keskusta</span></a></li>
+<li data-etunimi="Eero" data-sukunimi="Reijonen" data-lisa="2003–2015, 2018–2019 · Keskusta"><a href="entiset/796.html"><span class="sukunimi">Reijonen</span>, Eero<span class="lisa">2003–2015, 2018–2019 · Keskusta</span></a></li>
+<li data-etunimi="Eila" data-sukunimi="Rimmi" data-lisa="1991–1999 · Vasemmistoliitto"><a href="entiset/367.html"><span class="sukunimi">Rimmi</span>, Eila<span class="lisa">1991–1999 · Vasemmistoliitto</span></a></li>
+<li data-etunimi="Heikki" data-sukunimi="Rinne" data-lisa="1987–1999 · SDP · kuolinvuosi 2022"><a href="entiset/246.html"><span class="sukunimi">Rinne</span>, Heikki<span class="lisa">1987–1999 · SDP · kuolinvuosi 2022</span></a></li>
+<li data-etunimi="Jukka" data-sukunimi="Roos" data-lisa="1987–1999, 2003–2007 · SDP"><a href="entiset/247.html"><span class="sukunimi">Roos</span>, Jukka<span class="lisa">1987–1999, 2003–2007 · SDP</span></a></li>
+<li data-etunimi="Ola" data-sukunimi="Rosendahl" data-lisa="1995–2003 · RKP · kuolinvuosi 2008"><a href="entiset/498.html"><span class="sukunimi">Rosendahl</span>, Ola<span class="lisa">1995–2003 · RKP · kuolinvuosi 2008</span></a></li>
+<li data-etunimi="Markku" data-sukunimi="Rossi" data-lisa="1991–1995, 1999, 2000–2019 · Keskusta"><a href="entiset/375.html"><span class="sukunimi">Rossi</span>, Markku<span class="lisa">1991–1995, 1999, 2000–2019 · Keskusta</span></a></li>
+<li data-etunimi="Simo" data-sukunimi="Rundgren" data-lisa="2003–2007, 2011–2015 · Keskusta"><a href="entiset/803.html"><span class="sukunimi">Rundgren</span>, Simo<span class="lisa">2003–2007, 2011–2015 · Keskusta</span></a></li>
+<li data-etunimi="Veera" data-sukunimi="Ruoho" data-lisa="2015–2019 · Perussuomalaiset, Eduskuntaryhmä Ruoho, Kokoomus"><a href="entiset/1309.html"><span class="sukunimi">Ruoho</span>, Veera<span class="lisa">2015–2019 · Perussuomalaiset, Eduskuntaryhmä Ruoho, Kokoomus</span></a></li>
+<li data-etunimi="Pirkko" data-sukunimi="Ruohonen-Lerner" data-lisa="2007–2019 · Perussuomalaiset"><a href="entiset/920.html"><span class="sukunimi">Ruohonen-Lerner</span>, Pirkko<span class="lisa">2007–2019 · Perussuomalaiset</span></a></li>
+<li data-etunimi="Matti" data-sukunimi="Ryhänen" data-lisa="1995–1999 · SKL, Keskusta · kuolinvuosi 2018"><a href="entiset/514.html"><span class="sukunimi">Ryhänen</span>, Matti<span class="lisa">1995–1999 · SKL, Keskusta · kuolinvuosi 2018</span></a></li>
+<li data-etunimi="Mirja" data-sukunimi="Ryynänen" data-lisa="1987–1995, 1999–2003 · Keskusta"><a href="entiset/250.html"><span class="sukunimi">Ryynänen</span>, Mirja<span class="lisa">1987–1995, 1999–2003 · Keskusta</span></a></li>
+<li data-etunimi="Tero" data-sukunimi="Rönni" data-lisa="1999–2011 · SDP · kuolinvuosi 2023"><a href="entiset/595.html"><span class="sukunimi">Rönni</span>, Tero<span class="lisa">1999–2011 · SDP · kuolinvuosi 2023</span></a></li>
+</ul>
+</details>
+<details class="entiset-kirjain" id="ent-S"><summary>S <span class="lukumaara">50</span></summary>
+<ul class="nimilista">
+<li data-etunimi="Pauli" data-sukunimi="Saapunki" data-lisa="1987–2003 · Keskusta"><a href="entiset/256.html"><span class="sukunimi">Saapunki</span>, Pauli<span class="lisa">1987–2003 · Keskusta</span></a></li>
+<li data-etunimi="Vesa-Matti" data-sukunimi="Saarakkala" data-lisa="2011–2019 · Perussuomalaiset, Siniset"><a href="entiset/1041.html"><span class="sukunimi">Saarakkala</span>, Vesa-Matti<span class="lisa">2011–2019 · Perussuomalaiset, Siniset</span></a></li>
+<li data-etunimi="Aapo" data-sukunimi="Saari" data-lisa="1983–1999 · Keskusta · kuolinvuosi 2025"><a href="entiset/257.html"><span class="sukunimi">Saari</span>, Aapo<span class="lisa">1983–1999 · Keskusta · kuolinvuosi 2025</span></a></li>
+<li data-etunimi="Martin" data-sukunimi="Saarikangas" data-lisa="2003–2007 · Kokoomus"><a href="entiset/776.html"><span class="sukunimi">Saarikangas</span>, Martin<span class="lisa">2003–2007 · Kokoomus</span></a></li>
+<li data-etunimi="Annika" data-sukunimi="Saarikko" data-lisa="2011–2025 · Keskusta"><a href="entiset/1157.html"><span class="sukunimi">Saarikko</span>, Annika<span class="lisa">2011–2025 · Keskusta</span></a></li>
+<li data-etunimi="Matti" data-sukunimi="Saarinen" data-lisa="1987–1991, 1995–2015 · SDP · kuolinvuosi 2021"><a href="entiset/253.html"><span class="sukunimi">Saarinen</span>, Matti<span class="lisa">1987–1991, 1995–2015 · SDP · kuolinvuosi 2021</span></a></li>
+<li data-etunimi="Väinö" data-sukunimi="Saario" data-lisa="1991–1996 · Kokoomus · kuolinvuosi 1996"><a href="entiset/361.html"><span class="sukunimi">Saario</span>, Väinö<span class="lisa">1991–1996 · Kokoomus · kuolinvuosi 1996</span></a></li>
+<li data-etunimi="Pekka" data-sukunimi="Saarnio" data-lisa="1996–1999 · Vasemmistoliitto · kuolinvuosi 2020"><a href="entiset/542.html"><span class="sukunimi">Saarnio</span>, Pekka<span class="lisa">1996–1999 · Vasemmistoliitto · kuolinvuosi 2020</span></a></li>
+<li data-etunimi="Suldaan" data-sukunimi="Said Ahmed" data-lisa="2021–2023 · Vasemmistoliitto"><a href="entiset/1479.html"><span class="sukunimi">Said Ahmed</span>, Suldaan<span class="lisa">2021–2023 · Vasemmistoliitto</span></a></li>
+<li data-etunimi="Aura" data-sukunimi="Salla" data-lisa="2023–2024 · Kokoomus · Euroopan parlamentin jäsen 16.7.2024 alkaen"><a href="entiset/1487.html"><span class="sukunimi">Salla</span>, Aura<span class="lisa">2023–2024 · Kokoomus · Euroopan parlamentin jäsen 16.7.2024 alkaen</span></a></li>
+<li data-etunimi="Mauri" data-sukunimi="Salo" data-lisa="1995–1996, 1999–2003, 2006–2007, 2010–2011 · Keskusta · kuolinvuosi 2012"><a href="entiset/515.html"><span class="sukunimi">Salo</span>, Mauri<span class="lisa">1995–1996, 1999–2003, 2006–2007, 2010–2011 · Keskusta · kuolinvuosi 2012</span></a></li>
+<li data-etunimi="Petri" data-sukunimi="Salo" data-lisa="1999–2011 · Kokoomus"><a href="entiset/596.html"><span class="sukunimi">Salo</span>, Petri<span class="lisa">1999–2011 · Kokoomus</span></a></li>
+<li data-etunimi="Pertti" data-sukunimi="Salolainen" data-lisa="1970–1996, 2007–2019 · Kokoomus"><a href="entiset/259.html"><span class="sukunimi">Salolainen</span>, Pertti<span class="lisa">1970–1996, 2007–2019 · Kokoomus</span></a></li>
+<li data-etunimi="Kristiina" data-sukunimi="Salonen" data-lisa="2011–2023 · SDP"><a href="entiset/1102.html"><span class="sukunimi">Salonen</span>, Kristiina<span class="lisa">2011–2023 · SDP</span></a></li>
+<li data-etunimi="Pertti" data-sukunimi="Salovaara" data-lisa="2003–2011 · Keskusta"><a href="entiset/762.html"><span class="sukunimi">Salovaara</span>, Pertti<span class="lisa">2003–2011 · Keskusta</span></a></li>
+<li data-etunimi="Janne" data-sukunimi="Sankelo" data-lisa="2011–2015, 2019–2023 · Kokoomus"><a href="entiset/1105.html"><span class="sukunimi">Sankelo</span>, Janne<span class="lisa">2011–2015, 2019–2023 · Kokoomus</span></a></li>
+<li data-etunimi="Jussi" data-sukunimi="Saramo" data-lisa="2019–2024 · Vasemmistoliitto · Euroopan parlamentin jäsen 16.7.2024 alkaen"><a href="entiset/1400.html"><span class="sukunimi">Saramo</span>, Jussi<span class="lisa">2019–2024 · Vasemmistoliitto · Euroopan parlamentin jäsen 16.7.2024 alkaen</span></a></li>
+<li data-etunimi="Kimmo" data-sukunimi="Sasi" data-lisa="1983–2015 · Kokoomus · kuolinvuosi 2025"><a href="entiset/261.html"><span class="sukunimi">Sasi</span>, Kimmo<span class="lisa">1983–2015 · Kokoomus · kuolinvuosi 2025</span></a></li>
+<li data-etunimi="Oiva" data-sukunimi="Savela" data-lisa="1987–1999 · Kokoomus"><a href="entiset/255.html"><span class="sukunimi">Savela</span>, Oiva<span class="lisa">1987–1999 · Kokoomus</span></a></li>
+<li data-etunimi="Ismo" data-sukunimi="Seivästö" data-lisa="1991–1995, 1999–2003 · SKL, Kristillisdemokraatit"><a href="entiset/399.html"><span class="sukunimi">Seivästö</span>, Ismo<span class="lisa">1991–1995, 1999–2003 · SKL, Kristillisdemokraatit</span></a></li>
+<li data-etunimi="Matti" data-sukunimi="Semi" data-lisa="2015–2023 · Vasemmistoliitto"><a href="entiset/1315.html"><span class="sukunimi">Semi</span>, Matti<span class="lisa">2015–2023 · Vasemmistoliitto</span></a></li>
+<li data-etunimi="Arto" data-sukunimi="Seppälä" data-lisa="1999–2007 · SDP"><a href="entiset/597.html"><span class="sukunimi">Seppälä</span>, Arto<span class="lisa">1999–2007 · SDP</span></a></li>
+<li data-etunimi="Timo" data-sukunimi="Seppälä" data-lisa="1999–2007 · Kokoomus"><a href="entiset/598.html"><span class="sukunimi">Seppälä</span>, Timo<span class="lisa">1999–2007 · Kokoomus</span></a></li>
+<li data-etunimi="Esko" data-sukunimi="Seppänen" data-lisa="1987–1999 · Vasemmistoliitto · kuolinvuosi 2025"><a href="entiset/254.html"><span class="sukunimi">Seppänen</span>, Esko<span class="lisa">1987–1999 · Vasemmistoliitto · kuolinvuosi 2025</span></a></li>
+<li data-etunimi="Janne" data-sukunimi="Seurujärvi" data-lisa="2007–2011 · Keskusta"><a href="entiset/965.html"><span class="sukunimi">Seurujärvi</span>, Janne<span class="lisa">2007–2011 · Keskusta</span></a></li>
+<li data-etunimi="Paula" data-sukunimi="Sihto" data-lisa="2007–2011 · Keskusta"><a href="entiset/949.html"><span class="sukunimi">Sihto</span>, Paula<span class="lisa">2007–2011 · Keskusta</span></a></li>
+<li data-etunimi="Outi" data-sukunimi="Siimes" data-lisa="1996–1999 · Kokoomus"><a href="entiset/533.html"><span class="sukunimi">Siimes</span>, Outi<span class="lisa">1996–1999 · Kokoomus</span></a></li>
+<li data-etunimi="Suvi-Anne" data-sukunimi="Siimes" data-lisa="1999–2007 · Vasemmistoliitto"><a href="entiset/554.html"><span class="sukunimi">Siimes</span>, Suvi-Anne<span class="lisa">1999–2007 · Vasemmistoliitto</span></a></li>
+<li data-etunimi="Anni" data-sukunimi="Sinnemäki" data-lisa="1999–2015 · Vihreät"><a href="entiset/600.html"><span class="sukunimi">Sinnemäki</span>, Anni<span class="lisa">1999–2015 · Vihreät</span></a></li>
+<li data-etunimi="Juha" data-sukunimi="Sipilä" data-lisa="2011–2023 · Keskusta"><a href="entiset/1108.html"><span class="sukunimi">Sipilä</span>, Juha<span class="lisa">2011–2023 · Keskusta</span></a></li>
+<li data-etunimi="Saara-Sofia" data-sukunimi="Sirén" data-lisa="2015–2026 · Kokoomus"><a href="entiset/1219.html"><span class="sukunimi">Sirén</span>, Saara-Sofia<span class="lisa">2015–2026 · Kokoomus</span></a></li>
+<li data-etunimi="Minna" data-sukunimi="Sirnö" data-lisa="2003–2011 · Vasemmistoliitto"><a href="entiset/788.html"><span class="sukunimi">Sirnö</span>, Minna<span class="lisa">2003–2011 · Vasemmistoliitto</span></a></li>
+<li data-etunimi="Juhani" data-sukunimi="Sjöblom" data-lisa="1997–2007 · Kokoomus"><a href="entiset/544.html"><span class="sukunimi">Sjöblom</span>, Juhani<span class="lisa">1997–2007 · Kokoomus</span></a></li>
+<li data-etunimi="Ruut" data-sukunimi="Sjöblom" data-lisa="2019–2023 · Kokoomus"><a href="entiset/1395.html"><span class="sukunimi">Sjöblom</span>, Ruut<span class="lisa">2019–2023 · Kokoomus</span></a></li>
+<li data-etunimi="Jouko" data-sukunimi="Skinnari" data-lisa="1980–2015 · SDP · kuolinvuosi 2016"><a href="entiset/267.html"><span class="sukunimi">Skinnari</span>, Jouko<span class="lisa">1980–2015 · SDP · kuolinvuosi 2016</span></a></li>
+<li data-etunimi="Riikka" data-sukunimi="Slunga-Poutsalo" data-lisa="2019–2023 · Perussuomalaiset"><a href="entiset/1393.html"><span class="sukunimi">Slunga-Poutsalo</span>, Riikka<span class="lisa">2019–2023 · Perussuomalaiset</span></a></li>
+<li data-etunimi="Sakari" data-sukunimi="Smeds" data-lisa="1995–2003 · Kristillisdemokraatit"><a href="entiset/500.html"><span class="sukunimi">Smeds</span>, Sakari<span class="lisa">1995–2003 · Kristillisdemokraatit</span></a></li>
+<li data-etunimi="Timo" data-sukunimi="Soini" data-lisa="2003–2019 · Perussuomalaiset, Siniset"><a href="entiset/767.html"><span class="sukunimi">Soini</span>, Timo<span class="lisa">2003–2019 · Perussuomalaiset, Siniset</span></a></li>
+<li data-etunimi="Mirka" data-sukunimi="Soinikoski" data-lisa="2019–2023 · Vihreät"><a href="entiset/1416.html"><span class="sukunimi">Soinikoski</span>, Mirka<span class="lisa">2019–2023 · Vihreät</span></a></li>
+<li data-etunimi="Osmo" data-sukunimi="Soininvaara" data-lisa="1987–1991, 1995–2007, 2011–2015 · Vihreät"><a href="entiset/265.html"><span class="sukunimi">Soininvaara</span>, Osmo<span class="lisa">1987–1991, 1995–2007, 2011–2015 · Vihreät</span></a></li>
+<li data-etunimi="Ismo" data-sukunimi="Soukola" data-lisa="2011–2015 · Perussuomalaiset"><a href="entiset/1110.html"><span class="sukunimi">Soukola</span>, Ismo<span class="lisa">2011–2015 · Perussuomalaiset</span></a></li>
+<li data-etunimi="Marjatta" data-sukunimi="Stenius-Kaukonen" data-lisa="1975–1995, 1999–2003 · SKDL, Demokraattinen vaihtoehto, Vasemmistoliitto"><a href="entiset/272.html"><span class="sukunimi">Stenius-Kaukonen</span>, Marjatta<span class="lisa">1975–1995, 1999–2003 · SKDL, Demokraattinen vaihtoehto, Vasemmistoliitto</span></a></li>
+<li data-etunimi="Alexander" data-sukunimi="Stubb" data-lisa="2011–2017 · Kokoomus"><a href="entiset/1031.html"><span class="sukunimi">Stubb</span>, Alexander<span class="lisa">2011–2017 · Kokoomus</span></a></li>
+<li data-etunimi="Aino" data-sukunimi="Suhola" data-lisa="1991–1999 · Keskusta"><a href="entiset/372.html"><span class="sukunimi">Suhola</span>, Aino<span class="lisa">1991–1999 · Keskusta</span></a></li>
+<li data-etunimi="Johanna" data-sukunimi="Sumuvuori" data-lisa="2006–2011, 2015 · Vihreät"><a href="entiset/894.html"><span class="sukunimi">Sumuvuori</span>, Johanna<span class="lisa">2006–2011, 2015 · Vihreät</span></a></li>
+<li data-etunimi="Iiris" data-sukunimi="Suomela" data-lisa="2019–2023 · Vihreät"><a href="entiset/1423.html"><span class="sukunimi">Suomela</span>, Iiris<span class="lisa">2019–2023 · Vihreät</span></a></li>
+<li data-etunimi="Eero" data-sukunimi="Suutari" data-lisa="2011–2019 · Kokoomus"><a href="entiset/1111.html"><span class="sukunimi">Suutari</span>, Eero<span class="lisa">2011–2019 · Kokoomus</span></a></li>
+<li data-etunimi="Katja" data-sukunimi="Syvärinen" data-lisa="1999–2003 · Vasemmistoliitto"><a href="entiset/601.html"><span class="sukunimi">Syvärinen</span>, Katja<span class="lisa">1999–2003 · Vasemmistoliitto</span></a></li>
+<li data-etunimi="Seppo" data-sukunimi="Särkiniemi" data-lisa="2003–2007, 2010–2011 · Keskusta"><a href="entiset/773.html"><span class="sukunimi">Särkiniemi</span>, Seppo<span class="lisa">2003–2007, 2010–2011 · Keskusta</span></a></li>
+<li data-etunimi="Jacob" data-sukunimi="Söderman" data-lisa="1972–1982, 2007–2011 · SDP"><a href="entiset/311.html"><span class="sukunimi">Söderman</span>, Jacob<span class="lisa">1972–1982, 2007–2011 · SDP</span></a></li>
+</ul>
+</details>
+<details class="entiset-kirjain" id="ent-T"><summary>T <span class="lukumaara">40</span></summary>
+<ul class="nimilista">
+<li data-etunimi="Satu" data-sukunimi="Taavitsainen" data-lisa="2015–2019 · SDP"><a href="entiset/1319.html"><span class="sukunimi">Taavitsainen</span>, Satu<span class="lisa">2015–2019 · SDP</span></a></li>
+<li data-etunimi="Tommy" data-sukunimi="Tabermann" data-lisa="2007–2010 · SDP · kuolinvuosi 2010"><a href="entiset/929.html"><span class="sukunimi">Tabermann</span>, Tommy<span class="lisa">2007–2010 · SDP · kuolinvuosi 2010</span></a></li>
+<li data-etunimi="Säde" data-sukunimi="Tahvanainen" data-lisa="1995–2007 · SDP"><a href="entiset/501.html"><span class="sukunimi">Tahvanainen</span>, Säde<span class="lisa">1995–2007 · SDP</span></a></li>
+<li data-etunimi="Katja" data-sukunimi="Taimela" data-lisa="2007–2023 · SDP"><a href="entiset/952.html"><span class="sukunimi">Taimela</span>, Katja<span class="lisa">2007–2023 · SDP</span></a></li>
+<li data-etunimi="Anneli" data-sukunimi="Taina" data-lisa="1987–1999 · Kokoomus"><a href="entiset/275.html"><span class="sukunimi">Taina</span>, Anneli<span class="lisa">1987–1999 · Kokoomus</span></a></li>
+<li data-etunimi="Hanna" data-sukunimi="Tainio" data-lisa="2011–2015 · SDP"><a href="entiset/1112.html"><span class="sukunimi">Tainio</span>, Hanna<span class="lisa">2011–2015 · SDP</span></a></li>
+<li data-etunimi="Ilkka" data-sukunimi="Taipale" data-lisa="1971–1975, 2000–2007 · SDP"><a href="entiset/620.html"><span class="sukunimi">Taipale</span>, Ilkka<span class="lisa">1971–1975, 2000–2007 · SDP</span></a></li>
+<li data-etunimi="Satu" data-sukunimi="Taiveaho" data-lisa="2003–2011 · SDP"><a href="entiset/782.html"><span class="sukunimi">Taiveaho</span>, Satu<span class="lisa">2003–2011 · SDP</span></a></li>
+<li data-etunimi="Hannu" data-sukunimi="Takkula" data-lisa="1995–2007 · Keskusta"><a href="entiset/502.html"><span class="sukunimi">Takkula</span>, Hannu<span class="lisa">1995–2007 · Keskusta</span></a></li>
+<li data-etunimi="Martti" data-sukunimi="Talja" data-lisa="2015–2019 · Keskusta"><a href="entiset/1321.html"><span class="sukunimi">Talja</span>, Martti<span class="lisa">2015–2019 · Keskusta</span></a></li>
+<li data-etunimi="Tarja" data-sukunimi="Tallqvist" data-lisa="2007–2011 · Kristillisdemokraatit"><a href="entiset/933.html"><span class="sukunimi">Tallqvist</span>, Tarja<span class="lisa">2007–2011 · Kristillisdemokraatit</span></a></li>
+<li data-etunimi="Jukka" data-sukunimi="Tarkka" data-lisa="1995–1999 · Nuorsuomalaiset"><a href="entiset/503.html"><span class="sukunimi">Tarkka</span>, Jukka<span class="lisa">1995–1999 · Nuorsuomalaiset</span></a></li>
+<li data-etunimi="Esko-Juhani" data-sukunimi="Tennilä" data-lisa="1975–2011 · SKDL, Demokraattinen vaihtoehto, Vasemmistoliitto, Vasemmistoryhmä · kuolinvuosi 2024"><a href="entiset/278.html"><span class="sukunimi">Tennilä</span>, Esko-Juhani<span class="lisa">1975–2011 · SKDL, Demokraattinen vaihtoehto, Vasemmistoliitto, Vasemmistoryhmä · kuolinvuosi 2024</span></a></li>
+<li data-etunimi="Sampo" data-sukunimi="Terho" data-lisa="2015–2019 · Perussuomalaiset, Siniset"><a href="entiset/1347.html"><span class="sukunimi">Terho</span>, Sampo<span class="lisa">2015–2019 · Perussuomalaiset, Siniset</span></a></li>
+<li data-etunimi="Astrid" data-sukunimi="Thors" data-lisa="2003–2013 · RKP"><a href="entiset/770.html"><span class="sukunimi">Thors</span>, Astrid<span class="lisa">2003–2013 · RKP</span></a></li>
+<li data-etunimi="Eila" data-sukunimi="Tiainen" data-lisa="2011–2015 · Vasemmistoliitto"><a href="entiset/1113.html"><span class="sukunimi">Tiainen</span>, Eila<span class="lisa">2011–2015 · Vasemmistoliitto</span></a></li>
+<li data-etunimi="Kimmo" data-sukunimi="Tiilikainen" data-lisa="2003–2019 · Keskusta"><a href="entiset/790.html"><span class="sukunimi">Tiilikainen</span>, Kimmo<span class="lisa">2003–2019 · Keskusta</span></a></li>
+<li data-etunimi="Raimo" data-sukunimi="Tiilikainen" data-lisa="1995–1999 · RKP · kuolinvuosi 2023"><a href="entiset/504.html"><span class="sukunimi">Tiilikainen</span>, Raimo<span class="lisa">1995–1999 · RKP · kuolinvuosi 2023</span></a></li>
+<li data-etunimi="Marja" data-sukunimi="Tiura" data-lisa="1999–2011 · Kokoomus"><a href="entiset/602.html"><span class="sukunimi">Tiura</span>, Marja<span class="lisa">1999–2011 · Kokoomus</span></a></li>
+<li data-etunimi="Martti" data-sukunimi="Tiuri" data-lisa="1983–2003 · Kokoomus · kuolinvuosi 2016"><a href="entiset/279.html"><span class="sukunimi">Tiuri</span>, Martti<span class="lisa">1983–2003 · Kokoomus · kuolinvuosi 2016</span></a></li>
+<li data-etunimi="Pentti" data-sukunimi="Tiusanen" data-lisa="1995–2011 · Vasemmistoliitto · kuolinvuosi 2018"><a href="entiset/505.html"><span class="sukunimi">Tiusanen</span>, Pentti<span class="lisa">1995–2011 · Vasemmistoliitto · kuolinvuosi 2018</span></a></li>
+<li data-etunimi="Lenita" data-sukunimi="Toivakka" data-lisa="2007–2019 · Kokoomus"><a href="entiset/932.html"><span class="sukunimi">Toivakka</span>, Lenita<span class="lisa">2007–2019 · Kokoomus</span></a></li>
+<li data-etunimi="Jani" data-sukunimi="Toivola" data-lisa="2011–2019 · Vihreät"><a href="entiset/1114.html"><span class="sukunimi">Toivola</span>, Jani<span class="lisa">2011–2019 · Vihreät</span></a></li>
+<li data-etunimi="Maria" data-sukunimi="Tolppanen" data-lisa="2011–2019 · Perussuomalaiset, SDP"><a href="entiset/1116.html"><span class="sukunimi">Tolppanen</span>, Maria<span class="lisa">2011–2019 · Perussuomalaiset, SDP</span></a></li>
+<li data-etunimi="Kari" data-sukunimi="Tolvanen" data-lisa="2011–2023 · Kokoomus"><a href="entiset/1118.html"><span class="sukunimi">Tolvanen</span>, Kari<span class="lisa">2011–2023 · Kokoomus</span></a></li>
+<li data-etunimi="Ari" data-sukunimi="Torniainen" data-lisa="2011–2023 · Keskusta"><a href="entiset/1120.html"><span class="sukunimi">Torniainen</span>, Ari<span class="lisa">2011–2023 · Keskusta</span></a></li>
+<li data-etunimi="Pilvi" data-sukunimi="Torsti" data-lisa="2017–2019 · SDP"><a href="entiset/1378.html"><span class="sukunimi">Torsti</span>, Pilvi<span class="lisa">2017–2019 · SDP</span></a></li>
+<li data-etunimi="Matti" data-sukunimi="Torvinen" data-lisa="2017–2019 · Siniset"><a href="entiset/1372.html"><span class="sukunimi">Torvinen</span>, Matti<span class="lisa">2017–2019 · Siniset</span></a></li>
+<li data-etunimi="Reijo" data-sukunimi="Tossavainen" data-lisa="2011–2015 · Perussuomalaiset"><a href="entiset/1123.html"><span class="sukunimi">Tossavainen</span>, Reijo<span class="lisa">2011–2015 · Perussuomalaiset</span></a></li>
+<li data-etunimi="Pekka" data-sukunimi="Toveri" data-lisa="2023–2024 · Kokoomus · Euroopan parlamentin jäsen 16.7.2024 alkaen"><a href="entiset/1494.html"><span class="sukunimi">Toveri</span>, Pekka<span class="lisa">2023–2024 · Kokoomus · Euroopan parlamentin jäsen 16.7.2024 alkaen</span></a></li>
+<li data-etunimi="Irja" data-sukunimi="Tulonen" data-lisa="1995–2007 · Kokoomus"><a href="entiset/506.html"><span class="sukunimi">Tulonen</span>, Irja<span class="lisa">1995–2007 · Kokoomus</span></a></li>
+<li data-etunimi="Erkki" data-sukunimi="Tuomioja" data-lisa="1970–1979, 1991–2023 · SDP"><a href="entiset/357.html"><span class="sukunimi">Tuomioja</span>, Erkki<span class="lisa">1970–1979, 1991–2023 · SDP</span></a></li>
+<li data-etunimi="Ano" data-sukunimi="Turtiainen" data-lisa="2019–2023 · Perussuomalaiset, edustaja Turtiainen, Eduskuntaryhmä Valta kuuluu kansalle"><a href="entiset/1427.html"><span class="sukunimi">Turtiainen</span>, Ano<span class="lisa">2019–2023 · Perussuomalaiset, edustaja Turtiainen, Eduskuntaryhmä Valta kuuluu kansalle</span></a></li>
+<li data-etunimi="Pertti" data-sukunimi="Turtiainen" data-lisa="1999–2003 · Vasemmistoliitto"><a href="entiset/603.html"><span class="sukunimi">Turtiainen</span>, Pertti<span class="lisa">1999–2003 · Vasemmistoliitto</span></a></li>
+<li data-etunimi="Kaj" data-sukunimi="Turunen" data-lisa="2011–2019 · Perussuomalaiset, Siniset, Kokoomus"><a href="entiset/1128.html"><span class="sukunimi">Turunen</span>, Kaj<span class="lisa">2011–2019 · Perussuomalaiset, Siniset, Kokoomus</span></a></li>
+<li data-etunimi="Kauko" data-sukunimi="Tuupainen" data-lisa="2011–2015 · Perussuomalaiset"><a href="entiset/1130.html"><span class="sukunimi">Tuupainen</span>, Kauko<span class="lisa">2011–2015 · Perussuomalaiset</span></a></li>
+<li data-etunimi="Marja-Liisa" data-sukunimi="Tykkyläinen" data-lisa="1983–2003 · SDP · kuolinvuosi 2026"><a href="entiset/283.html"><span class="sukunimi">Tykkyläinen</span>, Marja-Liisa<span class="lisa">1983–2003 · SDP · kuolinvuosi 2026</span></a></li>
+<li data-etunimi="Sebastian" data-sukunimi="Tynkkynen" data-lisa="2019–2024 · Perussuomalaiset · Euroopan parlamentin jäsen 16.7.2024 alkaen"><a href="entiset/1451.html"><span class="sukunimi">Tynkkynen</span>, Sebastian<span class="lisa">2019–2024 · Perussuomalaiset · Euroopan parlamentin jäsen 16.7.2024 alkaen</span></a></li>
+<li data-etunimi="Tapani" data-sukunimi="Tölli" data-lisa="2003–2019 · Keskusta"><a href="entiset/800.html"><span class="sukunimi">Tölli</span>, Tapani<span class="lisa">2003–2019 · Keskusta</span></a></li>
+<li data-etunimi="Kerttu" data-sukunimi="Törnqvist" data-lisa="1983–1999 · SDP · kuolinvuosi 2002"><a href="entiset/288.html"><span class="sukunimi">Törnqvist</span>, Kerttu<span class="lisa">1983–1999 · SDP · kuolinvuosi 2002</span></a></li>
+</ul>
+</details>
+<details class="entiset-kirjain" id="ent-U"><summary>U <span class="lukumaara">7</span></summary>
+<ul class="nimilista">
+<li data-etunimi="Tuulikki" data-sukunimi="Ukkola" data-lisa="1991–1995, 2007–2011 · LKP, Kokoomus · kuolinvuosi 2019"><a href="entiset/389.html"><span class="sukunimi">Ukkola</span>, Tuulikki<span class="lisa">1991–1995, 2007–2011 · LKP, Kokoomus · kuolinvuosi 2019</span></a></li>
+<li data-etunimi="Riitta" data-sukunimi="Uosukainen" data-lisa="1983–2003 · Kokoomus"><a href="entiset/291.html"><span class="sukunimi">Uosukainen</span>, Riitta<span class="lisa">1983–2003 · Kokoomus</span></a></li>
+<li data-etunimi="Kari" data-sukunimi="Uotila" data-lisa="1995–2007, 2008–2019 · Vasemmistoliitto"><a href="entiset/507.html"><span class="sukunimi">Uotila</span>, Kari<span class="lisa">1995–2007, 2008–2019 · Vasemmistoliitto</span></a></li>
+<li data-etunimi="Anu" data-sukunimi="Urpalainen" data-lisa="2012–2015 · Kokoomus"><a href="entiset/1226.html"><span class="sukunimi">Urpalainen</span>, Anu<span class="lisa">2012–2015 · Kokoomus</span></a></li>
+<li data-etunimi="Jutta" data-sukunimi="Urpilainen" data-lisa="2003–2019 · SDP"><a href="entiset/808.html"><span class="sukunimi">Urpilainen</span>, Jutta<span class="lisa">2003–2019 · SDP</span></a></li>
+<li data-etunimi="Kari" data-sukunimi="Urpilainen" data-lisa="1983–1995, 1999–2003 · SDP"><a href="entiset/297.html"><span class="sukunimi">Urpilainen</span>, Kari<span class="lisa">1983–1995, 1999–2003 · SDP</span></a></li>
+<li data-etunimi="Markku" data-sukunimi="Uusipaavalniemi" data-lisa="2007–2011 · Keskusta, Perussuomalaiset"><a href="entiset/942.html"><span class="sukunimi">Uusipaavalniemi</span>, Markku<span class="lisa">2007–2011 · Keskusta, Perussuomalaiset</span></a></li>
+</ul>
+</details>
+<details class="entiset-kirjain" id="ent-V"><summary>V <span class="lukumaara">35</span></summary>
+<ul class="nimilista">
+<li data-etunimi="Raija" data-sukunimi="Vahasalo" data-lisa="1999–2015, 2018–2019 · Kokoomus"><a href="entiset/605.html"><span class="sukunimi">Vahasalo</span>, Raija<span class="lisa">1999–2015, 2018–2019 · Kokoomus</span></a></li>
+<li data-etunimi="Veikko" data-sukunimi="Vallin" data-lisa="2019–2023 · Perussuomalaiset"><a href="entiset/1420.html"><span class="sukunimi">Vallin</span>, Veikko<span class="lisa">2019–2023 · Perussuomalaiset</span></a></li>
+<li data-etunimi="Unto" data-sukunimi="Valpas" data-lisa="1999–2011 · Vasemmistoliitto · kuolinvuosi 2016"><a href="entiset/604.html"><span class="sukunimi">Valpas</span>, Unto<span class="lisa">1999–2011 · Vasemmistoliitto · kuolinvuosi 2016</span></a></li>
+<li data-etunimi="Matti" data-sukunimi="Vanhanen" data-lisa="1991–2010, 2015–2023 · Keskusta"><a href="entiset/414.html"><span class="sukunimi">Vanhanen</span>, Matti<span class="lisa">1991–2010, 2015–2023 · Keskusta</span></a></li>
+<li data-etunimi="Jan" data-sukunimi="Vapaavuori" data-lisa="2003–2015 · Kokoomus"><a href="entiset/766.html"><span class="sukunimi">Vapaavuori</span>, Jan<span class="lisa">2003–2015 · Kokoomus</span></a></li>
+<li data-etunimi="Antero" data-sukunimi="Vartia" data-lisa="2015–2019 · Vihreät"><a href="entiset/1329.html"><span class="sukunimi">Vartia</span>, Antero<span class="lisa">2015–2019 · Vihreät</span></a></li>
+<li data-etunimi="Helena" data-sukunimi="Vartiainen" data-lisa="1996–1999 · SDP"><a href="entiset/543.html"><span class="sukunimi">Vartiainen</span>, Helena<span class="lisa">1996–1999 · SDP</span></a></li>
+<li data-etunimi="Juhana" data-sukunimi="Vartiainen" data-lisa="2015–2021 · Kokoomus"><a href="entiset/1330.html"><span class="sukunimi">Vartiainen</span>, Juhana<span class="lisa">2015–2021 · Kokoomus</span></a></li>
+<li data-etunimi="Marjatta" data-sukunimi="Vehkaoja" data-lisa="1991–2003 · SDP"><a href="entiset/418.html"><span class="sukunimi">Vehkaoja</span>, Marjatta<span class="lisa">1991–2003 · SDP</span></a></li>
+<li data-etunimi="Mirja" data-sukunimi="Vehkaperä" data-lisa="2007–2019 · Keskusta"><a href="entiset/962.html"><span class="sukunimi">Vehkaperä</span>, Mirja<span class="lisa">2007–2019 · Keskusta</span></a></li>
+<li data-etunimi="Anu" data-sukunimi="Vehviläinen" data-lisa="1995–2003, 2007–2023 · Keskusta"><a href="entiset/508.html"><span class="sukunimi">Vehviläinen</span>, Anu<span class="lisa">1995–2003, 2007–2023 · Keskusta</span></a></li>
+<li data-etunimi="Maija-Liisa" data-sukunimi="Veteläinen" data-lisa="1995–1999 · Keskusta"><a href="entiset/509.html"><span class="sukunimi">Veteläinen</span>, Maija-Liisa<span class="lisa">1995–1999 · Keskusta</span></a></li>
+<li data-etunimi="Ahti" data-sukunimi="Vielma" data-lisa="2003–2007 · Kokoomus"><a href="entiset/810.html"><span class="sukunimi">Vielma</span>, Ahti<span class="lisa">2003–2007 · Kokoomus</span></a></li>
+<li data-etunimi="Jukka" data-sukunimi="Vihriälä" data-lisa="1983–2007 · Keskusta"><a href="entiset/292.html"><span class="sukunimi">Vihriälä</span>, Jukka<span class="lisa">1983–2007 · Keskusta</span></a></li>
+<li data-etunimi="Iiro" data-sukunimi="Viinanen" data-lisa="1983–1996 · Kokoomus"><a href="entiset/293.html"><span class="sukunimi">Viinanen</span>, Iiro<span class="lisa">1983–1996 · Kokoomus</span></a></li>
+<li data-etunimi="Janne" data-sukunimi="Viitamies" data-lisa="1995–1999 · SDP"><a href="entiset/510.html"><span class="sukunimi">Viitamies</span>, Janne<span class="lisa">1995–1999 · SDP</span></a></li>
+<li data-etunimi="Pauliina" data-sukunimi="Viitamies" data-lisa="2007–2015 · SDP"><a href="entiset/928.html"><span class="sukunimi">Viitamies</span>, Pauliina<span class="lisa">2007–2015 · SDP</span></a></li>
+<li data-etunimi="Jari" data-sukunimi="Vilén" data-lisa="1999–2007 · Kokoomus"><a href="entiset/606.html"><span class="sukunimi">Vilén</span>, Jari<span class="lisa">1999–2007 · Kokoomus</span></a></li>
+<li data-etunimi="Marja-Leena" data-sukunimi="Viljamaa" data-lisa="1991–1999 · SDP · kuolinvuosi 2003"><a href="entiset/373.html"><span class="sukunimi">Viljamaa</span>, Marja-Leena<span class="lisa">1991–1999 · SDP · kuolinvuosi 2003</span></a></li>
+<li data-etunimi="Heidi" data-sukunimi="Viljanen" data-lisa="2019–2023 · SDP"><a href="entiset/1414.html"><span class="sukunimi">Viljanen</span>, Heidi<span class="lisa">2019–2023 · SDP</span></a></li>
+<li data-etunimi="Ilkka" data-sukunimi="Viljanen" data-lisa="2007–2011 · Kokoomus"><a href="entiset/968.html"><span class="sukunimi">Viljanen</span>, Ilkka<span class="lisa">2007–2011 · Kokoomus</span></a></li>
+<li data-etunimi="Pekka" data-sukunimi="Vilkuna" data-lisa="1999–2011 · Keskusta"><a href="entiset/607.html"><span class="sukunimi">Vilkuna</span>, Pekka<span class="lisa">1999–2011 · Keskusta</span></a></li>
+<li data-etunimi="Lasse" data-sukunimi="Virén" data-lisa="1999–2007, 2010–2011 · Kokoomus"><a href="entiset/608.html"><span class="sukunimi">Virén</span>, Lasse<span class="lisa">1999–2007, 2010–2011 · Kokoomus</span></a></li>
+<li data-etunimi="Henna" data-sukunimi="Virkkunen" data-lisa="2007–2015 · Kokoomus"><a href="entiset/957.html"><span class="sukunimi">Virkkunen</span>, Henna<span class="lisa">2007–2015 · Kokoomus</span></a></li>
+<li data-etunimi="Anne-Mari" data-sukunimi="Virolainen" data-lisa="2007–2023, 2026 · Kokoomus"><a href="entiset/948.html"><span class="sukunimi">Virolainen</span>, Anne-Mari<span class="lisa">2007–2023, 2026 · Kokoomus</span></a></li>
+<li data-etunimi="Erkki" data-sukunimi="Virtanen" data-lisa="2003–2015 · Vasemmistoliitto"><a href="entiset/793.html"><span class="sukunimi">Virtanen</span>, Erkki<span class="lisa">2003–2015 · Vasemmistoliitto</span></a></li>
+<li data-etunimi="Pertti" data-sukunimi="Virtanen" data-lisa="1995–1999, 2007–2015 · Eduskuntaryhmä Virtanen, Perussuomalaiset"><a href="entiset/512.html"><span class="sukunimi">Virtanen</span>, Pertti<span class="lisa">1995–1999, 2007–2015 · Eduskuntaryhmä Virtanen, Perussuomalaiset</span></a></li>
+<li data-etunimi="Raimo" data-sukunimi="Vistbacka" data-lisa="1987–2011 · Perussuomalaiset"><a href="entiset/295.html"><span class="sukunimi">Vistbacka</span>, Raimo<span class="lisa">1987–2011 · Perussuomalaiset</span></a></li>
+<li data-etunimi="Jorma" data-sukunimi="Vokkolainen" data-lisa="1995–2001 · Vasemmistoliitto · kuolinvuosi 2001"><a href="entiset/513.html"><span class="sukunimi">Vokkolainen</span>, Jorma<span class="lisa">1995–2001 · Vasemmistoliitto · kuolinvuosi 2001</span></a></li>
+<li data-etunimi="Antti" data-sukunimi="Vuolanne" data-lisa="2007–2011 · SDP"><a href="entiset/961.html"><span class="sukunimi">Vuolanne</span>, Antti<span class="lisa">2007–2011 · SDP</span></a></li>
+<li data-etunimi="Markku" data-sukunimi="Vuorensola" data-lisa="1991–1999 · Keskusta · kuolinvuosi 2023"><a href="entiset/369.html"><span class="sukunimi">Vuorensola</span>, Markku<span class="lisa">1991–1999 · Keskusta · kuolinvuosi 2023</span></a></li>
+<li data-etunimi="Matti" data-sukunimi="Vähänäkki" data-lisa="1987–2003 · SDP · kuolinvuosi 2012"><a href="entiset/299.html"><span class="sukunimi">Vähänäkki</span>, Matti<span class="lisa">1987–2003 · SDP · kuolinvuosi 2012</span></a></li>
+<li data-etunimi="Matti" data-sukunimi="Väistö" data-lisa="1987–2007 · Keskusta"><a href="entiset/251.html"><span class="sukunimi">Väistö</span>, Matti<span class="lisa">1987–2007 · Keskusta</span></a></li>
+<li data-etunimi="Paavo" data-sukunimi="Väyrynen" data-lisa="1970–2003, 2007–2011, 2015–2019 · Keskusta, edustaja Väyrynen, Tähtiliike"><a href="entiset/300.html"><span class="sukunimi">Väyrynen</span>, Paavo<span class="lisa">1970–2003, 2007–2011, 2015–2019 · Keskusta, edustaja Väyrynen, Tähtiliike</span></a></li>
+<li data-etunimi="Juha" data-sukunimi="Väätäinen" data-lisa="2011–2015 · Perussuomalaiset"><a href="entiset/1139.html"><span class="sukunimi">Väätäinen</span>, Juha<span class="lisa">2011–2015 · Perussuomalaiset</span></a></li>
+</ul>
+</details>
+<details class="entiset-kirjain" id="ent-W"><summary>W <span class="lukumaara">5</span></summary>
+<ul class="nimilista">
+<li data-etunimi="Jarmo" data-sukunimi="Wahlström" data-lisa="1975–1983, 1987–1999 · SKDL, Vasemmistoliitto · kuolinvuosi 2013"><a href="entiset/280.html"><span class="sukunimi">Wahlström</span>, Jarmo<span class="lisa">1975–1983, 1987–1999 · SKDL, Vasemmistoliitto · kuolinvuosi 2013</span></a></li>
+<li data-etunimi="Harry" data-sukunimi="Wallin" data-lisa="1999–2007, 2014–2019 · SDP"><a href="entiset/609.html"><span class="sukunimi">Wallin</span>, Harry<span class="lisa">1999–2007, 2014–2019 · SDP</span></a></li>
+<li data-etunimi="Stefan" data-sukunimi="Wallin" data-lisa="2007–2019 · RKP"><a href="entiset/910.html"><span class="sukunimi">Wallin</span>, Stefan<span class="lisa">2007–2019 · RKP</span></a></li>
+<li data-etunimi="Ulla-Maj" data-sukunimi="Wideroos" data-lisa="1995–2015 · RKP"><a href="entiset/475.html"><span class="sukunimi">Wideroos</span>, Ulla-Maj<span class="lisa">1995–2015 · RKP</span></a></li>
+<li data-etunimi="Jussi" data-sukunimi="Wihonen" data-lisa="2019–2023 · Perussuomalaiset"><a href="entiset/1436.html"><span class="sukunimi">Wihonen</span>, Jussi<span class="lisa">2019–2023 · Perussuomalaiset</span></a></li>
+</ul>
+</details>
+<details class="entiset-kirjain" id="ent-Y"><summary>Y <span class="lukumaara">3</span></summary>
+<ul class="nimilista">
+<li data-etunimi="Ozan" data-sukunimi="Yanar" data-lisa="2015–2019 · Vihreät"><a href="entiset/1332.html"><span class="sukunimi">Yanar</span>, Ozan<span class="lisa">2015–2019 · Vihreät</span></a></li>
+<li data-etunimi="Jaana" data-sukunimi="Ylä-Mononen" data-lisa="1999–2007 · Keskusta"><a href="entiset/610.html"><span class="sukunimi">Ylä-Mononen</span>, Jaana<span class="lisa">1999–2007 · Keskusta</span></a></li>
+<li data-etunimi="Jyrki" data-sukunimi="Yrttiaho" data-lisa="2007–2015 · Vasemmistoliitto, Eduskuntaryhmä Yrttiaho, Vasenryhmä · kuolinvuosi 2021"><a href="entiset/945.html"><span class="sukunimi">Yrttiaho</span>, Jyrki<span class="lisa">2007–2015 · Vasemmistoliitto, Eduskuntaryhmä Yrttiaho, Vasenryhmä · kuolinvuosi 2021</span></a></li>
+</ul>
+</details>
+</div>
+<p class="osiolahde">Lähde: Eduskunnan avoin data (CC BY 4.0), kansanedustajien tiedot.</p>
+<details class="rajat"><summary>Tiedon rajat</summary>
+<p>Listalla ovat kaikki, jotka olivat kansanedustajina 24.3.1995 jälkeen eivätkä ole nykyisiä kansanedustajia. Mukana ovat myös ne viisi, jotka lähtivät ennen ensimmäistä aineiston äänestystä (12.6.1996) tai eivät äänestäneet puhemiehenä.</p>
+<p>Kaudet ovat edustajantoimen vuodet, myös ennen vuotta 1995. Ryhmät ovat eduskuntaryhmät uran ajalta aikajärjestyksessä. Kuolinvuosi näytetään, jos se on eduskunnan tiedoissa.</p>
+</details>
+</section>
+<div class="kortti rajakortti">
+<p class="osiolahde">Lähde: Eduskunnan avoin data (CC BY 4.0), täysistuntojen äänestykset.</p>
+<details class="rajat"><summary>Tiedon rajat</summary>
+<p>Äänestysaineisto alkaa 12.6.1996. Äänestysten määrä vaihtelee kausittain: pienin 995, suurin 3&nbsp;836.</p>
+<p>Poissaolon syitä ei näytetä aiemmilla kausilla, koska syyt ovat aineistossa vasta vuodesta 2015 ja syyluokat muuttuivat lokakuussa 2021. Perustelu on jokaisen kauden sivulla.</p>
+</details>
+</div>
+<nav class="listanav listanav-ala" aria-label="Top-listat, sivun lopussa"><a class="alkuun" href="#alku">↑ Sivun alkuun</a><a class="etusivulle" href="index.html">← Etusivu</a><span class="listanav-otsikko">Top-listat</span><a href="listat-poissaolot.html">Läsnäolo</a><a href="listat-poikkeamat.html">Poikkeamat ryhmälinjasta</a><a href="listat-kulut.html">Kampanjakulut</a><a href="lobbaus-eduskunnassa.html">Lobbaus</a><a href="vaalirahoittajat.html">Vaalirahoittajat</a><a href="listat-kaudet.html" aria-current="page">Aiemmat kaudet</a></nav>
+<p class="lahde">Lähteet on kerrottu kunkin osion lopussa. <a href="tietoa.html">Tietoa palvelusta ja lähteistä</a>. <a href="tietosuoja.html">Tietosuoja</a>.</p>
+</div>
+<script>
+(function () {
+  // Entisten haku (luonnos 1.10.2026). Toimii kuten etusivun haku: alkukirjainhaku, tarkkeet huomiotta,
+  // osumat kentän alle enintään 8. Ei hae mitään netistä eikä tallenna mitään. Ei innerHTML:ää.
+  var lomake = document.getElementById('entiset-haku');
+  var kentta = document.getElementById('entiset-kentta');
+  var tulos = document.getElementById('entiset-tulos');
+  var osumalista = document.getElementById('entiset-osumat');
+  if (!lomake || !kentta || !tulos || !osumalista) return;
+  var rivit = [].slice.call(document.querySelectorAll('#entiset .nimilista li'));
+  function pelkista(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/\p{M}/gu, '').replace(/\s+/g, ' ').trim();
+  }
+  rivit.forEach(function (r) {
+    var etu = pelkista(r.getAttribute('data-etunimi'));
+    var suku = pelkista(r.getAttribute('data-sukunimi'));
+    r.hakusanat = (etu + ' ' + suku).split(/[ -]/).concat([suku, suku + ' ' + etu, etu + ' ' + suku]);
+  });
+  function paivita() {
+    var q = pelkista(kentta.value);
+    var osumat = q === '' ? [] : rivit.filter(function (r) {
+      return r.hakusanat.some(function (s) { return s.indexOf(q) === 0; });
+    });
+    if (q === '') tulos.textContent = '';
+    else if (osumat.length === 0) tulos.textContent = 'Ei osumia. Tarkista kirjoitusasu tai kokeile alkukirjaimia. Haku kattaa ' + rivit.length + ' entistä kansanedustajaa (vuodesta 1995).';
+    else if (osumat.length === 1) tulos.textContent = 'Yksi osuma. Napauta nimeä tai paina Enter.';
+    else tulos.textContent = osumat.length + ' osumaa.';
+    while (osumalista.firstChild) osumalista.removeChild(osumalista.firstChild);
+    if (q !== '' && osumat.length) {
+      osumat.slice(0, 8).forEach(function (r) {
+        var a0 = r.querySelector('a'), li = document.createElement('li'), a = document.createElement('a');
+        a.href = a0.getAttribute('href');
+        a.textContent = (r.getAttribute('data-etunimi') || '') + ' ' + (r.getAttribute('data-sukunimi') || '');
+        var lisa = r.getAttribute('data-lisa');
+        if (lisa) {
+          var s = document.createElement('span');
+          s.className = 'osuma-lisa';
+          s.textContent = lisa;
+          a.appendChild(s);
+        }
+        li.appendChild(a);
+        osumalista.appendChild(li);
+      });
+      if (osumat.length > 8) {
+        var li2 = document.createElement('li');
+        li2.className = 'lisaa';
+        li2.textContent = 'Ja ' + (osumat.length - 8) + ' muuta – kirjoita lisää kirjaimia tai katso aakkoslista alempana.';
+        osumalista.appendChild(li2);
+      }
+      osumalista.hidden = false;
+    } else osumalista.hidden = true;
+    return osumat;
+  }
+  lomake.hidden = false;
+  kentta.addEventListener('input', paivita);
+  lomake.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var osumat = paivita();
+    if (osumat.length === 1) location.href = osumat[0].querySelector('a').getAttribute('href');
+  });
+})();
+</script>
+<script src="listat2.js"></script>
+</body>
+</html>

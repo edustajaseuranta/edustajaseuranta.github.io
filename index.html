@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Kirjoita kansanedustajan sukunimi ja näe, kuka hän on, miten hän on äänestänyt, mitä hän on esittänyt, kuka häneen on ollut yhteydessä ja mistä vaalirahat tulivat. Eduskunnan avoin data.">
+<link rel="canonical" href="https://edustajaseuranta.fi/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fi_FI">
+<meta property="og:site_name" content="Edustajaseuranta">
+<meta property="og:title" content="Edustajaseuranta">
+<meta property="og:description" content="Kirjoita kansanedustajan sukunimi ja näe, kuka hän on, miten hän on äänestänyt, mitä hän on esittänyt, kuka häneen on ollut yhteydessä ja mistä vaalirahat tulivat. Eduskunnan avoin data.">
+<meta property="og:url" content="https://edustajaseuranta.fi/">
+<meta property="og:image" content="https://edustajaseuranta.fi/kuvake-512.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Edustajaseuranta</title>
+<link rel="stylesheet" href="tyyli.css">
+<script src="teema.js"></script>
+<link rel="icon" href="kuvake.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="kuvake-512.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-title" content="Edustajat">
+<meta name="theme-color" content="#0047ab">
+</head>
+<body>
+<a class="ohitus" href="#sisalto">Siirry sisältöön</a>
+<div class="sisalto">
+
+<header class="hero">
+  <div class="hero-runko">
+  <div class="hero-teksti">
+    <div class="hero-nimi"><svg class="hero-merkki" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><rect width="512" height="512" rx="112" fill="#ffffff"/><rect x="118" y="250" width="68" height="152" rx="14" fill="#0047ab"/><rect x="222" y="170" width="68" height="232" rx="14" fill="#0047ab"/><rect x="326" y="110" width="68" height="292" rx="14" fill="#0047ab"/></svg><h1 id="sisalto" tabindex="-1">Edustajaseuranta</h1></div>
+    <p class="hero-iskulause">Katso, miten kansanedustajasi äänestää.</p>
+    <p class="esittely-teksti">Edustajaseuranta näyttää, miten kukin 200 kansanedustajasta on äänestänyt ja mitä hän on tehnyt eduskunnassa – suoraan eduskunnan avoimesta datasta.</p>
+    <form class="kortti haku" id="haku" role="search" hidden>
+      <label for="kentta">Kirjoita sukunimi</label>
+      <div class="hakurivi"><svg class="hakukuvake" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><input id="kentta" type="search" autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="search" placeholder="esim. Purra tai Salolainen"></div>
+      <p class="vinkki hakuvinkki">Haku löytää myös entiset kansanedustajat vuoden 1995 vaaleista alkaen.</p>
+      <p id="tulos" class="vinkki" aria-live="polite"></p>
+      <ul id="osumat" class="osumalista" hidden></ul>
+      <script id="entiset-data" type="application/json">[["1346","Touko","Aalto","2015–2019"],["102","Markus","Aaltonen","1975–1999"],["103","Matti","Ahde","1970–2011"],["104","Esko","Aho","1983–2003"],["557","Hannu","Aho","1999–2003"],["804","Esko","Ahonen","2003–2011"],["1086","Sauli","Ahvenjärvi","2011–2015"],["107","Sulo","Aittoniemi","1987–2003"],["558","Eero","Akaan-Penttilä","1999–2011"],["113","Kirsti","Ala-Harja","1987–1999"],["392","Olavi","Ala-Nissilä","1991–2019"],["914","Outi","Alanko-Kahiluoto","2007–2023"],["117","Juhani","Alaranta","1983–1999"],["786","Mikko","Alatalo","2003–2019"],["111","Arja","Alho","1983–2007"],["121","Claes","Andersson","1987–2008"],["446","Janina","Andersson","1995–2011"],["1310","Li","Andersson","2015–2024"],["127","Sirkka-Liisa","Anttila","1983–2019"],["404","Ulla","Anttila","1991–2007"],["129","Pirjo-Riitta","Antvuori","1987–2003"],["130","Asko","Apukka","1987–1998"],["917","Paavo","Arhinmäki","2007–2021"],["764","Sirpa","Asko-Seljavaara","2003–2011"],["380","Maria Kaisa","Aula","1991–2003"],["447","Matti","Aura","1995–1999"],["966","Risto","Autio","2007–2011"],["133","Jouni","Backman","1987–2015"],["1313","Anne","Berner","2015–2019"],["923","Thomas","Blomqvist","2007–2023"],["448","Tuija","Brax","1995–2015"],["449","Klaus","Bremer","1995–2003"],["450","Arto","Bryggare","1995–2007"],["795","Tarja","Cronberg","2003–2007"],["109","Jörn","Donner","1987–2015"],["110","Kaarina","Dromberg","1983–2007"],["112","Mikko","Elo","1979–2007"],["1317","Simon","Elo","2015–2019"],["1320","Tiina","Elovaara","2015–2019"],["393","Jan-Erik","Enestam","1991–2007"],["559","Rainer","Erlund","1999–2000"],["931","Maarit","Feldt-Ranta","2007–2019"],["560","Merikukka","Forsius","1999–2011"],["623","Christina","Gestrin","2000–2015"],["561","Nils-Anders","Granvik","1999–2007"],["116","Jukka","Gustafsson","1987–2023"],["926","Maria","Guzenina","2007–2024"],["1103","Lars Erik","Gästgivars","2011–2015"],["1104","Satu","Haapanen","2011–2015"],["806","Susanna","Haapoja","2003–2009"],["118","Pekka","Haavisto","1987–2026"],["1217","Carl","Haglund","2015–2016"],["1322","Pertti","Hakanen","2015–2019"],["1107","Teuvo","Hakkarainen","2011–2023"],["916","Juha","Hakola","2007–2011"],["763","Tony","Halme","2003–2007"],["1324","Hanna","Halmeenpää","2015–2019"],["122","Tarja","Halonen","1979–2000"],["562","Leena","Harkimo","1999–2015"],["363","Satu","Hassi","1991–2023"],["352","Heidi","Hautala","1991–2011"],["805","Lasse","Hautala","2003–2019"],["1115","Lauri","Heikkilä","2011–2015"],["938","Hannakaisa","Heikkinen","2007–2023"],["420","Olli-Pekka","Heinonen","1995–2002"],["768","Eero","Heinäluoma","2003–2019"],["452","Klaus","Hellberg","1995–2007"],["125","Esko","Helle","1983–2003"],["777","Hanna-Leena","Hemming","2003–2011"],["941","Anna-Maja","Henriksson","2007–2024"],["401","Leea","Hiltunen","1991–2003"],["564","Rakel","Hiltunen","1999–2015"],["1117","James","Hirvisaari","2011–2015"],["630","Anne","Holmlund","2002–2015"],["531","Raimo","Holopainen","1996–1999"],["1119","Reijo","Hongisto","2011–2019"],["453","Anne","Huotari","1995–2007"],["565","Susanna","Huovinen","1999–2018"],["136","Sinikka","Hurskainen","1983–2011"],["454","Terttu","Huttu-Juntunen","1995–1999"],["137","Jorma","Huuhtanen","1987–2000"],["553","Matti","Huutola","1998–2003"],["455","Liisa","Hyssälä","1995–2010"],["566","Jyri","Häkämies","1999–2012"],["138","Kari","Häkämies","1987–1998"],["139","Tuulikki","Hämäläinen","1983–1999"],["1276","Katja","Hänninen","2014–2023"],["799","Tuomo","Hänninen","2003–2011"],["1121","Lauri","Ihalainen","2011–2019"],["430","Timo","Ihamäki","1979–2003"],["456","Mikko","Immonen","1995–2007"],["1122","Olli","Immonen","2011–2023"],["145","Tytti","Isohookana-Asunmaa","1983–2003"],["457","Ville","Itälä","1995–2007"],["147","Liisa","Jaakonsaari","1979–2011"],["1124","Ari","Jalonen","2011–2019"],["148","Gunnar","Jansson","1983–2003"],["780","Roger","Jansson","2003–2007"],["1335","Marisanna","Jarva","2015–2019"],["972","Harri","Jaskari","2007–2019"],["149","Ilkka","Joenpalo","1987–1997"],["1056","Kalle","Jokinen","2009–2023"],["910615","Anssi","Joutsenlahti","1979–2015"],["157","Kauko","Juhantalo","1979–2019"],["1125","Mikael","Jungner","2011–2015"],["1127","Johanna","Jurva","2011–2015"],["1053","Timo","Juurikkala","2009–2011"],["458","Ulla","Juurola","1995–2003"],["160","Heikki","Järvenpää","1979–1999"],["394","Timo","Järvilahti","1991–1999"],["930","Heli","Järvinen","2007–2023"],["405","Jouko","Jääskeläinen","1991–2015"],["1052","Pietari","Jääskeläinen","2009–2015"],["189","Anneli","Jäätteenmäki","1987–2007"],["395","Marjut","Kaarilahti","1991–1999"],["402","Timo","Kalli","1991–2019"],["459","Reijo","Kallio","1995–2011"],["166","Antti","Kalliomäki","1983–2011"],["1132","Risto","Kalliorinne","2011–2019"],["417","Bjarne","Kallis","1991–2011"],["964","Oiva","Kaltiokumpu","2007–2011"],["567","Erkki","Kanerva","1999–2003"],["170","Ilkka","Kanerva","1975–2022"],["539","Seppo","Kanerva","1996–2003"],["614","Matti","Kangas","1999–2011"],["175","Toimi","Kankaanniemi","1987–2023"],["460","Kari","Kantalainen","1995–2003"],["954","Ilkka","Kantola","2007–2019"],["568","Saara","Karhu","1999–2015"],["406","Minna","Karhunen","1991–1999"],["918","Arja","Karhuvaara","2007–2011"],["1336","Emma","Kari","2015–2023"],["921","Johanna","Karimäki","2007–2019"],["461","Tapio","Karjalainen","1995–2003"],["462","Kyösti","Karjula","1995–2011"],["569","Tanja","Karpela","1999–2011"],["463","Juha","Karpio","1995–2003"],["570","Marjukka","Karttunen","1999–2007"],["969","Ulla","Karvo","2007–2011"],["849","Tatja","Karvonen","2004–2007"],["771","Jyrki","Kasvi","2003–2019"],["939","Elsi","Katainen","2007–2019"],["571","Jyrki","Katainen","1999–2014"],["958","Sampsa","Kataja","2007–2015"],["950","Timo","Kaunisto","2007–2011"],["781","Matti","Kauppila","2003–2011"],["1444","Juho","Kautto","2019–2023"],["307","Tarja","Kautto","1989–2003"],["179","Antero","Kekkonen","1987–2007"],["322","Hannu","Kemppainen","1983–1999"],["572","Marja-Leena","Kemppainen","1999–2003"],["613","Inkeri","Kerola","1999–2015"],["573","Niilo","Keränen","1999–2019"],["306","Pentti","Kettunen","1983–2015"],["792","Rauno","Kettunen","2003–2007"],["791","Anneli","Kiljunen","2003–2023"],["1480","Jari","Kinnunen","2021–2023"],["1453","Mikko","Kinnunen","2019–2023"],["1138","Kimmo","Kivelä","2011–2019"],["465","Mari","Kiviniemi","1995–2014"],["779","Esko","Kiviranta","2003–2023"],["1442","Pasi","Kivisaari","2019–2023"],["466","Anne","Knaapi-Lamminen","1995–1999"],["192","Annikki","Koistinen","1987–1999"],["1140","Osmo","Kokko","2011–2015"],["467","Paula","Kokkonen","1995–2003"],["384","Armas","Komi","1991–1999"],["574","Katri","Komi","1999–2015"],["1404","Noora","Koponen","2019–2023"],["386","Martti","Korhonen","1991–2015"],["468","Riitta","Korhonen","1995–2003"],["959","Timo V.","Korhonen","2007–2019"],["403","Juha","Korkeaoja","1991–2011"],["442","Ossi","Korteniemi","1994–2001"],["381","Timo E.","Korva","1991–2003"],["1143","Laila","Koskela","2011–2015"],["387","Markku","Koski","1991–2007"],["1337","Susanna","Koski","2015–2019"],["469","Valto","Koski","1995–2011"],["470","Heikki","Koskinen","1995–1999"],["532","Jari","Koskinen","1996–2009"],["471","Marjaana","Koskinen","1995–2011"],["1448","Jouni","Kotiaho","2019–2023"],["472","Irina","Krohn","1995–2006"],["473","Risto","Kuisma","1995–2011"],["474","Jorma","Kukkonen","1995–1999"],["1339","Kari","Kulmala","2015–2019"],["1340","Katri","Kulmuni","2015–2024"],["575","Kalervo","Kummola","1999–2003"],["807","Miapetra","Kumpula-Natri","2003–2026"],["444","Mikko","Kuoppa","1979–2011"],["476","Pekka","Kuosmanen","1995–2007"],["477","Osmo","Kurola","1995–1999"],["576","Esko","Kurvinen","1999–2015"],["927","Merja","Kuusisto","2007–2015"],["963","Merja","Kyllönen","2007–2024"],["577","Lauri","Kähkönen","1999–2011"],["578","Kari","Kärkkäinen","1999–2011"],["1145","Jukka","Kärnä","2011–2015"],["1348","Mikko","Kärnä","2015–2023"],["202","Seppo","Kääriäinen","1987–2019"],["1446","Joonas","Könttä","2019–2023"],["407","Jaakko","Laakso","1991–2011"],["146","Timo","Laaksonen","1983–1999"],["478","Esa","Lahtela","1995–2011"],["579","Seppo","Lahtela","1999–2007"],["765","Jere","Lahti","2003–2007"],["540","Reino","Laine","1996–1999"],["370","Reijo","Laitinen","1991–2011"],["1342","Jaana","Laitinen-Pesola","2015–2019"],["161","Kalevi","Lamminen","1987–2007"],["774","Eero","Lankia","2003–2007"],["479","Annika","Lapintie","1995–2019"],["162","Arto","Lapiolahti","1987–1999"],["924","Jari","Larikka","2007–2011"],["1343","Antero","Laukkanen","2015–2023"],["376","Markku","Laukkanen","1991–2011"],["934","Sanna","Lauslahti","2007–2018"],["165","Henrik","Lax","1987–2007"],["847","Jouko","Laxell","2004–2011"],["935","Eero","Lehti","2007–2019"],["580","Jouni","Lehtimäki","1999–2003"],["1344","Rami","Lehto","2015–2023"],["581","Paula","Lehtomäki","1999–2017"],["167","Markku","Lehtosaari","1987–1999"],["555","Sirkka","Lekman","1998–1999"],["582","Jari","Leppä","1999–2023"],["371","Johannes","Leppänen","1991–2003"],["168","Pekka","Leppänen","1983–1999"],["377","Raimo","Liikkanen","1991–1999"],["359","Maija-Liisa","Lindqvist","1991–2007"],["172","Reijo","Lindroos","1983–1999"],["1146","Jari","Lindström","2011–2019"],["480","Suvi","Lindén","1995–2011"],["173","Tuula","Linnainmaa","1987–1997"],["783","Minna","Lintonen","2003–2007"],["353","Paavo","Lipponen","1983–2007"],["915","Päivi","Lipponen","2007–2015"],["1148","Maria","Lohela","2011–2019"],["174","Matti","Louekoski","1976–1996"],["1150","Anne","Louhelainen","2011–2019"],["409","Leena","Luhtanen","1991–2007"],["481","Eero","Lämsä","1995–2007"],["482","Pehr","Löv","1995–2007"],["1151","Eeva-Maria","Maijala","2011–2019"],["188","Håkan","Malm","1975–1999"],["483","Hannes","Manninen","1995–2011"],["1297","Sanna","Marin","2015–2023"],["484","Markku","Markkula","1995–2003"],["410","Hanna","Markkula-Kivisilta","1991–2003"],["775","Marjo","Matikainen-Kallström","2003–2015"],["1152","Pirkko","Mattila","2011–2019"],["787","Rosa","Meriläinen","2003–2007"],["552","Rauha-Maria","Mertjärvi","1998–2003"],["197","Lauri","Metsämäki","1987–1999"],["944","Juha","Mieto","2007–2011"],["445","Jukka","Mikkola","1983–2003"],["1153","Silvia","Modig","2011–2019"],["798","Riikka","Moilanen","2003–2007"],["802","Markus","Mustajärvi","2003–2023"],["1300","Kai","Mykkänen","2015–2025"],["203","Riitta","Myller","1987–2019"],["1154","Jari","Myllykoski","2011–2023"],["530","Kari","Myllyniemi","1995–2003"],["485","Raimo","Mähönen","1995–2003"],["937","Jukka","Mäkelä","2007–2010"],["940","Outi","Mäkelä","2007–2018"],["584","Pertti","Mäki-Hakola","1999–2003"],["817","Tapani","Mäkinen","2003–2015"],["214","Lea","Mäkipää","1983–2019"],["1087","Merja","Mäkisalo-Ropponen","2011–2023"],["1438","Jukka","Mäkynen","2019–2023"],["1156","Lasse","Männistö","2011–2015"],["1088","Hanna","Mäntylä","2011–2017"],["1090","Markku","Mäntymaa","2011–2015"],["1091","Martti","Mölsä","2011–2019"],["411","Tero","Mölsä","1991–2003"],["218","Sinikka","Mönkäre","1987–2006"],["973","Elisabeth","Nauclér","2007–2015"],["611","Petri","Neittaanmäki","1999–2007"],["585","Olli","Nepponen","1999–2011"],["1092","Mika","Niikko","2011–2023"],["856","Jussi","Niinistö","2011–2019"],["223","Sauli","Niinistö","1987–2011"],["956","Ville","Niinistö","2007–2019"],["412","Paavo","Nikula","1991–1998"],["1381","Eija","Nivala","2018"],["224","Håkan","Nordman","1983–2011"],["304","Ole","Norrback","1979–1999"],["586","Pekka","Nousiainen","1999–2007"],["486","Tuija","Nurmi","1995–2011"],["1302","Ilmari","Nurminen","2015–2025"],["225","Mats","Nyby","1983–1999"],["769","Mikaela","Nylander","2003–2019"],["943","Mats","Nylund","2007–2019"],["1387","Maria","Ohisalo","2019–2024"],["587","Lauri","Oinonen","1999–2011"],["936","Pentti","Oinonen","2007–2019"],["366","Arja","Ojala","1991–1999"],["355","Outi","Ojala","1991–2007"],["487","Reino","Ojala","1995–2007"],["588","Kirsi","Ojansuu-Kaunisto","1999–2011"],["488","Kalevi","Olin","1995–2007"],["204","Heikki A.","Ollila","1987–2011"],["789","Reijo","Paajanen","2003–2011"],["206","Reino","Paasilinna","1983–1999"],["589","Heli","Paasio","1999–2015"],["207","Pertti","Paasio","1975–1999"],["887","Sirpa","Paatero","2006–2023"],["1095","Tom","Packalén","2011–2023"],["925","Markku","Pakkanen","2007–2019"],["922","Sari","Palm","2007–2015"],["1277","Mikael","Palola","2014–2015"],["811","Aila","Paloniemi","2003–2019"],["489","Erkki","Partanen","1995–1999"],["1304","Olli-Poika","Parviainen","2015–2019"],["1303","Ulla","Parviainen","2015–2019"],["490","Tauno","Pehkonen","1995–1999"],["212","Mauri","Pekkarinen","1979–2019"],["1098","Jaana","Pelkonen","2011–2023"],["848","Terhi","Peltokorpi","2004–2015"],["491","Pirkko","Peltomo","1995–2007"],["1496","Eemeli","Peltonen","2023–2025"],["955","Tuula","Peltonen","2007–2015"],["785","Klaus","Pentti","2003–2011"],["492","Risto","Penttilä","1995–1999"],["397","Maija","Perho","1991–2007"],["919","Sanna","Perkiö","2007–2011"],["219","Mikko","Pesälä","1975–1999"],["1405","Pirkka-Pekka","Petelius","2019–2023"],["413","Margareta","Pietikäinen","1991–2003"],["227","Sirpa","Pietikäinen","1983–2003"],["441","Kirsi","Piha","1994–2003"],["951","Petri","Pihlajaniemi","2007–2011"],["1051","Raimo","Piirainen","2009–2023"],["1101","Arto","Pirttilahti","2011–2023"],["236","Markku","Pohjola","1987–1999"],["493","Tuija","Pohjola","1995–1999"],["374","Iivo","Polvi","1991–2007"],["494","Riitta","Prusti","1995–2003"],["238","Matti","Puhakka","1975–1996"],["590","Osmo","Puhakka","1999–2003"],["495","Veijo","Puhjo","1995–2011"],["239","Virpa","Puisto","1987–2007"],["240","Erkki","Pulliainen","1987–2011"],["242","Pekka","Puska","1987–2019"],["946","Tuomo","Puumala","2007–2019"],["379","Tuija Maaret","Pykäläinen","1991–1999"],["1305","Juha","Pylväs","2015–2023"],["1307","Sari","Raassina","2015–2019"],["1275","Mika","Raatikainen","2014–2019"],["591","Susanna","Rahkonen","1999–2007"],["801","Lyly","Rajala","2003–2011"],["228","Kari","Rajamäki","1983–2015"],["229","Jussi","Ranta","1983–2003"],["496","Aulis","Ranta-Muotio","1995–2007"],["592","Antti","Rantakangas","1999–2019"],["230","Jorma","Rantanen","1983–1999"],["383","Maija","Rask","1991–2007"],["593","Leena","Rauhala","1999–2015"],["232","Anssi","Rauramo","1987–1998"],["594","Pekka","Ravi","1999–2015"],["356","Olli","Rehn","1991–2017"],["497","Vuokko","Rehn","1995–1999"],["1374","Veronica","Rehn-Kivi","2016–2023"],["541","Juha","Rehula","1996–2019"],["796","Eero","Reijonen","2003–2019"],["367","Eila","Rimmi","1991–1999"],["246","Heikki","Rinne","1987–1999"],["247","Jukka","Roos","1987–2007"],["498","Ola","Rosendahl","1995–2003"],["375","Markku","Rossi","1991–2019"],["803","Simo","Rundgren","2003–2015"],["1309","Veera","Ruoho","2015–2019"],["920","Pirkko","Ruohonen-Lerner","2007–2019"],["514","Matti","Ryhänen","1995–1999"],["250","Mirja","Ryynänen","1987–2003"],["595","Tero","Rönni","1999–2011"],["256","Pauli","Saapunki","1987–2003"],["1041","Vesa-Matti","Saarakkala","2011–2019"],["257","Aapo","Saari","1983–1999"],["776","Martin","Saarikangas","2003–2007"],["1157","Annika","Saarikko","2011–2025"],["253","Matti","Saarinen","1987–2015"],["361","Väinö","Saario","1991–1996"],["542","Pekka","Saarnio","1996–1999"],["1479","Suldaan","Said Ahmed","2021–2023"],["1487","Aura","Salla","2023–2024"],["515","Mauri","Salo","1995–2011"],["596","Petri","Salo","1999–2011"],["259","Pertti","Salolainen","1970–2019"],["1102","Kristiina","Salonen","2011–2023"],["762","Pertti","Salovaara","2003–2011"],["1105","Janne","Sankelo","2011–2023"],["1400","Jussi","Saramo","2019–2024"],["261","Kimmo","Sasi","1983–2015"],["255","Oiva","Savela","1987–1999"],["399","Ismo","Seivästö","1991–2003"],["1315","Matti","Semi","2015–2023"],["597","Arto","Seppälä","1999–2007"],["598","Timo","Seppälä","1999–2007"],["254","Esko","Seppänen","1987–1999"],["965","Janne","Seurujärvi","2007–2011"],["949","Paula","Sihto","2007–2011"],["533","Outi","Siimes","1996–1999"],["554","Suvi-Anne","Siimes","1999–2007"],["600","Anni","Sinnemäki","1999–2015"],["1108","Juha","Sipilä","2011–2023"],["788","Minna","Sirnö","2003–2011"],["1219","Saara-Sofia","Sirén","2015–2026"],["544","Juhani","Sjöblom","1997–2007"],["1395","Ruut","Sjöblom","2019–2023"],["267","Jouko","Skinnari","1980–2015"],["1393","Riikka","Slunga-Poutsalo","2019–2023"],["500","Sakari","Smeds","1995–2003"],["767","Timo","Soini","2003–2019"],["1416","Mirka","Soinikoski","2019–2023"],["265","Osmo","Soininvaara","1987–2015"],["1110","Ismo","Soukola","2011–2015"],["272","Marjatta","Stenius-Kaukonen","1975–2003"],["1031","Alexander","Stubb","2011–2017"],["372","Aino","Suhola","1991–1999"],["894","Johanna","Sumuvuori","2006–2015"],["1423","Iiris","Suomela","2019–2023"],["1111","Eero","Suutari","2011–2019"],["601","Katja","Syvärinen","1999–2003"],["773","Seppo","Särkiniemi","2003–2011"],["311","Jacob","Söderman","1972–2011"],["1319","Satu","Taavitsainen","2015–2019"],["929","Tommy","Tabermann","2007–2010"],["501","Säde","Tahvanainen","1995–2007"],["952","Katja","Taimela","2007–2023"],["275","Anneli","Taina","1987–1999"],["1112","Hanna","Tainio","2011–2015"],["620","Ilkka","Taipale","1971–2007"],["782","Satu","Taiveaho","2003–2011"],["502","Hannu","Takkula","1995–2007"],["1321","Martti","Talja","2015–2019"],["933","Tarja","Tallqvist","2007–2011"],["503","Jukka","Tarkka","1995–1999"],["278","Esko-Juhani","Tennilä","1975–2011"],["1347","Sampo","Terho","2015–2019"],["770","Astrid","Thors","2003–2013"],["1113","Eila","Tiainen","2011–2015"],["790","Kimmo","Tiilikainen","2003–2019"],["504","Raimo","Tiilikainen","1995–1999"],["602","Marja","Tiura","1999–2011"],["279","Martti","Tiuri","1983–2003"],["505","Pentti","Tiusanen","1995–2011"],["932","Lenita","Toivakka","2007–2019"],["1114","Jani","Toivola","2011–2019"],["1116","Maria","Tolppanen","2011–2019"],["1118","Kari","Tolvanen","2011–2023"],["1120","Ari","Torniainen","2011–2023"],["1378","Pilvi","Torsti","2017–2019"],["1372","Matti","Torvinen","2017–2019"],["1123","Reijo","Tossavainen","2011–2015"],["1494","Pekka","Toveri","2023–2024"],["506","Irja","Tulonen","1995–2007"],["357","Erkki","Tuomioja","1970–2023"],["1427","Ano","Turtiainen","2019–2023"],["603","Pertti","Turtiainen","1999–2003"],["1128","Kaj","Turunen","2011–2019"],["1130","Kauko","Tuupainen","2011–2015"],["283","Marja-Liisa","Tykkyläinen","1983–2003"],["1451","Sebastian","Tynkkynen","2019–2024"],["800","Tapani","Tölli","2003–2019"],["288","Kerttu","Törnqvist","1983–1999"],["389","Tuulikki","Ukkola","1991–2011"],["291","Riitta","Uosukainen","1983–2003"],["507","Kari","Uotila","1995–2019"],["1226","Anu","Urpalainen","2012–2015"],["808","Jutta","Urpilainen","2003–2019"],["297","Kari","Urpilainen","1983–2003"],["942","Markku","Uusipaavalniemi","2007–2011"],["605","Raija","Vahasalo","1999–2019"],["1420","Veikko","Vallin","2019–2023"],["604","Unto","Valpas","1999–2011"],["414","Matti","Vanhanen","1991–2023"],["766","Jan","Vapaavuori","2003–2015"],["1329","Antero","Vartia","2015–2019"],["543","Helena","Vartiainen","1996–1999"],["1330","Juhana","Vartiainen","2015–2021"],["418","Marjatta","Vehkaoja","1991–2003"],["962","Mirja","Vehkaperä","2007–2019"],["508","Anu","Vehviläinen","1995–2023"],["509","Maija-Liisa","Veteläinen","1995–1999"],["810","Ahti","Vielma","2003–2007"],["292","Jukka","Vihriälä","1983–2007"],["293","Iiro","Viinanen","1983–1996"],["510","Janne","Viitamies","1995–1999"],["928","Pauliina","Viitamies","2007–2015"],["373","Marja-Leena","Viljamaa","1991–1999"],["1414","Heidi","Viljanen","2019–2023"],["968","Ilkka","Viljanen","2007–2011"],["607","Pekka","Vilkuna","1999–2011"],["606","Jari","Vilén","1999–2007"],["957","Henna","Virkkunen","2007–2015"],["948","Anne-Mari","Virolainen","2007–2026"],["793","Erkki","Virtanen","2003–2015"],["512","Pertti","Virtanen","1995–2015"],["608","Lasse","Virén","1999–2011"],["295","Raimo","Vistbacka","1987–2011"],["513","Jorma","Vokkolainen","1995–2001"],["961","Antti","Vuolanne","2007–2011"],["369","Markku","Vuorensola","1991–1999"],["299","Matti","Vähänäkki","1987–2003"],["251","Matti","Väistö","1987–2007"],["300","Paavo","Väyrynen","1970–2019"],["1139","Juha","Väätäinen","2011–2015"],["280","Jarmo","Wahlström","1975–1999"],["609","Harry","Wallin","1999–2019"],["910","Stefan","Wallin","2007–2019"],["475","Ulla-Maj","Wideroos","1995–2015"],["1436","Jussi","Wihonen","2019–2023"],["1332","Ozan","Yanar","2015–2019"],["610","Jaana","Ylä-Mononen","1999–2007"],["945","Jyrki","Yrttiaho","2007–2015"],["1397","Hussein","al-Taee","2019–2023"]]</script>
+    </form>
+  </div>
+  <div class="hero-kuva" aria-hidden="true"><svg viewBox="0 0 200 100" focusable="false"><g fill="currentColor"><circle cx="61.3" cy="97" r="2.9" fill-opacity="0.95"/><circle cx="62.3" cy="88.4" r="2.9" fill-opacity="0.95"/><circle cx="65.1" cy="80.2" r="2.9" fill-opacity="0.95"/><circle cx="69.7" cy="72.9" r="2.9" fill-opacity="0.95"/><circle cx="75.9" cy="66.7" r="2.9" fill-opacity="0.95"/><circle cx="83.2" cy="62.1" r="2.9" fill-opacity="0.95"/><circle cx="91.4" cy="59.3" r="2.9" fill-opacity="0.95"/><circle cx="99.9" cy="58.3" r="2.9" fill-opacity="0.95"/><circle cx="108.5" cy="59.3" r="2.9" fill-opacity="0.95"/><circle cx="116.7" cy="62.1" r="2.9" fill-opacity="0.95"/><circle cx="124" cy="66.7" r="2.9" fill-opacity="0.95"/><circle cx="130.2" cy="72.9" r="2.9" fill-opacity="0.95"/><circle cx="134.8" cy="80.2" r="2.9" fill-opacity="0.95"/><circle cx="137.6" cy="88.4" r="2.9" fill-opacity="0.95"/><circle cx="138.6" cy="96.9" r="2.9" fill-opacity="0.95"/><circle cx="53.7" cy="97" r="2.9" fill-opacity="0.87"/><circle cx="54.5" cy="88.4" r="2.9" fill-opacity="0.87"/><circle cx="56.8" cy="80.2" r="2.9" fill-opacity="0.87"/><circle cx="60.6" cy="72.6" r="2.9" fill-opacity="0.87"/><circle cx="65.8" cy="65.8" r="2.9" fill-opacity="0.87"/><circle cx="72.1" cy="60" r="2.9" fill-opacity="0.87"/><circle cx="79.3" cy="55.5" r="2.9" fill-opacity="0.87"/><circle cx="87.3" cy="52.5" r="2.9" fill-opacity="0.87"/><circle cx="95.7" cy="50.9" r="2.9" fill-opacity="0.87"/><circle cx="104.2" cy="50.9" r="2.9" fill-opacity="0.87"/><circle cx="112.6" cy="52.5" r="2.9" fill-opacity="0.87"/><circle cx="120.6" cy="55.5" r="2.9" fill-opacity="0.87"/><circle cx="127.8" cy="60" r="2.9" fill-opacity="0.87"/><circle cx="134.1" cy="65.8" r="2.9" fill-opacity="0.87"/><circle cx="139.3" cy="72.6" r="2.9" fill-opacity="0.87"/><circle cx="143.1" cy="80.2" r="2.9" fill-opacity="0.87"/><circle cx="145.4" cy="88.4" r="2.9" fill-opacity="0.87"/><circle cx="146.2" cy="96.9" r="2.9" fill-opacity="0.87"/><circle cx="46.1" cy="97" r="2.9" fill-opacity="0.81"/><circle cx="46.7" cy="88.5" r="2.9" fill-opacity="0.81"/><circle cx="48.7" cy="80.3" r="2.9" fill-opacity="0.81"/><circle cx="51.9" cy="72.5" r="2.9" fill-opacity="0.81"/><circle cx="56.4" cy="65.3" r="2.9" fill-opacity="0.81"/><circle cx="61.8" cy="58.8" r="2.9" fill-opacity="0.81"/><circle cx="68.3" cy="53.4" r="2.9" fill-opacity="0.81"/><circle cx="75.5" cy="48.9" r="2.9" fill-opacity="0.81"/><circle cx="83.3" cy="45.7" r="2.9" fill-opacity="0.81"/><circle cx="91.5" cy="43.7" r="2.9" fill-opacity="0.81"/><circle cx="99.9" cy="43.1" r="2.9" fill-opacity="0.81"/><circle cx="108.4" cy="43.7" r="2.9" fill-opacity="0.81"/><circle cx="116.6" cy="45.7" r="2.9" fill-opacity="0.81"/><circle cx="124.4" cy="48.9" r="2.9" fill-opacity="0.81"/><circle cx="131.6" cy="53.4" r="2.9" fill-opacity="0.81"/><circle cx="138.1" cy="58.8" r="2.9" fill-opacity="0.81"/><circle cx="143.5" cy="65.3" r="2.9" fill-opacity="0.81"/><circle cx="148" cy="72.5" r="2.9" fill-opacity="0.81"/><circle cx="151.2" cy="80.3" r="2.9" fill-opacity="0.81"/><circle cx="153.2" cy="88.5" r="2.9" fill-opacity="0.81"/><circle cx="153.8" cy="96.9" r="2.9" fill-opacity="0.81"/><circle cx="38.4" cy="97" r="2.9" fill-opacity="0.74"/><circle cx="39" cy="88.6" r="2.9" fill-opacity="0.74"/><circle cx="40.7" cy="80.4" r="2.9" fill-opacity="0.74"/><circle cx="43.5" cy="72.4" r="2.9" fill-opacity="0.74"/><circle cx="47.4" cy="65" r="2.9" fill-opacity="0.74"/><circle cx="52.2" cy="58.1" r="2.9" fill-opacity="0.74"/><circle cx="58" cy="52" r="2.9" fill-opacity="0.74"/><circle cx="64.5" cy="46.7" r="2.9" fill-opacity="0.74"/><circle cx="71.7" cy="42.3" r="2.9" fill-opacity="0.74"/><circle cx="79.4" cy="39" r="2.9" fill-opacity="0.74"/><circle cx="87.4" cy="36.7" r="2.9" fill-opacity="0.74"/><circle cx="95.8" cy="35.6" r="2.9" fill-opacity="0.74"/><circle cx="104.1" cy="35.6" r="2.9" fill-opacity="0.74"/><circle cx="112.5" cy="36.7" r="2.9" fill-opacity="0.74"/><circle cx="120.5" cy="39" r="2.9" fill-opacity="0.74"/><circle cx="128.2" cy="42.3" r="2.9" fill-opacity="0.74"/><circle cx="135.4" cy="46.7" r="2.9" fill-opacity="0.74"/><circle cx="141.9" cy="52" r="2.9" fill-opacity="0.74"/><circle cx="147.7" cy="58.1" r="2.9" fill-opacity="0.74"/><circle cx="152.5" cy="65" r="2.9" fill-opacity="0.74"/><circle cx="156.4" cy="72.4" r="2.9" fill-opacity="0.74"/><circle cx="159.2" cy="80.4" r="2.9" fill-opacity="0.74"/><circle cx="160.9" cy="88.6" r="2.9" fill-opacity="0.74"/><circle cx="161.5" cy="96.9" r="2.9" fill-opacity="0.74"/><circle cx="30.8" cy="97" r="2.9" fill-opacity="0.67"/><circle cx="31.4" cy="88.3" r="2.9" fill-opacity="0.67"/><circle cx="33" cy="79.8" r="2.9" fill-opacity="0.67"/><circle cx="35.7" cy="71.5" r="2.9" fill-opacity="0.67"/><circle cx="39.4" cy="63.6" r="2.9" fill-opacity="0.67"/><circle cx="44" cy="56.3" r="2.9" fill-opacity="0.67"/><circle cx="49.6" cy="49.6" r="2.9" fill-opacity="0.67"/><circle cx="55.9" cy="43.7" r="2.9" fill-opacity="0.67"/><circle cx="62.9" cy="38.6" r="2.9" fill-opacity="0.67"/><circle cx="70.5" cy="34.4" r="2.9" fill-opacity="0.67"/><circle cx="78.6" cy="31.2" r="2.9" fill-opacity="0.67"/><circle cx="87" cy="29" r="2.9" fill-opacity="0.67"/><circle cx="95.6" cy="28" r="2.9" fill-opacity="0.67"/><circle cx="104.3" cy="28" r="2.9" fill-opacity="0.67"/><circle cx="112.9" cy="29" r="2.9" fill-opacity="0.67"/><circle cx="121.3" cy="31.2" r="2.9" fill-opacity="0.67"/><circle cx="129.4" cy="34.4" r="2.9" fill-opacity="0.67"/><circle cx="137" cy="38.6" r="2.9" fill-opacity="0.67"/><circle cx="144" cy="43.7" r="2.9" fill-opacity="0.67"/><circle cx="150.3" cy="49.6" r="2.9" fill-opacity="0.67"/><circle cx="155.9" cy="56.3" r="2.9" fill-opacity="0.67"/><circle cx="160.5" cy="63.6" r="2.9" fill-opacity="0.67"/><circle cx="164.2" cy="71.5" r="2.9" fill-opacity="0.67"/><circle cx="166.9" cy="79.8" r="2.9" fill-opacity="0.67"/><circle cx="168.5" cy="88.3" r="2.9" fill-opacity="0.67"/><circle cx="169.1" cy="96.9" r="2.9" fill-opacity="0.67"/><circle cx="23.2" cy="97" r="2.9" fill-opacity="0.59"/><circle cx="23.7" cy="88.4" r="2.9" fill-opacity="0.59"/><circle cx="25.1" cy="79.9" r="2.9" fill-opacity="0.59"/><circle cx="27.5" cy="71.6" r="2.9" fill-opacity="0.59"/><circle cx="30.8" cy="63.6" r="2.9" fill-opacity="0.59"/><circle cx="35" cy="56.1" r="2.9" fill-opacity="0.59"/><circle cx="39.9" cy="49.1" r="2.9" fill-opacity="0.59"/><circle cx="45.7" cy="42.7" r="2.9" fill-opacity="0.59"/><circle cx="52.1" cy="36.9" r="2.9" fill-opacity="0.59"/><circle cx="59.1" cy="32" r="2.9" fill-opacity="0.59"/><circle cx="66.6" cy="27.8" r="2.9" fill-opacity="0.59"/><circle cx="74.6" cy="24.5" r="2.9" fill-opacity="0.59"/><circle cx="82.9" cy="22.1" r="2.9" fill-opacity="0.59"/><circle cx="91.4" cy="20.7" r="2.9" fill-opacity="0.59"/><circle cx="99.9" cy="20.2" r="2.9" fill-opacity="0.59"/><circle cx="108.5" cy="20.7" r="2.9" fill-opacity="0.59"/><circle cx="117" cy="22.1" r="2.9" fill-opacity="0.59"/><circle cx="125.3" cy="24.5" r="2.9" fill-opacity="0.59"/><circle cx="133.3" cy="27.8" r="2.9" fill-opacity="0.59"/><circle cx="140.8" cy="32" r="2.9" fill-opacity="0.59"/><circle cx="147.8" cy="36.9" r="2.9" fill-opacity="0.59"/><circle cx="154.2" cy="42.7" r="2.9" fill-opacity="0.59"/><circle cx="160" cy="49.1" r="2.9" fill-opacity="0.59"/><circle cx="164.9" cy="56.1" r="2.9" fill-opacity="0.59"/><circle cx="169.1" cy="63.6" r="2.9" fill-opacity="0.59"/><circle cx="172.4" cy="71.6" r="2.9" fill-opacity="0.59"/><circle cx="174.8" cy="79.9" r="2.9" fill-opacity="0.59"/><circle cx="176.2" cy="88.4" r="2.9" fill-opacity="0.59"/><circle cx="176.7" cy="96.9" r="2.9" fill-opacity="0.59"/><circle cx="15.6" cy="97" r="2.9" fill-opacity="0.52"/><circle cx="16" cy="88.4" r="2.9" fill-opacity="0.52"/><circle cx="17.3" cy="80" r="2.9" fill-opacity="0.52"/><circle cx="19.4" cy="71.7" r="2.9" fill-opacity="0.52"/><circle cx="22.4" cy="63.7" r="2.9" fill-opacity="0.52"/><circle cx="26.2" cy="56" r="2.9" fill-opacity="0.52"/><circle cx="30.7" cy="48.7" r="2.9" fill-opacity="0.52"/><circle cx="35.9" cy="42" r="2.9" fill-opacity="0.52"/><circle cx="41.8" cy="35.8" r="2.9" fill-opacity="0.52"/><circle cx="48.3" cy="30.2" r="2.9" fill-opacity="0.52"/><circle cx="55.3" cy="25.3" r="2.9" fill-opacity="0.52"/><circle cx="62.8" cy="21.2" r="2.9" fill-opacity="0.52"/><circle cx="70.6" cy="17.8" r="2.9" fill-opacity="0.52"/><circle cx="78.8" cy="15.3" r="2.9" fill-opacity="0.52"/><circle cx="87.2" cy="13.5" r="2.9" fill-opacity="0.52"/><circle cx="95.7" cy="12.7" r="2.9" fill-opacity="0.52"/><circle cx="104.2" cy="12.7" r="2.9" fill-opacity="0.52"/><circle cx="112.7" cy="13.5" r="2.9" fill-opacity="0.52"/><circle cx="121.1" cy="15.3" r="2.9" fill-opacity="0.52"/><circle cx="129.3" cy="17.8" r="2.9" fill-opacity="0.52"/><circle cx="137.1" cy="21.2" r="2.9" fill-opacity="0.52"/><circle cx="144.6" cy="25.3" r="2.9" fill-opacity="0.52"/><circle cx="151.6" cy="30.2" r="2.9" fill-opacity="0.52"/><circle cx="158.1" cy="35.8" r="2.9" fill-opacity="0.52"/><circle cx="164" cy="42" r="2.9" fill-opacity="0.52"/><circle cx="169.2" cy="48.7" r="2.9" fill-opacity="0.52"/><circle cx="173.7" cy="56" r="2.9" fill-opacity="0.52"/><circle cx="177.5" cy="63.7" r="2.9" fill-opacity="0.52"/><circle cx="180.5" cy="71.7" r="2.9" fill-opacity="0.52"/><circle cx="182.6" cy="80" r="2.9" fill-opacity="0.52"/><circle cx="183.9" cy="88.4" r="2.9" fill-opacity="0.52"/><circle cx="184.3" cy="96.9" r="2.9" fill-opacity="0.52"/><circle cx="8" cy="97" r="2.9" fill-opacity="0.45"/><circle cx="8.3" cy="88.5" r="2.9" fill-opacity="0.45"/><circle cx="9.5" cy="80" r="2.9" fill-opacity="0.45"/><circle cx="11.5" cy="71.8" r="2.9" fill-opacity="0.45"/><circle cx="14.2" cy="63.7" r="2.9" fill-opacity="0.45"/><circle cx="17.6" cy="55.9" r="2.9" fill-opacity="0.45"/><circle cx="21.7" cy="48.5" r="2.9" fill-opacity="0.45"/><circle cx="26.5" cy="41.5" r="2.9" fill-opacity="0.45"/><circle cx="32" cy="35" r="2.9" fill-opacity="0.45"/><circle cx="38" cy="29" r="2.9" fill-opacity="0.45"/><circle cx="44.5" cy="23.5" r="2.9" fill-opacity="0.45"/><circle cx="51.5" cy="18.7" r="2.9" fill-opacity="0.45"/><circle cx="58.9" cy="14.6" r="2.9" fill-opacity="0.45"/><circle cx="66.7" cy="11.2" r="2.9" fill-opacity="0.45"/><circle cx="74.8" cy="8.5" r="2.9" fill-opacity="0.45"/><circle cx="83" cy="6.5" r="2.9" fill-opacity="0.45"/><circle cx="91.5" cy="5.3" r="2.9" fill-opacity="0.45"/><circle cx="99.9" cy="5" r="2.9" fill-opacity="0.45"/><circle cx="108.4" cy="5.3" r="2.9" fill-opacity="0.45"/><circle cx="116.9" cy="6.5" r="2.9" fill-opacity="0.45"/><circle cx="125.1" cy="8.5" r="2.9" fill-opacity="0.45"/><circle cx="133.2" cy="11.2" r="2.9" fill-opacity="0.45"/><circle cx="141" cy="14.6" r="2.9" fill-opacity="0.45"/><circle cx="148.4" cy="18.7" r="2.9" fill-opacity="0.45"/><circle cx="155.4" cy="23.5" r="2.9" fill-opacity="0.45"/><circle cx="161.9" cy="29" r="2.9" fill-opacity="0.45"/><circle cx="167.9" cy="35" r="2.9" fill-opacity="0.45"/><circle cx="173.4" cy="41.5" r="2.9" fill-opacity="0.45"/><circle cx="178.2" cy="48.5" r="2.9" fill-opacity="0.45"/><circle cx="182.3" cy="55.9" r="2.9" fill-opacity="0.45"/><circle cx="185.7" cy="63.7" r="2.9" fill-opacity="0.45"/><circle cx="188.4" cy="71.8" r="2.9" fill-opacity="0.45"/><circle cx="190.4" cy="80" r="2.9" fill-opacity="0.45"/><circle cx="191.6" cy="88.5" r="2.9" fill-opacity="0.45"/><circle cx="192" cy="96.9" r="2.9" fill-opacity="0.45"/></g></svg></div>
+  </div>
+  <ul class="hero-luvut">
+    <li><span class="hero-luku">200</span><span class="hero-selite">kansanedustajaa</span></li>
+    <li><span class="hero-luku">21 653</span><span class="hero-selite">täysistunto&shy;äänestystä vuodesta 1996</span></li>
+    <li><span class="hero-luku">Lähde</span><span class="hero-selite">jokaiselle tiedolle</span></li>
+  </ul>
+  <ul class="periaatteet" aria-label="Periaatteet"><li>lähde joka tiedolle</li><li>ei kirjautumista eikä seurantaa</li><li>maksuton</li><li><a href="tietoa.html">Tietoa palvelusta</a></li><li><a href="#top-listat">Top-listat</a></li></ul>
+</header>
+<div class="esittely">
+  <details class="esittely-lisaa kortti"><summary>Miksi Edustajaseuranta ja mitä sieltä löytyy</summary>
+    <div class="esittely-runko">
+    <p class="esittely-otsikko">Miksi Edustajaseuranta?</p>
+    <p>Politiikasta puhutaan paljon, mutta väitteen tarkistaminen vie aikaa: tiedot ovat hajallaan eduskunnan, virastojen ja lehtien sivuilla. Edustajaseuranta kokoaa ne yhteen paikkaan niin, että minkä tahansa kansanedustajan tiedot löytyvät puhelimella yhdellä haulla.</p>
+    <p class="esittely-otsikko">Mitä edustajan sivulta löytyy</p>
+    <p>Jokaisen edustajan sivulla näkyy, miten hän on äänestänyt täysistunnoissa vuodesta 1996 alkaen ja kuinka usein hän on poikennut ryhmänsä linjasta. Sivulta näkee myös hänen omat aloitteensa, kysymyksensä ja puheenvuoronsa, uransa ja vaalinsa sekä vaalirahoituksen ja sidonnaisuudet. Lisäksi siellä ovat lobbaajien ilmoittamat yhteydenotot.</p>
+    <p>Tiedot tulevat suoraan eduskunnan avoimesta datasta ja muista julkisista lähteistä, ja jokaisella tiedolla on lähde. Palvelu ei arvioi ketään eikä seuraa käyttäjiään.</p>
+    <p class="vinkki">Lähteet: eduskunnan avoin data, avoimuusrekisteri ja vaalirahoitusilmoitukset (Valtiontalouden tarkastusvirasto), vaalien tulospalvelu, Tilastokeskus ja nimetyt lehdet.</p>
+    </div>
+  </details>
+</div>
+<div class="nostot">
+<a class="kortti nosto" href="ryhmalinja.html"><span class="nosto-otsikko" role="heading" aria-level="2">Äänestävätkö ryhmät yhtenäisesti?</span><span class="nosto-teksti">Katso, kuinka usein kunkin eduskuntaryhmän edustajat ovat äänestäneet eri tavalla kuin ryhmänsä enemmistö – nykyinen ja aiemmat vaalikaudet 1995 alkaen.</span><span class="nosto-linkki">Katso ryhmävertailu →</span></a>
+<div class="kortti nosto nosto-listat" id="top-listat"><span class="nosto-otsikko" role="heading" aria-level="2">Top-listat</span><span class="nosto-teksti">Kaikki 200 edustajaa samalla listalla: läsnäolo äänestyksissä, poikkeamat ryhmälinjasta, kampanjakulut, lobbaus ja vaalirahoittajat.</span><nav class="nosto-pillerit" aria-label="Listat"><a href="listat-poissaolot.html">Läsnäolo</a><a href="listat-poikkeamat.html">Poikkeamat ryhmälinjasta</a><a href="listat-kulut.html">Kampanjakulut</a><a href="lobbaus-eduskunnassa.html">Lobbaus</a><a href="vaalirahoittajat.html">Vaalirahoittajat</a></nav><a class="nosto-linkki" href="listat-kaudet.html">Aiemmat vaalikaudet →</a></div>
+</div>
+<div class="tiesitko"><h2 class="sr">Tiesitkö?</h2><div class="alusta laput"><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Kuusi vuotta koolla</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Pitkä parlamentti istui kuusi vuotta · <span class="vuosi">1939</span></h3><p>Vuonna 1939 valittu eduskunta istui vuoteen 1945 asti, ja sitä kutsutaan pitkäksi parlamentiksi. Sotaa käyvistä Euroopan maista vain Suomessa ja Isossa-Britanniassa parlamentti kokoontui keskeytyksettä.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/eduskunta-ja-sen-toiminta/eduskunnan-historia/">Eduskunta, 10.6.2025</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Evakossa Kauhajoella</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Talvisodan ajan eduskunta kokoontui Kauhajoella · <span class="vuosi">1939</span></h3><p>Talvisodan aikana, joulukuusta 1939 helmikuuhun 1940, eduskunta kokoontui evakossa Kauhajoella.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/eduskunta-ja-sen-toiminta/eduskunnan-historia/">Eduskunta, 10.6.2025</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">24:stä 18:aan</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Äänioikeusikä laski 24 vuodesta 18 vuoteen · <span class="vuosi">1945</span></h3><p>Vuonna 1906 äänioikeuden sai 24-vuotiaana. Ikäraja laskettiin 21 vuoteen, jotta nuoret rintamaveteraanit pääsivät äänestämään vuoden 1945 vaaleissa. Vuonna 1969 raja laski 20 vuoteen ja 1972 nykyiseen 18 vuoteen.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/eduskunta-ja-sen-toiminta/eduskunnan-historia/">Eduskunta, 10.6.2025</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div></div><template class="laput-varalla"><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">16 hallitusta</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>16 hallitusta vuosina 1948–1963</h3><p>Sodan jälkeen sisäpolitiikka oli pitkään epävakaata. Vuosina 1948–1963 Suomessa ehti olla 16 hallitusta. Samaan aikaan eduskunta päätti muun muassa lapsilisistä ja kansaneläkkeistä.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/eduskunta-ja-sen-toiminta/eduskunnan-historia/">Eduskunta, 10.6.2025</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Vaali jäi väliin</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Presidentin kautta jatkettiin poikkeuslailla · <span class="vuosi">1973</span></h3><p>Vuonna 1973 presidentinvaalia ei järjestetty. Eduskunta jatkoi Urho Kekkosen kautta poikkeuslailla. Laki tarvitsi viiden kuudesosan enemmistön ja sai sen.</p><p class="lahde">Lähde: <a href="https://yle.fi/aihe/artikkeli/2006/09/08/kekkosen-hyvaksi-poikkeuslaki">Yle Elävä arkisto, 8.9.2006</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Seitsemän hajotusta</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Eduskunta on hajotettu seitsemän kertaa · <span class="vuosi">1975</span></h3><p>Presidentti on hajottanut eduskunnan ja määrännyt ennenaikaiset vaalit seitsemän kertaa: 1924, 1929, 1930, 1953, 1961, 1971 ja 1975. Vuosina 1919–1991 presidentin hajotusoikeudella ei ollut rajoituksia.</p><p class="lahde">Lähde: <a href="https://www.presidentti.fi/ahtisaari/fin/instituutio/manninen_2.html">Tasavallan presidentin kanslia (presidentti.fi, arkistosivu)</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">12 kertaa valittu</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Pitkäaikaisin kansanedustaja valittiin 12 kertaa · <span class="vuosi">1975</span></h3><p>Ilkka Kanerva nousi eduskuntaan vuonna 1975, 27-vuotiaana. Hänet valittiin eduskuntaan 12 kertaa. Hän oli Suomen pitkäaikaisin kansanedustaja.</p><p class="lahde">Lähde: <a href="https://yle.fi/a/3-12407024">Yle, 15.4.2022</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Kyselytunti ruutuun</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Kyselytunti tuli televisioon 1989</h3><p>Yle alkoi vuonna 1989 televisioida joka kuukauden ensimmäisen kyselytunnin. Muita kyselytunteja ei näytetty televisiossa ennen vuotta 2007.</p><p class="lahde">Lähde: <a href="https://yle.fi/a/74-20056187">Yle, 20.10.2023</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Nuija naiselle</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Ensimmäinen nainen puhemiehenä · <span class="vuosi">1994</span></h3><p>Riitta Uosukainen valittiin helmikuussa 1994 eduskunnan puhemieheksi ensimmäisenä naisena. Hän hoiti tehtävää yhdeksän vuotta.</p><p class="lahde">Lähde: <a href="https://yle.fi/a/74-20048447">Yle, 4.9.2023</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Avustaja vasta 1997</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Kansanedustajat saivat avustajat 1997</h3><p>Kansanedustajilla ei aina ole ollut omaa avustajaa. Osa-aikaiset avustajat tulivat vuonna 1997. Kokopäiväisiä heistä tuli vuonna 1999.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/kansanedustajat-ja-toimielimet/tietoa-kansanedustajan-tyosta/kansanedustajien-palkkioiden-kehitys/">Eduskunta, 18.2.2026</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Nimi ravintolalta</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Pikkuparlamentti sai nimensä ravintolalta · <span class="vuosi">2004</span></h3><p>Eduskunnan uusin lisärakennus Pikkuparlamentti valmistui kesäkuussa 2004. Nimi tulee ravintola Pikkuparlamentilta, joka sijaitsi samalla paikalla aiemmin.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/vieraile-ja-osallistu/eduskuntatalo/">Eduskunta, 3.6.2025</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">50 000 nimeä</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Kansalaisaloite tuli käyttöön 2012</h3><p>Vuodesta 2012 alkaen eduskunnan on pitänyt käsitellä kansalaisaloite, jolla on yli 50 000 allekirjoittajaa. Ensimmäisenä käsittelyyn ehti aloite turkistarhattomasta Suomesta. Ensimmäinen aloitteesta syntynyt laki oli sukupuolineutraali avioliittolaki.</p><p class="lahde">Lähde: <a href="https://yle.fi/aihe/artikkeli/2014/09/05/mika-kansalaisaloitteen-arvo">Yle Elävä arkisto, 5.9.2014</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Remonttia evakossa</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Remontin ajan eduskunta toimi Sibelius-Akatemiassa · <span class="vuosi">2017</span></h3><p>Eduskuntatalon päärakennuksen peruskorjaus valmistui vuonna 2017. Remontin ajan kansanedustajat työskentelivät Sibelius-Akatemian väistötiloissa. Päärakennuksen korjaukseen oli varattu 125 miljoonaa euroa.</p><p class="lahde">Lähde: <a href="https://yle.fi/a/3-9803720">Yle, 29.8.2017</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Naisia 47 prosenttia</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Naisten osuus nousi 47 prosenttiin · <span class="vuosi">2019</span></h3><p>Vuoden 2019 eduskuntavaaleissa valituista kansanedustajista 47,0 prosenttia oli naisia. Osuus oli suurempi kuin yhdessäkään aiemmista eduskuntavaaleista.</p><p class="lahde">Lähde: <a href="https://stat.fi/til/evaa/2019/02/evaa_2019_02_2019-04-29_tie_001_fi.html">Tilastokeskus, 29.4.2019</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Äänin 188–8</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Nato-jäsenyyden hakemisesta äänestettiin 188–8 · <span class="vuosi">2022</span></h3><p>Eduskunta äänesti toukokuussa 2022 Suomen hakemisesta Naton jäseneksi. Hakemista kannatti 188 ja vastusti 8 kansanedustajaa. Kolme edustajaa oli poissa.</p><p class="lahde">Lähde: <a href="https://yle.fi/a/3-12446945">Yle, 16.5.2022</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Ilman äänestystä</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Useimmista laeista ei äänestetä · <span class="vuosi">nykyään</span></h3><p>Täysistunnossa äänestetään harvemmin kuin luullaan. Eri aikoina tehtyjen kartoitusten mukaan vain 10–25 prosentissa lakiehdotusten käsittelyistä äänestetään. Useimmat asiat ratkeavat ilman äänestystä.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/asiat-ja-aanestykset/aanestaminen-eduskunnassa/">Eduskunta, 28.8.2025</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Vanhin aloittaa</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Vanhin edustaja avaa vaalikauden · <span class="vuosi">nykyään</span></h3><p>Vaalikauden ensimmäisessä täysistunnossa puhetta johtaa iältään vanhin kansanedustaja. Hän johtaa puhetta, kunnes eduskunta on valinnut puhemiehen ja kaksi varapuhemiestä ja nämä ovat antaneet juhlallisen vakuutuksen.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/eduskunta-ja-sen-toiminta/eduskuntavaalit/mita-tapahtuu-kun-uusi-eduskunta-aloittaa/">Eduskunta, 9.6.2025</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Läsnä napilla</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Nimenhuuto hoidetaan napilla · <span class="vuosi">nykyään</span></h3><p>Täysistunnon alussa pidetään 15 minuutin nimenhuuto. Kansanedustaja ilmoittautuu läsnä olevaksi painamalla läsnäolopainiketta. Myöhässä tullut ilmoittautuu samalla painikkeella.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/taysistunnot-ja-tapahtumat/yleistietoa-eduskunnan-taysistunnoista/">Eduskunta, 26.3.2025</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Verolle vasta 1955</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Edustajanpalkkio tuli kokonaan verotettavaksi vasta vuonna 1955</h3><p>Vuonna 1951 annetun lain mukaan kansanedustajan palkkiosta puolet tuli veronalaiseksi valtion tuloverotuksessa. Vuoden 1955 alusta palkkiota verotettiin kokonaan sekä valtion- että kunnallisverotuksessa.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/fi/kansanedustajat-ja-toimielimet/tietoa-kansanedustajan-tyosta/kansanedustajien-palkkioiden-kehitys/">Eduskunta, 18.2.2026</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Äänestysinto huipussa</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Vuoden 1962 eduskuntavaaleissa äänesti 85,1 prosenttia</h3><p>Vuoden 1962 eduskuntavaaleissa äänesti 85,1 prosenttia äänioikeutetuista. Se on korkein lukema Tilastokeskuksen taulukossa, joka kattaa eduskuntavaalit vuosilta 1908–2003. Miehistä äänesti 86,1 ja naisista 84,2 prosenttia.</p><p class="lahde">Lähde: <a href="https://stat.fi/til/evaa/2003/evaa_2003_2004-05-31_tau_005.html">Tilastokeskus, 1.6.2005</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Tilapäiset valiokunnat</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Viimeiset tilapäiset valiokunnat toimivat vuonna 1968</h3><p>Eduskunnalla oli aiemmin myös tilapäisiä erikoisvaliokuntia, niin sanottuja ad hoc -valiokuntia. Viimeiset niistä, alkoholilakivaliokunta ja verolakivaliokunta, toimivat vuonna 1968.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/fi/kansanedustajat-ja-toimielimet/valiokunnat/tietoa-valiokunnista/valiokuntien-historia/">Eduskunta, 28.4.2026</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Talo purettiin 1969</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Talo, jossa itsenäisyysjulistus hyväksyttiin, purettiin vuonna 1969</h3><p>Eduskunta kokoontui Helsingin Heimolan talossa vuosina 1911–1930, ja siellä se hyväksyi itsenäisyysjulistuksen 6.12.1917. Talo purettiin vuonna 1969. Nykyisen talon kerrostasanteella on asiasta kertova kyltti.</p><p class="lahde">Lähde: <a href="https://yle.fi/a/20-152123">Yle, 4.12.2013</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Siivet kylkeen 1978</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Eduskuntatalo sai lisäsiivet ja kirjastorakennuksen vuonna 1978</h3><p>Eduskuntatalon laajennus valmistui vuonna 1978, kun päärakennuksen molemmille puolille tehtiin kansanedustajien työhuonesiivet. Samana vuonna valmistui myös C-rakennus, jossa toimii yleisölle avoin Eduskunnan kirjasto.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/fi/vieraile-ja-osallistu/eduskuntatalo/">Eduskunta, 3.6.2025</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Kuusi tuntia muistoja</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Entisiä kansanedustajia on haastateltu arkistoon vuodesta 1988</h3><p>Eduskunnan muistitietoarkistoon on tallennettu yli 500 entisen kansanedustajan haastattelua, joita on tehty vuodesta 1988 lähtien. Elämäkerralliset haastattelut kestävät keskimäärin yli kuusi tuntia, ja kokoelma kasvaa vuosittain 10–15 haastattelulla.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/fi/kirjasto-ja-arkisto/aineistot-esittelyssa/arkiston-aineistot/muistitietoarkisto/">Eduskunta, 27.6.2025</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Valiokunnat uusiksi</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Valiokunnat järjestettiin ministeriöiden mukaan vuonna 1991</h3><p>Säätyvaltiopäiviltä periytynyt valiokuntalaitos uudistettiin vuonna 1991 vastaamaan ministeriöiden toimialoja. Samalla valiokuntien toimikaudet pidennettiin koko vaalikauden mittaisiksi.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/fi/eduskunta-ja-sen-toiminta/eduskunnan-historia/">Eduskunta, 10.6.2025</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Lomaraha jäi saamatta</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Lamavuonna 1993 kansanedustajien lomarahat jätettiin maksamatta</h3><p>1990-luvun laman aikana kansanedustajat olivat haluttomia korottamaan palkkioitaan. Eduskunnan täysistunto päätti 8.6.1993, ettei kansanedustajien lomarahoja makseta heinäkuussa.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/fi/kansanedustajat-ja-toimielimet/tietoa-kansanedustajan-tyosta/kansanedustajien-palkkioiden-kehitys/">Eduskunta, 18.2.2026</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Tilapäisestä pysyväksi</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Tulevaisuusvaliokunta aloitti tilapäisenä vuonna 1993</h3><p>Tulevaisuusvaliokunta perustettiin vuonna 1993 alun perin tilapäiseksi valiokunnaksi. Sen asema vakinaistettiin uuden perustuslain myötä vuonna 2000.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/fi/kansanedustajat-ja-toimielimet/valiokunnat/tietoa-valiokunnista/valiokuntien-historia/">Eduskunta, 28.4.2026</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Ryhmät lakiin 2000</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Eduskuntaryhmien asema kirjattiin lainsäädäntöön lopullisesti vasta vuonna 2000</h3><p>Eduskuntaryhmät ovat toimineet aktiivisesti yksikamarisen eduskunnan alusta asti. Niiden asema poliittisena toimijana tunnustettiin lainsäädännössä lopullisesti kuitenkin vasta vuoden 2000 perustuslaissa. Laki ei velvoita kansanedustajaa liittymään eduskuntaryhmään.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/fi/kansanedustajat-ja-toimielimet/eduskuntaryhmat/eduskuntaryhman-tyo/">Eduskunta, 28.4.2025</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Palkka ulkoistettiin</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Kansanedustajien palkkioista päättää eduskunnan ulkopuolinen toimikunta · <span class="vuosi">2003</span></h3><p>Vuonna 2003 eduskunta muutti lakia niin, ettei sen kansliatoimikunnan tarvinnut enää hyväksyä palkkiotoimikunnan esityksiä. Siitä lähtien kansanedustajien palkkioista on päättänyt eduskunnan ulkopuolinen palkkiotoimikunta. Sama malli on käytössä Norjassa ja Ruotsissa.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/fi/kansanedustajat-ja-toimielimet/tietoa-kansanedustajan-tyosta/kansanedustajien-palkkioiden-kehitys/">Eduskunta, 18.2.2026</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Neljästä tuli kaksi</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Neljästä vaalipiiristä tehtiin kaksi vuonna 2013</h3><p>Keväällä 2013 säädetyllä vaalilain muutoksella Etelä-Savon ja Kymen vaalipiirit yhdistettiin Kaakkois-Suomen vaalipiiriksi. Samalla Pohjois-Savon ja Pohjois-Karjalan vaalipiireistä tuli Savo-Karjalan vaalipiiri.</p><p class="lahde">Lähde: <a href="https://vaalit.fi/eduskuntavaalien-vaalijarjestelman-kehittaminen">Oikeusministeriö (vaalit.fi)</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Taustat tarkistetaan</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Eduskunnan uusin valiokunta aloitti vuonna 2019</h3><p>Tiedusteluvalvontavaliokunta aloitti toimintansa vuonna 2019, ja se on eduskunnan uusin valiokunta. Se poikkeaa muista valiokunnista, sillä se asetetaan vasta hallituksen nimittämisen jälkeen ja jäseniksi tulevien kansanedustajien taustat tarkistetaan ennen nimitystä.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/fi/kansanedustajat-ja-toimielimet/valiokunnat/tietoa-valiokunnista/valiokuntien-historia/">Eduskunta, 28.4.2026</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">18 euroa per nenä</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Eduskunnan toiminta maksoi 18 euroa jokaista suomalaista kohden · <span class="vuosi">2024</span></h3><p>Eduskunnan toiminta maksoi vuonna 2024 jokaista suomalaista kohden 18 euroa. Vuonna 2017 sama luku oli 23 euroa. Vuoden 2025 talousarviossa eduskunnan kaikki menot ovat yhteensä 148,0 miljoonaa euroa.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/fi/eduskunta-ja-sen-toiminta/eduskunta-organisaationa/">Eduskunta, 12.2.2025</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Kysymykset yllätyksenä</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Ministerit eivät saa kyselytunnin kysymyksiä etukäteen · <span class="vuosi">nykyään</span></h3><p>Suullinen kyselytunti pidetään torstaisin kello 16 alkavan täysistunnon alussa. Ministerit eivät saa kysymyksiä etukäteen tietoonsa, joten kyselytunnilla punnitaan heidän kykynsä hallita hallinnonalansa ajankohtaiset asiat.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/fi/eduskunta-ja-sen-toiminta/miten-eduskunta-toimii/eduskunta-valvoo-hallituksen-toimintaa/">Eduskunta, 18.3.2025</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Puhetta kello 22 asti</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Täysistunnot päättyvät yleensä viimeistään kello 22 · <span class="vuosi">nykyään</span></h3><p>Kansanedustajilla on vapaa puheoikeus, joten täysistuntojen päättymisaikaa ei tiedetä etukäteen. Takaraja on kuitenkin kello 22. Kiireisinä aikoina puhemiesneuvosto voi tarvittaessa poistaa takarajan.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/fi/taysistunnot-ja-tapahtumat/yleistietoa-eduskunnan-taysistunnoista/">Eduskunta, 26.3.2025</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Edustaja armeijaan</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Asevelvollisuus keskeyttää kansanedustajan tehtävän · <span class="vuosi">nykyään</span></h3><p>Perustuslain mukaan kansanedustajan tehtävän hoitaminen keskeytyy asevelvollisuuden suorittamisen ajaksi. Tehtävä keskeytyy myös silloin, kun kansanedustaja toimii Euroopan parlamentin jäsenenä – silloin tehtävää hoitaa hänen varaedustajansa.</p><p class="lahde">Lähde: <a href="https://www.finlex.fi/fi/lainsaadanto/1999/731">Finlex</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Sotilasvirka estää</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Sotilasvirassa olevaa ei voi valita kansanedustajaksi · <span class="vuosi">nykyään</span></h3><p>Perustuslain mukaan kansanedustajaksi ei voida valita sotilasvirassa olevaa henkilöä. Kansanedustajana eivät voi olla myöskään esimerkiksi oikeuskansleri, eduskunnan oikeusasiamies tai valtakunnansyyttäjä.</p><p class="lahde">Lähde: <a href="https://www.finlex.fi/fi/lainsaadanto/1999/731">Finlex</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Arpa ratkaisee</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Tasan menneen äänestyksen ratkaisee arpa · <span class="vuosi">nykyään</span></h3><p>Eduskunnan täysistunnossa päätökset tehdään annettujen äänten enemmistöllä. Jos äänet menevät tasan, perustuslain mukaan ratkaisee arpa – paitsi silloin, kun ehdotuksen hyväksymiseen vaaditaan määräenemmistö.</p><p class="lahde">Lähde: <a href="https://www.finlex.fi/fi/lainsaadanto/1999/731">Finlex</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Eduskunnan pankki</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Suomen Pankki toimii eduskunnan takuulla · <span class="vuosi">nykyään</span></h3><p>Perustuslain mukaan Suomen Pankki toimii eduskunnan takuulla ja hoidossa. Eduskunta valitsee pankkivaltuutetut valvomaan Suomen Pankin toimintaa.</p><p class="lahde">Lähde: <a href="https://www.finlex.fi/fi/lainsaadanto/1999/731">Finlex</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Yövuoro ilman lisää</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Yöistunnoista ei makseta lisäpalkkiota · <span class="vuosi">nykyään</span></h3><p>Kansanedustajille ei makseta lisäpalkkiota yö- eikä viikonloppuistunnoista. Myöskään valiokuntien kokouksista ei makseta erillisiä kokouspalkkioita.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/fi/kansanedustajat-ja-toimielimet/tietoa-kansanedustajan-tyosta/kansanedustajien-palkkiot-ja-kulukorvaukset/">Eduskunta, 13.3.2025</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Kotikunta ei ratkaise</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Ehdokkaaksi voi asettua missä tahansa vaalipiirissä · <span class="vuosi">nykyään</span></h3><p>Vaalikelpoisuus eduskuntavaaleissa ei riipu ehdokkaan kotikunnasta, joten ehdokkaaksi voi asettua missä tahansa vaalipiirissä – mutta vain yhdessä. Äänestäjä taas voi äänestää vain oman vaalipiirinsä ehdokasta.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/fi/eduskunta-ja-sen-toiminta/eduskuntavaalit/">Eduskunta, 11.2.2025</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Vanhat vaalimainokset</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Eduskunnan kirjastossa voi selata vaalimainoksia vuodesta 1948 · <span class="vuosi">nykyään</span></h3><p>Eduskunnan kirjastossa on oma työasema vaalimainoskokoelmaa varten. Sillä voi selata kirjaston skannaamia eduskuntavaalien vaalimainoksia vuosilta 1948–2015.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/fi/kirjasto-ja-arkisto/tilat-ja-laitteet/">Eduskunta, 20.5.2025</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Pesti valtiopäiviksi</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Puhemies valitaan yksien valtiopäivien ajaksi kerrallaan · <span class="vuosi">nykyään</span></h3><p>Eduskunnan puhemies ja varapuhemiehet valitaan yksien valtiopäivien ajaksi kerrallaan. Valtiopäivät alkavat vaalivuotta lukuun ottamatta helmikuun alussa, joten valtiopäivävuosi ei ole sama kuin kalenterivuosi. Puhemiesten vaali on aina valtiopäivien ensimmäisen täysistunnon ensimmäinen asia.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/fi/eduskunta-ja-sen-toiminta/eduskuntatyon-rytmitys-ja-suunnittelu/">Eduskunta, 10.6.2025</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">1 400 markan palkkio</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Ensimmäinen edustajanpalkkio oli 1 400 markkaa · <span class="vuosi">1907</span></h3><p>Kun eduskunta aloitti keväällä 1907, kansanedustajuus oli luottamustehtävä. Varsinaisilta valtiopäiviltä maksettiin 1 400 markan kertapalkkio. Edustajan varsinaisen työn oletettiin olevan muualla.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/kansanedustajat-ja-toimielimet/tietoa-kansanedustajan-tyosta/kansanedustajien-palkkioiden-kehitys/">Eduskunta, 18.2.2026</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Alku palokunnan talossa</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Eduskunta aloitti palokunnan talossa · <span class="vuosi">1907</span></h3><p>Eduskunta kokoontui vuosina 1907–1910 Vapaaehtoisen palokunnan talossa Helsingin Keskuskadulla. Valiokunnat ja kirjasto toimivat Säätytalolla vuoteen 1931 saakka.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/vieraile-ja-osallistu/eduskuntatalo/">Eduskunta, 3.6.2025</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Toinen tontti</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Ensimmäinen suunnitelma sijoitti talon Tähtitorninmäelle · <span class="vuosi">1908</span></h3><p>Ensimmäinen Eduskuntatalon suunnittelukilpailu järjestettiin jo vuonna 1908. Voittaja Eliel Saarinen sijoitti talon Tähtitorninmäelle. Hanke ei toteutunut muun muassa keisarin vastustuksen vuoksi.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/vieraile-ja-osallistu/eduskuntatalo/">Eduskunta, 3.6.2025</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Kaksi vuotta tauolla</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Eduskunta ei kokoontunut lainkaan 1915–1916</h3><p>Ensimmäisen maailmansodan poikkeusoloissa eduskunta ei ollut koolla lainkaan vuosina 1915 ja 1916. Muutenkin eduskunta kokoontui vuosina 1907–1917 vain muutaman kuukauden vuodessa.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/kansanedustajat-ja-toimielimet/tietoa-kansanedustajan-tyosta/kansanedustajien-palkkioiden-kehitys/">Eduskunta, 18.2.2026</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Äänin 100–88</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Itsenäisyysjulistus hyväksyttiin äänin 100–88 · <span class="vuosi">1917</span></h3><p>P. E. Svinhufvudin johtama senaatti toi itsenäisyysjulistuksen eduskuntaan joulukuun alussa 1917. Eduskunta hyväksyi sen 6. joulukuuta äänin 100–88. Siksi itsenäisyyspäivää vietetään juuri tuona päivänä.</p><p class="lahde">Lähde: <a href="https://yle.fi/a/20-10007197">Yle Elävä arkisto, 24.2.2015</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Eduskunta valitsi</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Ensimmäisen presidentin valitsi eduskunta · <span class="vuosi">1919</span></h3><p>Suomen ensimmäistä presidenttiä ei valittu kansanvaalilla. Eduskunta äänesti K. J. Ståhlbergin presidentiksi Heimolan talossa 25. heinäkuuta 1919. Vastaehdokas oli C. G. E. Mannerheim.</p><p class="lahde">Lähde: <a href="https://yle.fi/aihe/a/20-289946">Yle, 25.7.2019</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Nimimerkki Oratoribus</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Voittajaehdotuksen nimi oli Oratoribus · <span class="vuosi">1924</span></h3><p>Eduskuntatalon suunnittelukilpailun voitti vuonna 1924 ehdotus nimeltä Oratoribus. Nimi tarkoittaa ”puhujille”. Ehdotuksen varsinainen laatija oli arkkitehti J. S. Sirén.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/vieraile-ja-osallistu/eduskuntatalo/">Eduskunta, 3.6.2025</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Miina ministeriksi</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Suomen ensimmäinen naisministeri · <span class="vuosi">1926</span></h3><p>Kansanedustaja Miina Sillanpäästä tuli vuonna 1926 Suomen ensimmäinen naisministeri Väinö Tannerin hallituksessa. Hän oli myös yksi vuonna 1907 valituista 19 ensimmäisestä naiskansanedustajasta.</p><p class="lahde">Lähde: <a href="https://yle.fi/a/20-304733">Yle Oppiminen, 30.9.2020</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Kone laski äänet</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Äänestyskone tuli käyttöön jo 1927</h3><p>Eduskunnassa on ollut äänestyskone syksystä 1927 lähtien. Ensimmäinen kone maksoi 171 000 markkaa, ja sen valmisti L. M. Ericsson. Se näytti vain kokonaistuloksen, ei yksittäisen edustajan ääntä.</p><p class="lahde">Lähde: <a href="https://www.kirjastot.fi/kysy/suomen-eduskunnalla-on-kaytossa-sahkoinen?language_content_entity=fi">Kirjastot.fi – Kysy kirjastonhoitajalta (vastaaja: Eduskunnan kirjasto), 25.11.2020</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">14 pylvästä, 46 porrasta</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>14 pylvästä ja 46 porrasta · <span class="vuosi">1931</span></h3><p>Eduskuntatalon julkisivussa on 14 pylvästä, ja pääsisäänkäynnille nousee 46 porrasta. Pylväät ovat noin 17 metriä korkeita. Ne ovat Kalvolan graniittia.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/vieraile-ja-osallistu/eduskuntatalo/">Eduskunta, 3.6.2025</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Naisten oma huone</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Eduskuntatalossa oli kolme naisten huonetta · <span class="vuosi">1931</span></h3><p>Eduskuntatalossa oli alun perin kolme naisten huonetta. Niissä naiskansanedustajat saivat levätä rauhassa ja tavata toisiaan. Yksi huoneista on yhä jäljellä hallituksen käytävällä.</p><p class="lahde">Lähde: <a href="https://www.eduskunta.fi/vieraile-ja-osallistu/eduskuntatalo/">Eduskunta, 3.6.2025</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div><div class="lappu-kehys"><details class="tiesitko-lappu"><summary><span class="yla">Tiesitkö?</span><span class="kasi">Kultaa kipsin päällä</span><span class="vihje">Napauta tai vie hiiri päälle</span></summary><div class="sisus"><h3>Istuntosalin patsaat ovat kullattua kipsiä · <span class="vuosi">1932</span></h3><p>Wäinö Aaltosen viisi patsasta tuotiin istuntosaliin lokakuussa 1932. Ne oli tarkoitus valaa pronssiin, mutta rahatilanteen vuoksi ne tehtiin kullatusta kipsistä. Vuonna 1969 tilalle tulivat pronssivalokset. Kipsipatsaat konservoitiin eduskuntatalon remontin yhteydessä 2017.</p><p class="lahde">Lähde: <a href="https://yle.fi/a/3-9814103">Yle, 4.9.2017</a></p><p class="pysyva">Napauta otsikkoa, niin lappu jää auki.</p></div></details></div></template><script>(function(){var t=document.querySelector("template.laput-varalla"),a=t&&t.previousElementSibling;if(!a)return;var k=[].slice.call(a.children).concat([].slice.call(t.content.children));for(var i=k.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),x=k[i];k[i]=k[j];k[j]=x;}a.textContent="";for(var m=0;m<3&&m<k.length;m++)a.appendChild(document.importNode(k[m],true));})();</script></div>
+
+<h2 class="listaotsikko">Edustajat</h2>
+<p class="listaselite">200 nykyistä kansanedustajaa</p>
+<div class="listat">
+<input type="radio" name="jarjestys" id="j-ryhma" class="valinta" checked>
+<input type="radio" name="jarjestys" id="j-piiri" class="valinta">
+<div class="valilehdet"><label for="j-ryhma">Ryhmittäin</label><label for="j-piiri">Vaalipiireittäin</label></div>
+<div class="lista" id="lista-ryhmat">
+<nav class="kirjaimet ryhmat" id="kirjaimet" aria-label="Eduskuntaryhmä"><a href="#r-0">Perussuomalaiset</a><a href="#r-1">Kokoomus</a><a href="#r-2">Kristillisdemokraatit</a><a href="#r-3">RKP</a><a href="#r-4">Keskusta</a><a href="#r-5">Vihreät</a><a href="#r-6">SDP</a><a href="#r-7">Vasemmistoliitto</a><a href="#r-8">Liike Nyt</a><a href="#r-9">Eduskuntaryhmä Timo Vornanen</a></nav>
+<section class="kortti kirjain" id="r-0">
+  <h2>Perussuomalaiset <span class="lukumaara">45</span></h2>
+  <ul class="nimilista">
+    <li id="e-1452" data-etunimi="Pekka" data-sukunimi="Aittakumpu"><a href="edustajat/1452.html"><span class="sukunimi">Aittakumpu</span>, Pekka<span class="lisa">Oulun vaalipiiri</span></a></li>
+    <li id="e-1434" data-etunimi="Sanna" data-sukunimi="Antikainen"><a href="edustajat/1434.html"><span class="sukunimi">Antikainen</span>, Sanna<span class="lisa">Savo-Karjalan vaalipiiri</span></a></li>
+    <li id="e-1514" data-etunimi="Miko" data-sukunimi="Bergbom"><a href="edustajat/1514.html"><span class="sukunimi">Bergbom</span>, Miko<span class="lisa">Pirkanmaan vaalipiiri</span></a></li>
+    <li id="e-1093" data-etunimi="Juho" data-sukunimi="Eerola"><a href="edustajat/1093.html"><span class="sukunimi">Eerola</span>, Juho<span class="lisa">Kaakkois-Suomen vaalipiiri</span></a></li>
+    <li id="e-1096" data-etunimi="Ritva" data-sukunimi="Elomaa"><a href="edustajat/1096.html"><span class="sukunimi">Elomaa</span>, Ritva<span class="lisa">Varsinais-Suomen vaalipiiri</span></a></li>
+    <li id="e-1530" data-etunimi="Kaisa" data-sukunimi="Garedew"><a href="edustajat/1530.html"><span class="sukunimi">Garedew</span>, Kaisa<span class="lisa">Keski-Suomen vaalipiiri</span></a></li>
+    <li id="e-1109" data-etunimi="Jussi" data-sukunimi="Halla-aho"><a href="edustajat/1109.html"><span class="sukunimi">Halla-aho</span>, Jussi<span class="lisa">Helsingin vaalipiiri</span></a></li>
+    <li id="e-1333" data-etunimi="Laura" data-sukunimi="Huhtasaari"><a href="edustajat/1333.html"><span class="sukunimi">Huhtasaari</span>, Laura<span class="lisa">Satakunnan vaalipiiri</span></a></li>
+    <li id="e-1467" data-etunimi="Petri" data-sukunimi="Huru"><a href="edustajat/1467.html"><span class="sukunimi">Huru</span>, Petri<span class="lisa">Satakunnan vaalipiiri</span></a></li>
+    <li id="e-1531" data-etunimi="Tomi" data-sukunimi="Immonen"><a href="edustajat/1531.html"><span class="sukunimi">Immonen</span>, Tomi<span class="lisa">Keski-Suomen vaalipiiri</span></a></li>
+    <li id="e-1409" data-etunimi="Vilhelm" data-sukunimi="Junnila"><a href="edustajat/1409.html"><span class="sukunimi">Junnila</span>, Vilhelm<span class="lisa">Varsinais-Suomen vaalipiiri</span></a></li>
+    <li id="e-1455" data-etunimi="Kaisa" data-sukunimi="Juuso"><a href="edustajat/1455.html"><span class="sukunimi">Juuso</span>, Kaisa<span class="lisa">Lapin vaalipiiri</span></a></li>
+    <li id="e-1129" data-etunimi="Arja" data-sukunimi="Juvonen"><a href="edustajat/1129.html"><span class="sukunimi">Juvonen</span>, Arja<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-1535" data-etunimi="Antti" data-sukunimi="Kangas"><a href="edustajat/1535.html"><span class="sukunimi">Kangas</span>, Antti<span class="lisa">Oulun vaalipiiri</span></a></li>
+    <li id="e-1498" data-etunimi="Teemu" data-sukunimi="Keskisarja"><a href="edustajat/1498.html"><span class="sukunimi">Keskisarja</span>, Teemu<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-1391" data-etunimi="Ari" data-sukunimi="Koponen"><a href="edustajat/1391.html"><span class="sukunimi">Koponen</span>, Ari<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-1413" data-etunimi="Jari" data-sukunimi="Koskela"><a href="edustajat/1413.html"><span class="sukunimi">Koskela</span>, Jari<span class="lisa">Satakunnan vaalipiiri</span></a></li>
+    <li id="e-1426" data-etunimi="Sheikki" data-sukunimi="Laakso"><a href="edustajat/1426.html"><span class="sukunimi">Laakso</span>, Sheikki<span class="lisa">Kaakkois-Suomen vaalipiiri</span></a></li>
+    <li id="e-1508" data-etunimi="Rami" data-sukunimi="Lehtinen"><a href="edustajat/1508.html"><span class="sukunimi">Lehtinen</span>, Rami<span class="lisa">Hämeen vaalipiiri</span></a></li>
+    <li id="e-1410" data-etunimi="Mikko" data-sukunimi="Lundén"><a href="edustajat/1410.html"><span class="sukunimi">Lundén</span>, Mikko<span class="lisa">Varsinais-Suomen vaalipiiri</span></a></li>
+    <li id="e-1349" data-etunimi="Leena" data-sukunimi="Meri"><a href="edustajat/1349.html"><span class="sukunimi">Meri</span>, Leena<span class="lisa">ministeri · Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-1437" data-etunimi="Juha" data-sukunimi="Mäenpää"><a href="edustajat/1437.html"><span class="sukunimi">Mäenpää</span>, Juha<span class="lisa">Vaasan vaalipiiri</span></a></li>
+    <li id="e-1301" data-etunimi="Jani" data-sukunimi="Mäkelä"><a href="edustajat/1301.html"><span class="sukunimi">Mäkelä</span>, Jani<span class="lisa">Kaakkois-Suomen vaalipiiri</span></a></li>
+    <li id="e-1418" data-etunimi="Veijo" data-sukunimi="Niemi"><a href="edustajat/1418.html"><span class="sukunimi">Niemi</span>, Veijo<span class="lisa">Pirkanmaan vaalipiiri</span></a></li>
+    <li id="e-1509" data-etunimi="Mira" data-sukunimi="Nieminen"><a href="edustajat/1509.html"><span class="sukunimi">Nieminen</span>, Mira<span class="lisa">Hämeen vaalipiiri</span></a></li>
+    <li id="e-1439" data-etunimi="Mauri" data-sukunimi="Peltokangas"><a href="edustajat/1439.html"><span class="sukunimi">Peltokangas</span>, Mauri<span class="lisa">Vaasan vaalipiiri</span></a></li>
+    <li id="e-1499" data-etunimi="Jorma" data-sukunimi="Piisinen"><a href="edustajat/1499.html"><span class="sukunimi">Piisinen</span>, Jorma<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-1419" data-etunimi="Sakari" data-sukunimi="Puisto"><a href="edustajat/1419.html"><span class="sukunimi">Puisto</span>, Sakari<span class="lisa">ministeri · Pirkanmaan vaalipiiri</span></a></li>
+    <li id="e-1392" data-etunimi="Riikka" data-sukunimi="Purra"><a href="edustajat/1392.html"><span class="sukunimi">Purra</span>, Riikka<span class="lisa">ministeri · Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-1417" data-etunimi="Lulu" data-sukunimi="Ranne"><a href="edustajat/1417.html"><span class="sukunimi">Ranne</span>, Lulu<span class="lisa">ministeri · Hämeen vaalipiiri</span></a></li>
+    <li id="e-1388" data-etunimi="Mari" data-sukunimi="Rantanen"><a href="edustajat/1388.html"><span class="sukunimi">Rantanen</span>, Mari<span class="lisa">ministeri · Helsingin vaalipiiri</span></a></li>
+    <li id="e-911826" data-etunimi="Merja" data-sukunimi="Rasinkangas"><a href="edustajat/911826.html"><span class="sukunimi">Rasinkangas</span>, Merja<span class="lisa">Oulun vaalipiiri</span></a></li>
+    <li id="e-1435" data-etunimi="Minna" data-sukunimi="Reijonen"><a href="edustajat/1435.html"><span class="sukunimi">Reijonen</span>, Minna<span class="lisa">Savo-Karjalan vaalipiiri</span></a></li>
+    <li id="e-1526" data-etunimi="Anne" data-sukunimi="Rintamäki"><a href="edustajat/1526.html"><span class="sukunimi">Rintamäki</span>, Anne<span class="lisa">Vaasan vaalipiiri</span></a></li>
+    <li id="e-1308" data-etunimi="Jari" data-sukunimi="Ronkainen"><a href="edustajat/1308.html"><span class="sukunimi">Ronkainen</span>, Jari<span class="lisa">Hämeen vaalipiiri</span></a></li>
+    <li id="e-1500" data-etunimi="Onni" data-sukunimi="Rostila"><a href="edustajat/1500.html"><span class="sukunimi">Rostila</span>, Onni<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-1282" data-etunimi="Wille" data-sukunimi="Rydman"><a href="edustajat/1282.html"><span class="sukunimi">Rydman</span>, Wille<span class="lisa">ministeri · Helsingin vaalipiiri</span></a></li>
+    <li id="e-1314" data-etunimi="Sami" data-sukunimi="Savio"><a href="edustajat/1314.html"><span class="sukunimi">Savio</span>, Sami<span class="lisa">Pirkanmaan vaalipiiri</span></a></li>
+    <li id="e-1538" data-etunimi="Sara" data-sukunimi="Seppänen"><a href="edustajat/1538.html"><span class="sukunimi">Seppänen</span>, Sara<span class="lisa">Lapin vaalipiiri</span></a></li>
+    <li id="e-1527" data-etunimi="Pia" data-sukunimi="Sillanpää"><a href="edustajat/1527.html"><span class="sukunimi">Sillanpää</span>, Pia<span class="lisa">Vaasan vaalipiiri</span></a></li>
+    <li id="e-1450" data-etunimi="Jenna" data-sukunimi="Simula"><a href="edustajat/1450.html"><span class="sukunimi">Simula</span>, Jenna<span class="lisa">Oulun vaalipiiri</span></a></li>
+    <li id="e-1516" data-etunimi="Jaana" data-sukunimi="Strandman"><a href="edustajat/1516.html"><span class="sukunimi">Strandman</span>, Jaana<span class="lisa">Kaakkois-Suomen vaalipiiri</span></a></li>
+    <li id="e-1327" data-etunimi="Ville" data-sukunimi="Tavio"><a href="edustajat/1327.html"><span class="sukunimi">Tavio</span>, Ville<span class="lisa">ministeri · Varsinais-Suomen vaalipiiri</span></a></li>
+    <li id="e-1515" data-etunimi="Joakim" data-sukunimi="Vigelius"><a href="edustajat/1515.html"><span class="sukunimi">Vigelius</span>, Joakim<span class="lisa">Pirkanmaan vaalipiiri</span></a></li>
+    <li id="e-1136" data-etunimi="Ville" data-sukunimi="Vähämäki"><a href="edustajat/1136.html"><span class="sukunimi">Vähämäki</span>, Ville<span class="lisa">Oulun vaalipiiri</span></a></li>
+  </ul>
+</section>
+<section class="kortti kirjain" id="r-1">
+  <h2>Kokoomus <span class="lukumaara">48</span></h2>
+  <ul class="nimilista">
+    <li id="e-1504" data-etunimi="Pauli" data-sukunimi="Aalto-Setälä"><a href="edustajat/1504.html"><span class="sukunimi">Aalto-Setälä</span>, Pauli<span class="lisa">Varsinais-Suomen vaalipiiri</span></a></li>
+    <li id="e-1089" data-etunimi="Heikki" data-sukunimi="Autto"><a href="edustajat/1089.html"><span class="sukunimi">Autto</span>, Heikki<span class="lisa">Lapin vaalipiiri</span></a></li>
+    <li id="e-911822" data-etunimi="Maaret" data-sukunimi="Castrén"><a href="edustajat/911822.html"><span class="sukunimi">Castrén</span>, Maaret<span class="lisa">Helsingin vaalipiiri</span></a></li>
+    <li id="e-1094" data-etunimi="Markku" data-sukunimi="Eestilä"><a href="edustajat/1094.html"><span class="sukunimi">Eestilä</span>, Markku<span class="lisa">Savo-Karjalan vaalipiiri</span></a></li>
+    <li id="e-1490" data-etunimi="Noora" data-sukunimi="Fagerström"><a href="edustajat/1490.html"><span class="sukunimi">Fagerström</span>, Noora<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-1100" data-etunimi="Sanni" data-sukunimi="Grahn-Laasonen"><a href="edustajat/1100.html"><span class="sukunimi">Grahn-Laasonen</span>, Sanni<span class="lisa">Hämeen vaalipiiri</span></a></li>
+    <li id="e-1454" data-etunimi="Janne" data-sukunimi="Heikkinen"><a href="edustajat/1454.html"><span class="sukunimi">Heikkinen</span>, Janne<span class="lisa">Oulun vaalipiiri</span></a></li>
+    <li id="e-967" data-etunimi="Timo" data-sukunimi="Heinonen"><a href="edustajat/967.html"><span class="sukunimi">Heinonen</span>, Timo<span class="lisa">Hämeen vaalipiiri</span></a></li>
+    <li id="e-563" data-etunimi="Pertti" data-sukunimi="Hemmilä"><a href="edustajat/563.html"><span class="sukunimi">Hemmilä</span>, Pertti<span class="lisa">Varsinais-Suomen vaalipiiri</span></a></li>
+    <li id="e-1334" data-etunimi="Antti" data-sukunimi="Häkkänen"><a href="edustajat/1334.html"><span class="sukunimi">Häkkänen</span>, Antti<span class="lisa">ministeri · Kaakkois-Suomen vaalipiiri</span></a></li>
+    <li id="e-1537" data-etunimi="Juha" data-sukunimi="Hänninen"><a href="edustajat/1537.html"><span class="sukunimi">Hänninen</span>, Juha<span class="lisa">Oulun vaalipiiri</span></a></li>
+    <li id="e-1421" data-etunimi="Anna-Kaisa" data-sukunimi="Ikonen"><a href="edustajat/1421.html"><span class="sukunimi">Ikonen</span>, Anna-Kaisa<span class="lisa">ministeri · Pirkanmaan vaalipiiri</span></a></li>
+    <li id="e-1525" data-etunimi="Janne" data-sukunimi="Jukkola"><a href="edustajat/1525.html"><span class="sukunimi">Jukkola</span>, Janne<span class="lisa">Vaasan vaalipiiri</span></a></li>
+    <li id="e-1513" data-etunimi="Aleksi" data-sukunimi="Jäntti"><a href="edustajat/1513.html"><span class="sukunimi">Jäntti</span>, Aleksi<span class="lisa">Pirkanmaan vaalipiiri</span></a></li>
+    <li id="e-1481" data-etunimi="Atte" data-sukunimi="Kaleva"><a href="edustajat/1481.html"><span class="sukunimi">Kaleva</span>, Atte<span class="lisa">Helsingin vaalipiiri</span></a></li>
+    <li id="e-1135" data-etunimi="Pia" data-sukunimi="Kauma"><a href="edustajat/1135.html"><span class="sukunimi">Kauma</span>, Pia<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-1425" data-etunimi="Ville" data-sukunimi="Kaunisto"><a href="edustajat/1425.html"><span class="sukunimi">Kaunisto</span>, Ville<span class="lisa">Kaakkois-Suomen vaalipiiri</span></a></li>
+    <li id="e-1507" data-etunimi="Mari" data-sukunimi="Kaunistola"><a href="edustajat/1507.html"><span class="sukunimi">Kaunistola</span>, Mari<span class="lisa">Satakunnan vaalipiiri</span></a></li>
+    <li id="e-1394" data-etunimi="Pihla" data-sukunimi="Keto-Huovinen"><a href="edustajat/1394.html"><span class="sukunimi">Keto-Huovinen</span>, Pihla<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-1432" data-etunimi="Marko" data-sukunimi="Kilpi"><a href="edustajat/1432.html"><span class="sukunimi">Kilpi</span>, Marko<span class="lisa">Savo-Karjalan vaalipiiri</span></a></li>
+    <li id="e-1510" data-etunimi="Teemu" data-sukunimi="Kinnari"><a href="edustajat/1510.html"><span class="sukunimi">Kinnari</span>, Teemu<span class="lisa">Hämeen vaalipiiri</span></a></li>
+    <li id="e-1137" data-etunimi="Pauli" data-sukunimi="Kiuru"><a href="edustajat/1137.html"><span class="sukunimi">Kiuru</span>, Pauli<span class="lisa">Pirkanmaan vaalipiiri</span></a></li>
+    <li id="e-1142" data-etunimi="Jukka" data-sukunimi="Kopra"><a href="edustajat/1142.html"><span class="sukunimi">Kopra</span>, Jukka<span class="lisa">Kaakkois-Suomen vaalipiiri</span></a></li>
+    <li id="e-1389" data-etunimi="Terhi" data-sukunimi="Koulumies"><a href="edustajat/1389.html"><span class="sukunimi">Koulumies</span>, Terhi<span class="lisa">Helsingin vaalipiiri</span></a></li>
+    <li id="e-1505" data-etunimi="Milla" data-sukunimi="Lahdenperä"><a href="edustajat/1505.html"><span class="sukunimi">Lahdenperä</span>, Milla<span class="lisa">Varsinais-Suomen vaalipiiri</span></a></li>
+    <li id="e-1379" data-etunimi="Mia" data-sukunimi="Laiho"><a href="edustajat/1379.html"><span class="sukunimi">Laiho</span>, Mia<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-1491" data-etunimi="Jarno" data-sukunimi="Limnell"><a href="edustajat/1491.html"><span class="sukunimi">Limnell</span>, Jarno<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-1486" data-etunimi="Jarmo" data-sukunimi="Lindberg"><a href="edustajat/1486.html"><span class="sukunimi">Lindberg</span>, Jarmo<span class="lisa">Helsingin vaalipiiri</span></a></li>
+    <li id="e-1265" data-etunimi="Matias" data-sukunimi="Marttinen"><a href="edustajat/1265.html"><span class="sukunimi">Marttinen</span>, Matias<span class="lisa">ministeri · Satakunnan vaalipiiri</span></a></li>
+    <li id="e-1299" data-etunimi="Sari" data-sukunimi="Multala"><a href="edustajat/1299.html"><span class="sukunimi">Multala</span>, Sari<span class="lisa">ministeri · Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-947" data-etunimi="Petteri" data-sukunimi="Orpo"><a href="edustajat/947.html"><span class="sukunimi">Orpo</span>, Petteri<span class="lisa">ministeri · Varsinais-Suomen vaalipiiri</span></a></li>
+    <li id="e-911825" data-etunimi="Martin" data-sukunimi="Paasi"><a href="edustajat/911825.html"><span class="sukunimi">Paasi</span>, Martin<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-1520" data-etunimi="Karoliina" data-sukunimi="Partanen"><a href="edustajat/1520.html"><span class="sukunimi">Partanen</span>, Karoliina<span class="lisa">ministeri · Savo-Karjalan vaalipiiri</span></a></li>
+    <li id="e-1492" data-etunimi="Susanne" data-sukunimi="Päivärinta"><a href="edustajat/1492.html"><span class="sukunimi">Päivärinta</span>, Susanne<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-809" data-etunimi="Paula" data-sukunimi="Risikko"><a href="edustajat/809.html"><span class="sukunimi">Risikko</span>, Paula<span class="lisa">Vaasan vaalipiiri</span></a></li>
+    <li id="e-1493" data-etunimi="Tere" data-sukunimi="Sammallahti"><a href="edustajat/1493.html"><span class="sukunimi">Sammallahti</span>, Tere<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-612" data-etunimi="Sari" data-sukunimi="Sarkomaa"><a href="edustajat/612.html"><span class="sukunimi">Sarkomaa</span>, Sari<span class="lisa">Helsingin vaalipiiri</span></a></li>
+    <li id="e-784" data-etunimi="Arto" data-sukunimi="Satonen"><a href="edustajat/784.html"><span class="sukunimi">Satonen</span>, Arto<span class="lisa">Pirkanmaan vaalipiiri</span></a></li>
+    <li id="e-1323" data-etunimi="Mari-Leena" data-sukunimi="Talvitie"><a href="edustajat/1323.html"><span class="sukunimi">Talvitie</span>, Mari-Leena<span class="lisa">ministeri · Oulun vaalipiiri</span></a></li>
+    <li id="e-1483" data-etunimi="Ville" data-sukunimi="Valkonen"><a href="edustajat/1483.html"><span class="sukunimi">Valkonen</span>, Ville<span class="lisa">Varsinais-Suomen vaalipiiri</span></a></li>
+    <li id="e-1517" data-etunimi="Oskari" data-sukunimi="Valtola"><a href="edustajat/1517.html"><span class="sukunimi">Valtola</span>, Oskari<span class="lisa">Kaakkois-Suomen vaalipiiri</span></a></li>
+    <li id="e-1279" data-etunimi="Elina" data-sukunimi="Valtonen"><a href="edustajat/1279.html"><span class="sukunimi">Valtonen</span>, Elina<span class="lisa">ministeri · Helsingin vaalipiiri</span></a></li>
+    <li id="e-1396" data-etunimi="Heikki" data-sukunimi="Vestman"><a href="edustajat/1396.html"><span class="sukunimi">Vestman</span>, Heikki<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-1134" data-etunimi="Sofia" data-sukunimi="Vikman"><a href="edustajat/1134.html"><span class="sukunimi">Vikman</span>, Sofia<span class="lisa">Pirkanmaan vaalipiiri</span></a></li>
+    <li id="e-911828" data-etunimi="Henrik" data-sukunimi="Vuornos"><a href="edustajat/911828.html"><span class="sukunimi">Vuornos</span>, Henrik<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-1528" data-etunimi="Ville" data-sukunimi="Väyrynen"><a href="edustajat/1528.html"><span class="sukunimi">Väyrynen</span>, Ville<span class="lisa">Keski-Suomen vaalipiiri</span></a></li>
+    <li id="e-1131" data-etunimi="Sinuhe" data-sukunimi="Wallinheimo"><a href="edustajat/1131.html"><span class="sukunimi">Wallinheimo</span>, Sinuhe<span class="lisa">Keski-Suomen vaalipiiri</span></a></li>
+    <li id="e-301" data-etunimi="Ben" data-sukunimi="Zyskowicz"><a href="edustajat/301.html"><span class="sukunimi">Zyskowicz</span>, Ben<span class="lisa">Helsingin vaalipiiri</span></a></li>
+  </ul>
+</section>
+<section class="kortti kirjain" id="r-2">
+  <h2>Kristillisdemokraatit <span class="lukumaara">5</span></h2>
+  <ul class="nimilista">
+    <li id="e-778" data-etunimi="Sari" data-sukunimi="Essayah"><a href="edustajat/778.html"><span class="sukunimi">Essayah</span>, Sari<span class="lisa">ministeri · Savo-Karjalan vaalipiiri</span></a></li>
+    <li id="e-1495" data-etunimi="Mika" data-sukunimi="Poutala"><a href="edustajat/1495.html"><span class="sukunimi">Poutala</span>, Mika<span class="lisa">ministeri · Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-499" data-etunimi="Päivi" data-sukunimi="Räsänen"><a href="edustajat/499.html"><span class="sukunimi">Räsänen</span>, Päivi<span class="lisa">Hämeen vaalipiiri</span></a></li>
+    <li id="e-1325" data-etunimi="Sari" data-sukunimi="Tanus"><a href="edustajat/1325.html"><span class="sukunimi">Tanus</span>, Sari<span class="lisa">Pirkanmaan vaalipiiri</span></a></li>
+    <li id="e-1141" data-etunimi="Peter" data-sukunimi="Östman"><a href="edustajat/1141.html"><span class="sukunimi">Östman</span>, Peter<span class="lisa">Vaasan vaalipiiri</span></a></li>
+  </ul>
+</section>
+<section class="kortti kirjain" id="r-3">
+  <h2>RKP <span class="lukumaara">10</span></h2>
+  <ul class="nimilista">
+    <li id="e-1306" data-etunimi="Anders" data-sukunimi="Adlercreutz"><a href="edustajat/1306.html"><span class="sukunimi">Adlercreutz</span>, Anders<span class="lisa">ministeri · Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-1189" data-etunimi="Otto" data-sukunimi="Andersson"><a href="edustajat/1189.html"><span class="sukunimi">Andersson</span>, Otto<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-1406" data-etunimi="Sandra" data-sukunimi="Bergqvist"><a href="edustajat/1406.html"><span class="sukunimi">Bergqvist</span>, Sandra<span class="lisa">Varsinais-Suomen vaalipiiri</span></a></li>
+    <li id="e-351" data-etunimi="Eva" data-sukunimi="Biaudet"><a href="edustajat/351.html"><span class="sukunimi">Biaudet</span>, Eva<span class="lisa">Helsingin vaalipiiri</span></a></li>
+    <li id="e-911821" data-etunimi="Christoffer" data-sukunimi="Ingo"><a href="edustajat/911821.html"><span class="sukunimi">Ingo</span>, Christoffer<span class="lisa">Vaasan vaalipiiri</span></a></li>
+    <li id="e-1345" data-etunimi="Mats" data-sukunimi="Löfström"><a href="edustajat/1345.html"><span class="sukunimi">Löfström</span>, Mats<span class="lisa">Ahvenanmaan vaalipiiri</span></a></li>
+    <li id="e-1440" data-etunimi="Anders" data-sukunimi="Norrback"><a href="edustajat/1440.html"><span class="sukunimi">Norrback</span>, Anders<span class="lisa">Vaasan vaalipiiri</span></a></li>
+    <li id="e-1441" data-etunimi="Mikko" data-sukunimi="Ollikainen"><a href="edustajat/1441.html"><span class="sukunimi">Ollikainen</span>, Mikko<span class="lisa">Vaasan vaalipiiri</span></a></li>
+    <li id="e-1318" data-etunimi="Joakim" data-sukunimi="Strand"><a href="edustajat/1318.html"><span class="sukunimi">Strand</span>, Joakim<span class="lisa">ministeri · Vaasan vaalipiiri</span></a></li>
+    <li id="e-1501" data-etunimi="Henrik" data-sukunimi="Wickström"><a href="edustajat/1501.html"><span class="sukunimi">Wickström</span>, Henrik<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+  </ul>
+</section>
+<section class="kortti kirjain" id="r-4">
+  <h2>Keskusta <span class="lukumaara">23</span></h2>
+  <ul class="nimilista">
+    <li id="e-1331" data-etunimi="Petri" data-sukunimi="Honkonen"><a href="edustajat/1331.html"><span class="sukunimi">Honkonen</span>, Petri<span class="lisa">Keski-Suomen vaalipiiri</span></a></li>
+    <li id="e-797" data-etunimi="Hannu" data-sukunimi="Hoskonen"><a href="edustajat/797.html"><span class="sukunimi">Hoskonen</span>, Hannu<span class="lisa">Savo-Karjalan vaalipiiri</span></a></li>
+    <li id="e-772" data-etunimi="Antti" data-sukunimi="Kaikkonen"><a href="edustajat/772.html"><span class="sukunimi">Kaikkonen</span>, Antti<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-1412" data-etunimi="Eeva" data-sukunimi="Kalli"><a href="edustajat/1412.html"><span class="sukunimi">Kalli</span>, Eeva<span class="lisa">Satakunnan vaalipiiri</span></a></li>
+    <li id="e-1518" data-etunimi="Vesa" data-sukunimi="Kallio"><a href="edustajat/1518.html"><span class="sukunimi">Kallio</span>, Vesa<span class="lisa">Kaakkois-Suomen vaalipiiri</span></a></li>
+    <li id="e-953" data-etunimi="Anne" data-sukunimi="Kalmari"><a href="edustajat/953.html"><span class="sukunimi">Kalmari</span>, Anne<span class="lisa">Keski-Suomen vaalipiiri</span></a></li>
+    <li id="e-1415" data-etunimi="Hilkka" data-sukunimi="Kemppi"><a href="edustajat/1415.html"><span class="sukunimi">Kemppi</span>, Hilkka<span class="lisa">Hämeen vaalipiiri</span></a></li>
+    <li id="e-1468" data-etunimi="Tuomas" data-sukunimi="Kettunen"><a href="edustajat/1468.html"><span class="sukunimi">Kettunen</span>, Tuomas<span class="lisa">Oulun vaalipiiri</span></a></li>
+    <li id="e-911830" data-etunimi="Mauri" data-sukunimi="Kontu"><a href="edustajat/911830.html"><span class="sukunimi">Kontu</span>, Mauri<span class="lisa">Varsinais-Suomen vaalipiiri</span></a></li>
+    <li id="e-1338" data-etunimi="Hanna" data-sukunimi="Kosonen"><a href="edustajat/1338.html"><span class="sukunimi">Kosonen</span>, Hanna<span class="lisa">Kaakkois-Suomen vaalipiiri</span></a></li>
+    <li id="e-1341" data-etunimi="Antti" data-sukunimi="Kurvinen"><a href="edustajat/1341.html"><span class="sukunimi">Kurvinen</span>, Antti<span class="lisa">Vaasan vaalipiiri</span></a></li>
+    <li id="e-583" data-etunimi="Mika" data-sukunimi="Lintilä"><a href="edustajat/583.html"><span class="sukunimi">Lintilä</span>, Mika<span class="lisa">Vaasan vaalipiiri</span></a></li>
+    <li id="e-1149" data-etunimi="Markus" data-sukunimi="Lohi"><a href="edustajat/1149.html"><span class="sukunimi">Lohi</span>, Markus<span class="lisa">Lapin vaalipiiri</span></a></li>
+    <li id="e-1382" data-etunimi="Hanna-Leena" data-sukunimi="Mattila"><a href="edustajat/1382.html"><span class="sukunimi">Mattila</span>, Hanna-Leena<span class="lisa">Oulun vaalipiiri</span></a></li>
+    <li id="e-1532" data-etunimi="Timo" data-sukunimi="Mehtälä"><a href="edustajat/1532.html"><span class="sukunimi">Mehtälä</span>, Timo<span class="lisa">Oulun vaalipiiri</span></a></li>
+    <li id="e-1533" data-etunimi="Olga" data-sukunimi="Oinas-Panuma"><a href="edustajat/1533.html"><span class="sukunimi">Oinas-Panuma</span>, Olga<span class="lisa">Oulun vaalipiiri</span></a></li>
+    <li id="e-1422" data-etunimi="Jouni" data-sukunimi="Ovaska"><a href="edustajat/1422.html"><span class="sukunimi">Ovaska</span>, Jouni<span class="lisa">Pirkanmaan vaalipiiri</span></a></li>
+    <li id="e-1536" data-etunimi="Mikko" data-sukunimi="Polvinen"><a href="edustajat/1536.html"><span class="sukunimi">Polvinen</span>, Mikko<span class="lisa">Oulun vaalipiiri</span></a></li>
+    <li id="e-911827" data-etunimi="Mika" data-sukunimi="Riipi"><a href="edustajat/911827.html"><span class="sukunimi">Riipi</span>, Mika<span class="lisa">Lapin vaalipiiri</span></a></li>
+    <li id="e-1433" data-etunimi="Hanna" data-sukunimi="Räsänen"><a href="edustajat/1433.html"><span class="sukunimi">Räsänen</span>, Hanna<span class="lisa">Savo-Karjalan vaalipiiri</span></a></li>
+    <li id="e-1106" data-etunimi="Mikko" data-sukunimi="Savola"><a href="edustajat/1106.html"><span class="sukunimi">Savola</span>, Mikko<span class="lisa">Vaasan vaalipiiri</span></a></li>
+    <li id="e-1524" data-etunimi="Markku" data-sukunimi="Siponen"><a href="edustajat/1524.html"><span class="sukunimi">Siponen</span>, Markku<span class="lisa">Savo-Karjalan vaalipiiri</span></a></li>
+    <li id="e-913" data-etunimi="Eerikki" data-sukunimi="Viljanen"><a href="edustajat/913.html"><span class="sukunimi">Viljanen</span>, Eerikki<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+  </ul>
+</section>
+<section class="kortti kirjain" id="r-5">
+  <h2>Vihreät <span class="lukumaara">13</span></h2>
+  <ul class="nimilista">
+    <li id="e-911823" data-etunimi="Alviina" data-sukunimi="Alametsä"><a href="edustajat/911823.html"><span class="sukunimi">Alametsä</span>, Alviina<span class="lisa">Helsingin vaalipiiri</span></a></li>
+    <li id="e-1489" data-etunimi="Fatim" data-sukunimi="Diarra"><a href="edustajat/1489.html"><span class="sukunimi">Diarra</span>, Fatim<span class="lisa">Helsingin vaalipiiri</span></a></li>
+    <li id="e-1401" data-etunimi="Tiina" data-sukunimi="Elo"><a href="edustajat/1401.html"><span class="sukunimi">Elo</span>, Tiina<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-1445" data-etunimi="Bella" data-sukunimi="Forsgrén"><a href="edustajat/1445.html"><span class="sukunimi">Forsgrén</span>, Bella<span class="lisa">Keski-Suomen vaalipiiri</span></a></li>
+    <li id="e-1385" data-etunimi="Atte" data-sukunimi="Harjanne"><a href="edustajat/1385.html"><span class="sukunimi">Harjanne</span>, Atte<span class="lisa">Helsingin vaalipiiri</span></a></li>
+    <li id="e-1424" data-etunimi="Hanna" data-sukunimi="Holopainen"><a href="edustajat/1424.html"><span class="sukunimi">Holopainen</span>, Hanna<span class="lisa">Kaakkois-Suomen vaalipiiri</span></a></li>
+    <li id="e-1386" data-etunimi="Mari" data-sukunimi="Holopainen"><a href="edustajat/1386.html"><span class="sukunimi">Holopainen</span>, Mari<span class="lisa">Helsingin vaalipiiri</span></a></li>
+    <li id="e-1402" data-etunimi="Inka" data-sukunimi="Hopsu"><a href="edustajat/1402.html"><span class="sukunimi">Hopsu</span>, Inka<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-1403" data-etunimi="Saara" data-sukunimi="Hyrkkö"><a href="edustajat/1403.html"><span class="sukunimi">Hyrkkö</span>, Saara<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-1298" data-etunimi="Krista" data-sukunimi="Mikkonen"><a href="edustajat/1298.html"><span class="sukunimi">Mikkonen</span>, Krista<span class="lisa">Savo-Karjalan vaalipiiri</span></a></li>
+    <li id="e-1449" data-etunimi="Jenni" data-sukunimi="Pitko"><a href="edustajat/1449.html"><span class="sukunimi">Pitko</span>, Jenni<span class="lisa">Oulun vaalipiiri</span></a></li>
+    <li id="e-846" data-etunimi="Oras" data-sukunimi="Tynkkynen"><a href="edustajat/846.html"><span class="sukunimi">Tynkkynen</span>, Oras<span class="lisa">Pirkanmaan vaalipiiri</span></a></li>
+    <li id="e-1411" data-etunimi="Sofia" data-sukunimi="Virta"><a href="edustajat/1411.html"><span class="sukunimi">Virta</span>, Sofia<span class="lisa">Varsinais-Suomen vaalipiiri</span></a></li>
+  </ul>
+</section>
+<section class="kortti kirjain" id="r-6">
+  <h2>SDP <span class="lukumaara">43</span></h2>
+  <ul class="nimilista">
+    <li id="e-970" data-etunimi="Marko" data-sukunimi="Asell"><a href="edustajat/970.html"><span class="sukunimi">Asell</span>, Marko<span class="lisa">Pirkanmaan vaalipiiri</span></a></li>
+    <li id="e-1443" data-etunimi="Kim" data-sukunimi="Berg"><a href="edustajat/1443.html"><span class="sukunimi">Berg</span>, Kim<span class="lisa">Vaasan vaalipiiri</span></a></li>
+    <li id="e-1099" data-etunimi="Eeva-Johanna" data-sukunimi="Eloranta"><a href="edustajat/1099.html"><span class="sukunimi">Eloranta</span>, Eeva-Johanna<span class="lisa">Varsinais-Suomen vaalipiiri</span></a></li>
+    <li id="e-1430" data-etunimi="Seppo" data-sukunimi="Eskelinen"><a href="edustajat/1430.html"><span class="sukunimi">Eskelinen</span>, Seppo<span class="lisa">Savo-Karjalan vaalipiiri</span></a></li>
+    <li id="e-451" data-etunimi="Tarja" data-sukunimi="Filatov"><a href="edustajat/451.html"><span class="sukunimi">Filatov</span>, Tarja<span class="lisa">Hämeen vaalipiiri</span></a></li>
+    <li id="e-1488" data-etunimi="Elisa" data-sukunimi="Gebhard"><a href="edustajat/1488.html"><span class="sukunimi">Gebhard</span>, Elisa<span class="lisa">Helsingin vaalipiiri</span></a></li>
+    <li id="e-538" data-etunimi="Tuula" data-sukunimi="Haatainen"><a href="edustajat/538.html"><span class="sukunimi">Haatainen</span>, Tuula<span class="lisa">Helsingin vaalipiiri</span></a></li>
+    <li id="e-911820" data-etunimi="Lotta" data-sukunimi="Hamari"><a href="edustajat/911820.html"><span class="sukunimi">Hamari</span>, Lotta<span class="lisa">Pirkanmaan vaalipiiri</span></a></li>
+    <li id="e-1326" data-etunimi="Timo" data-sukunimi="Harakka"><a href="edustajat/1326.html"><span class="sukunimi">Harakka</span>, Timo<span class="lisa">Helsingin vaalipiiri</span></a></li>
+    <li id="e-1390" data-etunimi="Eveliina" data-sukunimi="Heinäluoma"><a href="edustajat/1390.html"><span class="sukunimi">Heinäluoma</span>, Eveliina<span class="lisa">Helsingin vaalipiiri</span></a></li>
+    <li id="e-1534" data-etunimi="Pia" data-sukunimi="Hiltunen"><a href="edustajat/1534.html"><span class="sukunimi">Hiltunen</span>, Pia<span class="lisa">Oulun vaalipiiri</span></a></li>
+    <li id="e-1380" data-etunimi="Riitta" data-sukunimi="Kaarisalo"><a href="edustajat/1380.html"><span class="sukunimi">Kaarisalo</span>, Riitta<span class="lisa">Keski-Suomen vaalipiiri</span></a></li>
+    <li id="e-1133" data-etunimi="Mika" data-sukunimi="Kari"><a href="edustajat/1133.html"><span class="sukunimi">Kari</span>, Mika<span class="lisa">Hämeen vaalipiiri</span></a></li>
+    <li id="e-911831" data-etunimi="Anette" data-sukunimi="Karlsson"><a href="edustajat/911831.html"><span class="sukunimi">Karlsson</span>, Anette<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-464" data-etunimi="Kimmo" data-sukunimi="Kiljunen"><a href="edustajat/464.html"><span class="sukunimi">Kiljunen</span>, Kimmo<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-960" data-etunimi="Krista" data-sukunimi="Kiuru"><a href="edustajat/960.html"><span class="sukunimi">Kiuru</span>, Krista<span class="lisa">Satakunnan vaalipiiri</span></a></li>
+    <li id="e-1529" data-etunimi="Jani" data-sukunimi="Kokko"><a href="edustajat/1529.html"><span class="sukunimi">Kokko</span>, Jani<span class="lisa">Keski-Suomen vaalipiiri</span></a></li>
+    <li id="e-358" data-etunimi="Johannes" data-sukunimi="Koskinen"><a href="edustajat/358.html"><span class="sukunimi">Koskinen</span>, Johannes<span class="lisa">Hämeen vaalipiiri</span></a></li>
+    <li id="e-1398" data-etunimi="Johan" data-sukunimi="Kvarnström"><a href="edustajat/1398.html"><span class="sukunimi">Kvarnström</span>, Johan<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-1144" data-etunimi="Suna" data-sukunimi="Kymäläinen"><a href="edustajat/1144.html"><span class="sukunimi">Kymäläinen</span>, Suna<span class="lisa">Kaakkois-Suomen vaalipiiri</span></a></li>
+    <li id="e-911829" data-etunimi="Hanna" data-sukunimi="Laine-Nousimaa"><a href="edustajat/911829.html"><span class="sukunimi">Laine-Nousimaa</span>, Hanna<span class="lisa">Pirkanmaan vaalipiiri</span></a></li>
+    <li id="e-1408" data-etunimi="Aki" data-sukunimi="Lindén"><a href="edustajat/1408.html"><span class="sukunimi">Lindén</span>, Aki<span class="lisa">Varsinais-Suomen vaalipiiri</span></a></li>
+    <li id="e-1147" data-etunimi="Antti" data-sukunimi="Lindtman"><a href="edustajat/1147.html"><span class="sukunimi">Lindtman</span>, Antti<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-1511" data-etunimi="Lauri" data-sukunimi="Lyly"><a href="edustajat/1511.html"><span class="sukunimi">Lyly</span>, Lauri<span class="lisa">Pirkanmaan vaalipiiri</span></a></li>
+    <li id="e-1428" data-etunimi="Niina" data-sukunimi="Malm"><a href="edustajat/1428.html"><span class="sukunimi">Malm</span>, Niina<span class="lisa">Kaakkois-Suomen vaalipiiri</span></a></li>
+    <li id="e-1539" data-etunimi="Helena" data-sukunimi="Marttila"><a href="edustajat/1539.html"><span class="sukunimi">Marttila</span>, Helena<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-1512" data-etunimi="Ville" data-sukunimi="Merinen"><a href="edustajat/1512.html"><span class="sukunimi">Merinen</span>, Ville<span class="lisa">Pirkanmaan vaalipiiri</span></a></li>
+    <li id="e-1519" data-etunimi="Anna-Kristiina" data-sukunimi="Mikkonen"><a href="edustajat/1519.html"><span class="sukunimi">Mikkonen</span>, Anna-Kristiina<span class="lisa">Kaakkois-Suomen vaalipiiri</span></a></li>
+    <li id="e-1469" data-etunimi="Matias" data-sukunimi="Mäkynen"><a href="edustajat/1469.html"><span class="sukunimi">Mäkynen</span>, Matias<span class="lisa">Vaasan vaalipiiri</span></a></li>
+    <li id="e-1503" data-etunimi="Saku" data-sukunimi="Nikkanen"><a href="edustajat/1503.html"><span class="sukunimi">Nikkanen</span>, Saku<span class="lisa">Varsinais-Suomen vaalipiiri</span></a></li>
+    <li id="e-971" data-etunimi="Johanna" data-sukunimi="Ojala-Niemelä"><a href="edustajat/971.html"><span class="sukunimi">Ojala-Niemelä</span>, Johanna<span class="lisa">Lapin vaalipiiri</span></a></li>
+    <li id="e-1497" data-etunimi="Pinja" data-sukunimi="Perholehto"><a href="edustajat/1497.html"><span class="sukunimi">Perholehto</span>, Pinja<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-1447" data-etunimi="Piritta" data-sukunimi="Rantanen"><a href="edustajat/1447.html"><span class="sukunimi">Rantanen</span>, Piritta<span class="lisa">Keski-Suomen vaalipiiri</span></a></li>
+    <li id="e-1202" data-etunimi="Nasima" data-sukunimi="Razmyar"><a href="edustajat/1202.html"><span class="sukunimi">Razmyar</span>, Nasima<span class="lisa">Helsingin vaalipiiri</span></a></li>
+    <li id="e-1274" data-etunimi="Antti" data-sukunimi="Rinne"><a href="edustajat/1274.html"><span class="sukunimi">Rinne</span>, Antti<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-1311" data-etunimi="Joona" data-sukunimi="Räsänen"><a href="edustajat/1311.html"><span class="sukunimi">Räsänen</span>, Joona<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-1316" data-etunimi="Ville" data-sukunimi="Skinnari"><a href="edustajat/1316.html"><span class="sukunimi">Skinnari</span>, Ville<span class="lisa">Hämeen vaalipiiri</span></a></li>
+    <li id="e-1521" data-etunimi="Timo" data-sukunimi="Suhonen"><a href="edustajat/1521.html"><span class="sukunimi">Suhonen</span>, Timo<span class="lisa">Savo-Karjalan vaalipiiri</span></a></li>
+    <li id="e-1126" data-etunimi="Tytti" data-sukunimi="Tuppurainen"><a href="edustajat/1126.html"><span class="sukunimi">Tuppurainen</span>, Tytti<span class="lisa">Oulun vaalipiiri</span></a></li>
+    <li id="e-1506" data-etunimi="Juha" data-sukunimi="Viitala"><a href="edustajat/1506.html"><span class="sukunimi">Viitala</span>, Juha<span class="lisa">Satakunnan vaalipiiri</span></a></li>
+    <li id="e-511" data-etunimi="Pia" data-sukunimi="Viitanen"><a href="edustajat/511.html"><span class="sukunimi">Viitanen</span>, Pia<span class="lisa">Pirkanmaan vaalipiiri</span></a></li>
+    <li id="e-794" data-etunimi="Tuula" data-sukunimi="Väätäinen"><a href="edustajat/794.html"><span class="sukunimi">Väätäinen</span>, Tuula<span class="lisa">Savo-Karjalan vaalipiiri</span></a></li>
+    <li id="e-1429" data-etunimi="Paula" data-sukunimi="Werning"><a href="edustajat/1429.html"><span class="sukunimi">Werning</span>, Paula<span class="lisa">Kaakkois-Suomen vaalipiiri</span></a></li>
+  </ul>
+</section>
+<section class="kortti kirjain" id="r-7">
+  <h2>Vasemmistoliitto <span class="lukumaara">11</span></h2>
+  <ul class="nimilista">
+    <li id="e-1502" data-etunimi="Timo" data-sukunimi="Furuholm"><a href="edustajat/1502.html"><span class="sukunimi">Furuholm</span>, Timo<span class="lisa">Varsinais-Suomen vaalipiiri</span></a></li>
+    <li id="e-1383" data-etunimi="Veronika" data-sukunimi="Honkasalo"><a href="edustajat/1383.html"><span class="sukunimi">Honkasalo</span>, Veronika<span class="lisa">Helsingin vaalipiiri</span></a></li>
+    <li id="e-911824" data-etunimi="Jessi" data-sukunimi="Jokelainen"><a href="edustajat/911824.html"><span class="sukunimi">Jokelainen</span>, Jessi<span class="lisa">Oulun vaalipiiri</span></a></li>
+    <li id="e-1384" data-etunimi="Mai" data-sukunimi="Kivelä"><a href="edustajat/1384.html"><span class="sukunimi">Kivelä</span>, Mai<span class="lisa">Helsingin vaalipiiri</span></a></li>
+    <li id="e-1155" data-etunimi="Anna" data-sukunimi="Kontula"><a href="edustajat/1155.html"><span class="sukunimi">Kontula</span>, Anna<span class="lisa">Pirkanmaan vaalipiiri</span></a></li>
+    <li id="e-1485" data-etunimi="Minja" data-sukunimi="Koskela"><a href="edustajat/1485.html"><span class="sukunimi">Koskela</span>, Minja<span class="lisa">Helsingin vaalipiiri</span></a></li>
+    <li id="e-1399" data-etunimi="Pia" data-sukunimi="Lohikoski"><a href="edustajat/1399.html"><span class="sukunimi">Lohikoski</span>, Pia<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+    <li id="e-1523" data-etunimi="Laura" data-sukunimi="Meriluoto"><a href="edustajat/1523.html"><span class="sukunimi">Meriluoto</span>, Laura<span class="lisa">Savo-Karjalan vaalipiiri</span></a></li>
+    <li id="e-1097" data-etunimi="Aino-Kaisa" data-sukunimi="Pekonen"><a href="edustajat/1097.html"><span class="sukunimi">Pekonen</span>, Aino-Kaisa<span class="lisa">Hämeen vaalipiiri</span></a></li>
+    <li id="e-1312" data-etunimi="Hanna" data-sukunimi="Sarkkinen"><a href="edustajat/1312.html"><span class="sukunimi">Sarkkinen</span>, Hanna<span class="lisa">Oulun vaalipiiri</span></a></li>
+    <li id="e-1407" data-etunimi="Johannes" data-sukunimi="Yrttiaho"><a href="edustajat/1407.html"><span class="sukunimi">Yrttiaho</span>, Johannes<span class="lisa">Varsinais-Suomen vaalipiiri</span></a></li>
+  </ul>
+</section>
+<section class="kortti kirjain" id="r-8">
+  <h2>Liike Nyt <span class="lukumaara">1</span></h2>
+  <ul class="nimilista">
+    <li id="e-1328" data-etunimi="Harry" data-sukunimi="Harkimo"><a href="edustajat/1328.html"><span class="sukunimi">Harkimo</span>, Harry<span class="lisa">Uudenmaan vaalipiiri</span></a></li>
+  </ul>
+</section>
+<section class="kortti kirjain" id="r-9">
+  <h2>Eduskuntaryhmä Timo Vornanen <span class="lukumaara">1</span></h2>
+  <ul class="nimilista">
+    <li id="e-1522" data-etunimi="Timo" data-sukunimi="Vornanen"><a href="edustajat/1522.html"><span class="sukunimi">Vornanen</span>, Timo<span class="lisa">Savo-Karjalan vaalipiiri</span></a></li>
+  </ul>
+</section>
+</div>
+<div class="lista" id="lista-piirit">
+<nav class="kirjaimet ryhmat" aria-label="Vaalipiiri"><a href="#vp-0">Helsinki</a><a href="#vp-1">Uusimaa</a><a href="#vp-2">Varsinais-Suomi</a><a href="#vp-3">Satakunta</a><a href="#vp-4">Ahvenanmaa</a><a href="#vp-5">Häme</a><a href="#vp-6">Pirkanmaa</a><a href="#vp-7">Kaakkois-Suomi</a><a href="#vp-8">Savo-Karjala</a><a href="#vp-9">Vaasa</a><a href="#vp-10">Keski-Suomi</a><a href="#vp-11">Oulu</a><a href="#vp-12">Lappi</a></nav>
+<section class="kortti kirjain" id="vp-0">
+  <h2>Helsingin vaalipiiri <span class="lukumaara">23</span></h2>
+  <div class="piiriryhma">
+  <h3>Perussuomalaiset <span class="lukumaara">3</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Jussi" data-sukunimi="Halla-aho"><a href="edustajat/1109.html"><span class="sukunimi">Halla-aho</span>, Jussi</a></li>
+    <li data-etunimi="Mari" data-sukunimi="Rantanen"><a href="edustajat/1388.html"><span class="sukunimi">Rantanen</span>, Mari<span class="lisa">ministeri</span></a></li>
+    <li data-etunimi="Wille" data-sukunimi="Rydman"><a href="edustajat/1282.html"><span class="sukunimi">Rydman</span>, Wille<span class="lisa">ministeri</span></a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Kokoomus <span class="lukumaara">7</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Maaret" data-sukunimi="Castrén"><a href="edustajat/911822.html"><span class="sukunimi">Castrén</span>, Maaret</a></li>
+    <li data-etunimi="Atte" data-sukunimi="Kaleva"><a href="edustajat/1481.html"><span class="sukunimi">Kaleva</span>, Atte</a></li>
+    <li data-etunimi="Terhi" data-sukunimi="Koulumies"><a href="edustajat/1389.html"><span class="sukunimi">Koulumies</span>, Terhi</a></li>
+    <li data-etunimi="Jarmo" data-sukunimi="Lindberg"><a href="edustajat/1486.html"><span class="sukunimi">Lindberg</span>, Jarmo</a></li>
+    <li data-etunimi="Sari" data-sukunimi="Sarkomaa"><a href="edustajat/612.html"><span class="sukunimi">Sarkomaa</span>, Sari</a></li>
+    <li data-etunimi="Elina" data-sukunimi="Valtonen"><a href="edustajat/1279.html"><span class="sukunimi">Valtonen</span>, Elina<span class="lisa">ministeri</span></a></li>
+    <li data-etunimi="Ben" data-sukunimi="Zyskowicz"><a href="edustajat/301.html"><span class="sukunimi">Zyskowicz</span>, Ben</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>RKP <span class="lukumaara">1</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Eva" data-sukunimi="Biaudet"><a href="edustajat/351.html"><span class="sukunimi">Biaudet</span>, Eva</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Vihreät <span class="lukumaara">4</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Alviina" data-sukunimi="Alametsä"><a href="edustajat/911823.html"><span class="sukunimi">Alametsä</span>, Alviina</a></li>
+    <li data-etunimi="Fatim" data-sukunimi="Diarra"><a href="edustajat/1489.html"><span class="sukunimi">Diarra</span>, Fatim</a></li>
+    <li data-etunimi="Atte" data-sukunimi="Harjanne"><a href="edustajat/1385.html"><span class="sukunimi">Harjanne</span>, Atte</a></li>
+    <li data-etunimi="Mari" data-sukunimi="Holopainen"><a href="edustajat/1386.html"><span class="sukunimi">Holopainen</span>, Mari</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>SDP <span class="lukumaara">5</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Elisa" data-sukunimi="Gebhard"><a href="edustajat/1488.html"><span class="sukunimi">Gebhard</span>, Elisa</a></li>
+    <li data-etunimi="Tuula" data-sukunimi="Haatainen"><a href="edustajat/538.html"><span class="sukunimi">Haatainen</span>, Tuula</a></li>
+    <li data-etunimi="Timo" data-sukunimi="Harakka"><a href="edustajat/1326.html"><span class="sukunimi">Harakka</span>, Timo</a></li>
+    <li data-etunimi="Eveliina" data-sukunimi="Heinäluoma"><a href="edustajat/1390.html"><span class="sukunimi">Heinäluoma</span>, Eveliina</a></li>
+    <li data-etunimi="Nasima" data-sukunimi="Razmyar"><a href="edustajat/1202.html"><span class="sukunimi">Razmyar</span>, Nasima</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Vasemmistoliitto <span class="lukumaara">3</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Veronika" data-sukunimi="Honkasalo"><a href="edustajat/1383.html"><span class="sukunimi">Honkasalo</span>, Veronika</a></li>
+    <li data-etunimi="Mai" data-sukunimi="Kivelä"><a href="edustajat/1384.html"><span class="sukunimi">Kivelä</span>, Mai</a></li>
+    <li data-etunimi="Minja" data-sukunimi="Koskela"><a href="edustajat/1485.html"><span class="sukunimi">Koskela</span>, Minja</a></li>
+  </ul>
+  </div>
+</section>
+<section class="kortti kirjain" id="vp-1">
+  <h2>Uudenmaan vaalipiiri <span class="lukumaara">37</span></h2>
+  <div class="piiriryhma">
+  <h3>Perussuomalaiset <span class="lukumaara">7</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Arja" data-sukunimi="Juvonen"><a href="edustajat/1129.html"><span class="sukunimi">Juvonen</span>, Arja</a></li>
+    <li data-etunimi="Teemu" data-sukunimi="Keskisarja"><a href="edustajat/1498.html"><span class="sukunimi">Keskisarja</span>, Teemu</a></li>
+    <li data-etunimi="Ari" data-sukunimi="Koponen"><a href="edustajat/1391.html"><span class="sukunimi">Koponen</span>, Ari</a></li>
+    <li data-etunimi="Leena" data-sukunimi="Meri"><a href="edustajat/1349.html"><span class="sukunimi">Meri</span>, Leena<span class="lisa">ministeri</span></a></li>
+    <li data-etunimi="Jorma" data-sukunimi="Piisinen"><a href="edustajat/1499.html"><span class="sukunimi">Piisinen</span>, Jorma</a></li>
+    <li data-etunimi="Riikka" data-sukunimi="Purra"><a href="edustajat/1392.html"><span class="sukunimi">Purra</span>, Riikka<span class="lisa">ministeri</span></a></li>
+    <li data-etunimi="Onni" data-sukunimi="Rostila"><a href="edustajat/1500.html"><span class="sukunimi">Rostila</span>, Onni</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Kokoomus <span class="lukumaara">11</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Noora" data-sukunimi="Fagerström"><a href="edustajat/1490.html"><span class="sukunimi">Fagerström</span>, Noora</a></li>
+    <li data-etunimi="Pia" data-sukunimi="Kauma"><a href="edustajat/1135.html"><span class="sukunimi">Kauma</span>, Pia</a></li>
+    <li data-etunimi="Pihla" data-sukunimi="Keto-Huovinen"><a href="edustajat/1394.html"><span class="sukunimi">Keto-Huovinen</span>, Pihla</a></li>
+    <li data-etunimi="Mia" data-sukunimi="Laiho"><a href="edustajat/1379.html"><span class="sukunimi">Laiho</span>, Mia</a></li>
+    <li data-etunimi="Jarno" data-sukunimi="Limnell"><a href="edustajat/1491.html"><span class="sukunimi">Limnell</span>, Jarno</a></li>
+    <li data-etunimi="Sari" data-sukunimi="Multala"><a href="edustajat/1299.html"><span class="sukunimi">Multala</span>, Sari<span class="lisa">ministeri</span></a></li>
+    <li data-etunimi="Martin" data-sukunimi="Paasi"><a href="edustajat/911825.html"><span class="sukunimi">Paasi</span>, Martin</a></li>
+    <li data-etunimi="Susanne" data-sukunimi="Päivärinta"><a href="edustajat/1492.html"><span class="sukunimi">Päivärinta</span>, Susanne</a></li>
+    <li data-etunimi="Tere" data-sukunimi="Sammallahti"><a href="edustajat/1493.html"><span class="sukunimi">Sammallahti</span>, Tere</a></li>
+    <li data-etunimi="Heikki" data-sukunimi="Vestman"><a href="edustajat/1396.html"><span class="sukunimi">Vestman</span>, Heikki</a></li>
+    <li data-etunimi="Henrik" data-sukunimi="Vuornos"><a href="edustajat/911828.html"><span class="sukunimi">Vuornos</span>, Henrik</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Kristillisdemokraatit <span class="lukumaara">1</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Mika" data-sukunimi="Poutala"><a href="edustajat/1495.html"><span class="sukunimi">Poutala</span>, Mika<span class="lisa">ministeri</span></a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>RKP <span class="lukumaara">3</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Anders" data-sukunimi="Adlercreutz"><a href="edustajat/1306.html"><span class="sukunimi">Adlercreutz</span>, Anders<span class="lisa">ministeri</span></a></li>
+    <li data-etunimi="Otto" data-sukunimi="Andersson"><a href="edustajat/1189.html"><span class="sukunimi">Andersson</span>, Otto</a></li>
+    <li data-etunimi="Henrik" data-sukunimi="Wickström"><a href="edustajat/1501.html"><span class="sukunimi">Wickström</span>, Henrik</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Keskusta <span class="lukumaara">2</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Antti" data-sukunimi="Kaikkonen"><a href="edustajat/772.html"><span class="sukunimi">Kaikkonen</span>, Antti</a></li>
+    <li data-etunimi="Eerikki" data-sukunimi="Viljanen"><a href="edustajat/913.html"><span class="sukunimi">Viljanen</span>, Eerikki</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Vihreät <span class="lukumaara">3</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Tiina" data-sukunimi="Elo"><a href="edustajat/1401.html"><span class="sukunimi">Elo</span>, Tiina</a></li>
+    <li data-etunimi="Inka" data-sukunimi="Hopsu"><a href="edustajat/1402.html"><span class="sukunimi">Hopsu</span>, Inka</a></li>
+    <li data-etunimi="Saara" data-sukunimi="Hyrkkö"><a href="edustajat/1403.html"><span class="sukunimi">Hyrkkö</span>, Saara</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>SDP <span class="lukumaara">8</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Anette" data-sukunimi="Karlsson"><a href="edustajat/911831.html"><span class="sukunimi">Karlsson</span>, Anette</a></li>
+    <li data-etunimi="Kimmo" data-sukunimi="Kiljunen"><a href="edustajat/464.html"><span class="sukunimi">Kiljunen</span>, Kimmo</a></li>
+    <li data-etunimi="Johan" data-sukunimi="Kvarnström"><a href="edustajat/1398.html"><span class="sukunimi">Kvarnström</span>, Johan</a></li>
+    <li data-etunimi="Antti" data-sukunimi="Lindtman"><a href="edustajat/1147.html"><span class="sukunimi">Lindtman</span>, Antti</a></li>
+    <li data-etunimi="Helena" data-sukunimi="Marttila"><a href="edustajat/1539.html"><span class="sukunimi">Marttila</span>, Helena</a></li>
+    <li data-etunimi="Pinja" data-sukunimi="Perholehto"><a href="edustajat/1497.html"><span class="sukunimi">Perholehto</span>, Pinja</a></li>
+    <li data-etunimi="Antti" data-sukunimi="Rinne"><a href="edustajat/1274.html"><span class="sukunimi">Rinne</span>, Antti</a></li>
+    <li data-etunimi="Joona" data-sukunimi="Räsänen"><a href="edustajat/1311.html"><span class="sukunimi">Räsänen</span>, Joona</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Vasemmistoliitto <span class="lukumaara">1</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Pia" data-sukunimi="Lohikoski"><a href="edustajat/1399.html"><span class="sukunimi">Lohikoski</span>, Pia</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Liike Nyt <span class="lukumaara">1</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Harry" data-sukunimi="Harkimo"><a href="edustajat/1328.html"><span class="sukunimi">Harkimo</span>, Harry</a></li>
+  </ul>
+  </div>
+</section>
+<section class="kortti kirjain" id="vp-2">
+  <h2>Varsinais-Suomen vaalipiiri <span class="lukumaara">17</span></h2>
+  <div class="piiriryhma">
+  <h3>Perussuomalaiset <span class="lukumaara">4</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Ritva" data-sukunimi="Elomaa"><a href="edustajat/1096.html"><span class="sukunimi">Elomaa</span>, Ritva</a></li>
+    <li data-etunimi="Vilhelm" data-sukunimi="Junnila"><a href="edustajat/1409.html"><span class="sukunimi">Junnila</span>, Vilhelm</a></li>
+    <li data-etunimi="Mikko" data-sukunimi="Lundén"><a href="edustajat/1410.html"><span class="sukunimi">Lundén</span>, Mikko</a></li>
+    <li data-etunimi="Ville" data-sukunimi="Tavio"><a href="edustajat/1327.html"><span class="sukunimi">Tavio</span>, Ville<span class="lisa">ministeri</span></a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Kokoomus <span class="lukumaara">5</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Pauli" data-sukunimi="Aalto-Setälä"><a href="edustajat/1504.html"><span class="sukunimi">Aalto-Setälä</span>, Pauli</a></li>
+    <li data-etunimi="Pertti" data-sukunimi="Hemmilä"><a href="edustajat/563.html"><span class="sukunimi">Hemmilä</span>, Pertti</a></li>
+    <li data-etunimi="Milla" data-sukunimi="Lahdenperä"><a href="edustajat/1505.html"><span class="sukunimi">Lahdenperä</span>, Milla</a></li>
+    <li data-etunimi="Petteri" data-sukunimi="Orpo"><a href="edustajat/947.html"><span class="sukunimi">Orpo</span>, Petteri<span class="lisa">ministeri</span></a></li>
+    <li data-etunimi="Ville" data-sukunimi="Valkonen"><a href="edustajat/1483.html"><span class="sukunimi">Valkonen</span>, Ville</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>RKP <span class="lukumaara">1</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Sandra" data-sukunimi="Bergqvist"><a href="edustajat/1406.html"><span class="sukunimi">Bergqvist</span>, Sandra</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Keskusta <span class="lukumaara">1</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Mauri" data-sukunimi="Kontu"><a href="edustajat/911830.html"><span class="sukunimi">Kontu</span>, Mauri</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Vihreät <span class="lukumaara">1</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Sofia" data-sukunimi="Virta"><a href="edustajat/1411.html"><span class="sukunimi">Virta</span>, Sofia</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>SDP <span class="lukumaara">3</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Eeva-Johanna" data-sukunimi="Eloranta"><a href="edustajat/1099.html"><span class="sukunimi">Eloranta</span>, Eeva-Johanna</a></li>
+    <li data-etunimi="Aki" data-sukunimi="Lindén"><a href="edustajat/1408.html"><span class="sukunimi">Lindén</span>, Aki</a></li>
+    <li data-etunimi="Saku" data-sukunimi="Nikkanen"><a href="edustajat/1503.html"><span class="sukunimi">Nikkanen</span>, Saku</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Vasemmistoliitto <span class="lukumaara">2</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Timo" data-sukunimi="Furuholm"><a href="edustajat/1502.html"><span class="sukunimi">Furuholm</span>, Timo</a></li>
+    <li data-etunimi="Johannes" data-sukunimi="Yrttiaho"><a href="edustajat/1407.html"><span class="sukunimi">Yrttiaho</span>, Johannes</a></li>
+  </ul>
+  </div>
+</section>
+<section class="kortti kirjain" id="vp-3">
+  <h2>Satakunnan vaalipiiri <span class="lukumaara">8</span></h2>
+  <div class="piiriryhma">
+  <h3>Perussuomalaiset <span class="lukumaara">3</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Laura" data-sukunimi="Huhtasaari"><a href="edustajat/1333.html"><span class="sukunimi">Huhtasaari</span>, Laura</a></li>
+    <li data-etunimi="Petri" data-sukunimi="Huru"><a href="edustajat/1467.html"><span class="sukunimi">Huru</span>, Petri</a></li>
+    <li data-etunimi="Jari" data-sukunimi="Koskela"><a href="edustajat/1413.html"><span class="sukunimi">Koskela</span>, Jari</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Kokoomus <span class="lukumaara">2</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Mari" data-sukunimi="Kaunistola"><a href="edustajat/1507.html"><span class="sukunimi">Kaunistola</span>, Mari</a></li>
+    <li data-etunimi="Matias" data-sukunimi="Marttinen"><a href="edustajat/1265.html"><span class="sukunimi">Marttinen</span>, Matias<span class="lisa">ministeri</span></a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Keskusta <span class="lukumaara">1</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Eeva" data-sukunimi="Kalli"><a href="edustajat/1412.html"><span class="sukunimi">Kalli</span>, Eeva</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>SDP <span class="lukumaara">2</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Krista" data-sukunimi="Kiuru"><a href="edustajat/960.html"><span class="sukunimi">Kiuru</span>, Krista</a></li>
+    <li data-etunimi="Juha" data-sukunimi="Viitala"><a href="edustajat/1506.html"><span class="sukunimi">Viitala</span>, Juha</a></li>
+  </ul>
+  </div>
+</section>
+<section class="kortti kirjain" id="vp-4">
+  <h2>Ahvenanmaan vaalipiiri <span class="lukumaara">1</span></h2>
+  <div class="piiriryhma">
+  <h3>RKP <span class="lukumaara">1</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Mats" data-sukunimi="Löfström"><a href="edustajat/1345.html"><span class="sukunimi">Löfström</span>, Mats</a></li>
+  </ul>
+  </div>
+</section>
+<section class="kortti kirjain" id="vp-5">
+  <h2>Hämeen vaalipiiri <span class="lukumaara">14</span></h2>
+  <div class="piiriryhma">
+  <h3>Perussuomalaiset <span class="lukumaara">4</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Rami" data-sukunimi="Lehtinen"><a href="edustajat/1508.html"><span class="sukunimi">Lehtinen</span>, Rami</a></li>
+    <li data-etunimi="Mira" data-sukunimi="Nieminen"><a href="edustajat/1509.html"><span class="sukunimi">Nieminen</span>, Mira</a></li>
+    <li data-etunimi="Lulu" data-sukunimi="Ranne"><a href="edustajat/1417.html"><span class="sukunimi">Ranne</span>, Lulu<span class="lisa">ministeri</span></a></li>
+    <li data-etunimi="Jari" data-sukunimi="Ronkainen"><a href="edustajat/1308.html"><span class="sukunimi">Ronkainen</span>, Jari</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Kokoomus <span class="lukumaara">3</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Sanni" data-sukunimi="Grahn-Laasonen"><a href="edustajat/1100.html"><span class="sukunimi">Grahn-Laasonen</span>, Sanni</a></li>
+    <li data-etunimi="Timo" data-sukunimi="Heinonen"><a href="edustajat/967.html"><span class="sukunimi">Heinonen</span>, Timo</a></li>
+    <li data-etunimi="Teemu" data-sukunimi="Kinnari"><a href="edustajat/1510.html"><span class="sukunimi">Kinnari</span>, Teemu</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Kristillisdemokraatit <span class="lukumaara">1</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Päivi" data-sukunimi="Räsänen"><a href="edustajat/499.html"><span class="sukunimi">Räsänen</span>, Päivi</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Keskusta <span class="lukumaara">1</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Hilkka" data-sukunimi="Kemppi"><a href="edustajat/1415.html"><span class="sukunimi">Kemppi</span>, Hilkka</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>SDP <span class="lukumaara">4</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Tarja" data-sukunimi="Filatov"><a href="edustajat/451.html"><span class="sukunimi">Filatov</span>, Tarja</a></li>
+    <li data-etunimi="Mika" data-sukunimi="Kari"><a href="edustajat/1133.html"><span class="sukunimi">Kari</span>, Mika</a></li>
+    <li data-etunimi="Johannes" data-sukunimi="Koskinen"><a href="edustajat/358.html"><span class="sukunimi">Koskinen</span>, Johannes</a></li>
+    <li data-etunimi="Ville" data-sukunimi="Skinnari"><a href="edustajat/1316.html"><span class="sukunimi">Skinnari</span>, Ville</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Vasemmistoliitto <span class="lukumaara">1</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Aino-Kaisa" data-sukunimi="Pekonen"><a href="edustajat/1097.html"><span class="sukunimi">Pekonen</span>, Aino-Kaisa</a></li>
+  </ul>
+  </div>
+</section>
+<section class="kortti kirjain" id="vp-6">
+  <h2>Pirkanmaan vaalipiiri <span class="lukumaara">20</span></h2>
+  <div class="piiriryhma">
+  <h3>Perussuomalaiset <span class="lukumaara">5</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Miko" data-sukunimi="Bergbom"><a href="edustajat/1514.html"><span class="sukunimi">Bergbom</span>, Miko</a></li>
+    <li data-etunimi="Veijo" data-sukunimi="Niemi"><a href="edustajat/1418.html"><span class="sukunimi">Niemi</span>, Veijo</a></li>
+    <li data-etunimi="Sakari" data-sukunimi="Puisto"><a href="edustajat/1419.html"><span class="sukunimi">Puisto</span>, Sakari<span class="lisa">ministeri</span></a></li>
+    <li data-etunimi="Sami" data-sukunimi="Savio"><a href="edustajat/1314.html"><span class="sukunimi">Savio</span>, Sami</a></li>
+    <li data-etunimi="Joakim" data-sukunimi="Vigelius"><a href="edustajat/1515.html"><span class="sukunimi">Vigelius</span>, Joakim</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Kokoomus <span class="lukumaara">5</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Anna-Kaisa" data-sukunimi="Ikonen"><a href="edustajat/1421.html"><span class="sukunimi">Ikonen</span>, Anna-Kaisa<span class="lisa">ministeri</span></a></li>
+    <li data-etunimi="Aleksi" data-sukunimi="Jäntti"><a href="edustajat/1513.html"><span class="sukunimi">Jäntti</span>, Aleksi</a></li>
+    <li data-etunimi="Pauli" data-sukunimi="Kiuru"><a href="edustajat/1137.html"><span class="sukunimi">Kiuru</span>, Pauli</a></li>
+    <li data-etunimi="Arto" data-sukunimi="Satonen"><a href="edustajat/784.html"><span class="sukunimi">Satonen</span>, Arto</a></li>
+    <li data-etunimi="Sofia" data-sukunimi="Vikman"><a href="edustajat/1134.html"><span class="sukunimi">Vikman</span>, Sofia</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Kristillisdemokraatit <span class="lukumaara">1</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Sari" data-sukunimi="Tanus"><a href="edustajat/1325.html"><span class="sukunimi">Tanus</span>, Sari</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Keskusta <span class="lukumaara">1</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Jouni" data-sukunimi="Ovaska"><a href="edustajat/1422.html"><span class="sukunimi">Ovaska</span>, Jouni</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Vihreät <span class="lukumaara">1</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Oras" data-sukunimi="Tynkkynen"><a href="edustajat/846.html"><span class="sukunimi">Tynkkynen</span>, Oras</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>SDP <span class="lukumaara">6</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Marko" data-sukunimi="Asell"><a href="edustajat/970.html"><span class="sukunimi">Asell</span>, Marko</a></li>
+    <li data-etunimi="Lotta" data-sukunimi="Hamari"><a href="edustajat/911820.html"><span class="sukunimi">Hamari</span>, Lotta</a></li>
+    <li data-etunimi="Hanna" data-sukunimi="Laine-Nousimaa"><a href="edustajat/911829.html"><span class="sukunimi">Laine-Nousimaa</span>, Hanna</a></li>
+    <li data-etunimi="Lauri" data-sukunimi="Lyly"><a href="edustajat/1511.html"><span class="sukunimi">Lyly</span>, Lauri</a></li>
+    <li data-etunimi="Ville" data-sukunimi="Merinen"><a href="edustajat/1512.html"><span class="sukunimi">Merinen</span>, Ville</a></li>
+    <li data-etunimi="Pia" data-sukunimi="Viitanen"><a href="edustajat/511.html"><span class="sukunimi">Viitanen</span>, Pia</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Vasemmistoliitto <span class="lukumaara">1</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Anna" data-sukunimi="Kontula"><a href="edustajat/1155.html"><span class="sukunimi">Kontula</span>, Anna</a></li>
+  </ul>
+  </div>
+</section>
+<section class="kortti kirjain" id="vp-7">
+  <h2>Kaakkois-Suomen vaalipiiri <span class="lukumaara">15</span></h2>
+  <div class="piiriryhma">
+  <h3>Perussuomalaiset <span class="lukumaara">4</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Juho" data-sukunimi="Eerola"><a href="edustajat/1093.html"><span class="sukunimi">Eerola</span>, Juho</a></li>
+    <li data-etunimi="Sheikki" data-sukunimi="Laakso"><a href="edustajat/1426.html"><span class="sukunimi">Laakso</span>, Sheikki</a></li>
+    <li data-etunimi="Jani" data-sukunimi="Mäkelä"><a href="edustajat/1301.html"><span class="sukunimi">Mäkelä</span>, Jani</a></li>
+    <li data-etunimi="Jaana" data-sukunimi="Strandman"><a href="edustajat/1516.html"><span class="sukunimi">Strandman</span>, Jaana</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Kokoomus <span class="lukumaara">4</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Antti" data-sukunimi="Häkkänen"><a href="edustajat/1334.html"><span class="sukunimi">Häkkänen</span>, Antti<span class="lisa">ministeri</span></a></li>
+    <li data-etunimi="Ville" data-sukunimi="Kaunisto"><a href="edustajat/1425.html"><span class="sukunimi">Kaunisto</span>, Ville</a></li>
+    <li data-etunimi="Jukka" data-sukunimi="Kopra"><a href="edustajat/1142.html"><span class="sukunimi">Kopra</span>, Jukka</a></li>
+    <li data-etunimi="Oskari" data-sukunimi="Valtola"><a href="edustajat/1517.html"><span class="sukunimi">Valtola</span>, Oskari</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Keskusta <span class="lukumaara">2</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Vesa" data-sukunimi="Kallio"><a href="edustajat/1518.html"><span class="sukunimi">Kallio</span>, Vesa</a></li>
+    <li data-etunimi="Hanna" data-sukunimi="Kosonen"><a href="edustajat/1338.html"><span class="sukunimi">Kosonen</span>, Hanna</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Vihreät <span class="lukumaara">1</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Hanna" data-sukunimi="Holopainen"><a href="edustajat/1424.html"><span class="sukunimi">Holopainen</span>, Hanna</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>SDP <span class="lukumaara">4</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Suna" data-sukunimi="Kymäläinen"><a href="edustajat/1144.html"><span class="sukunimi">Kymäläinen</span>, Suna</a></li>
+    <li data-etunimi="Niina" data-sukunimi="Malm"><a href="edustajat/1428.html"><span class="sukunimi">Malm</span>, Niina</a></li>
+    <li data-etunimi="Anna-Kristiina" data-sukunimi="Mikkonen"><a href="edustajat/1519.html"><span class="sukunimi">Mikkonen</span>, Anna-Kristiina</a></li>
+    <li data-etunimi="Paula" data-sukunimi="Werning"><a href="edustajat/1429.html"><span class="sukunimi">Werning</span>, Paula</a></li>
+  </ul>
+  </div>
+</section>
+<section class="kortti kirjain" id="vp-8">
+  <h2>Savo-Karjalan vaalipiiri <span class="lukumaara">15</span></h2>
+  <div class="piiriryhma">
+  <h3>Perussuomalaiset <span class="lukumaara">2</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Sanna" data-sukunimi="Antikainen"><a href="edustajat/1434.html"><span class="sukunimi">Antikainen</span>, Sanna</a></li>
+    <li data-etunimi="Minna" data-sukunimi="Reijonen"><a href="edustajat/1435.html"><span class="sukunimi">Reijonen</span>, Minna</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Kokoomus <span class="lukumaara">3</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Markku" data-sukunimi="Eestilä"><a href="edustajat/1094.html"><span class="sukunimi">Eestilä</span>, Markku</a></li>
+    <li data-etunimi="Marko" data-sukunimi="Kilpi"><a href="edustajat/1432.html"><span class="sukunimi">Kilpi</span>, Marko</a></li>
+    <li data-etunimi="Karoliina" data-sukunimi="Partanen"><a href="edustajat/1520.html"><span class="sukunimi">Partanen</span>, Karoliina<span class="lisa">ministeri</span></a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Kristillisdemokraatit <span class="lukumaara">1</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Sari" data-sukunimi="Essayah"><a href="edustajat/778.html"><span class="sukunimi">Essayah</span>, Sari<span class="lisa">ministeri</span></a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Keskusta <span class="lukumaara">3</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Hannu" data-sukunimi="Hoskonen"><a href="edustajat/797.html"><span class="sukunimi">Hoskonen</span>, Hannu</a></li>
+    <li data-etunimi="Hanna" data-sukunimi="Räsänen"><a href="edustajat/1433.html"><span class="sukunimi">Räsänen</span>, Hanna</a></li>
+    <li data-etunimi="Markku" data-sukunimi="Siponen"><a href="edustajat/1524.html"><span class="sukunimi">Siponen</span>, Markku</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Vihreät <span class="lukumaara">1</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Krista" data-sukunimi="Mikkonen"><a href="edustajat/1298.html"><span class="sukunimi">Mikkonen</span>, Krista</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>SDP <span class="lukumaara">3</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Seppo" data-sukunimi="Eskelinen"><a href="edustajat/1430.html"><span class="sukunimi">Eskelinen</span>, Seppo</a></li>
+    <li data-etunimi="Timo" data-sukunimi="Suhonen"><a href="edustajat/1521.html"><span class="sukunimi">Suhonen</span>, Timo</a></li>
+    <li data-etunimi="Tuula" data-sukunimi="Väätäinen"><a href="edustajat/794.html"><span class="sukunimi">Väätäinen</span>, Tuula</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Vasemmistoliitto <span class="lukumaara">1</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Laura" data-sukunimi="Meriluoto"><a href="edustajat/1523.html"><span class="sukunimi">Meriluoto</span>, Laura</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Eduskuntaryhmä Timo Vornanen <span class="lukumaara">1</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Timo" data-sukunimi="Vornanen"><a href="edustajat/1522.html"><span class="sukunimi">Vornanen</span>, Timo</a></li>
+  </ul>
+  </div>
+</section>
+<section class="kortti kirjain" id="vp-9">
+  <h2>Vaasan vaalipiiri <span class="lukumaara">16</span></h2>
+  <div class="piiriryhma">
+  <h3>Perussuomalaiset <span class="lukumaara">4</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Juha" data-sukunimi="Mäenpää"><a href="edustajat/1437.html"><span class="sukunimi">Mäenpää</span>, Juha</a></li>
+    <li data-etunimi="Mauri" data-sukunimi="Peltokangas"><a href="edustajat/1439.html"><span class="sukunimi">Peltokangas</span>, Mauri</a></li>
+    <li data-etunimi="Anne" data-sukunimi="Rintamäki"><a href="edustajat/1526.html"><span class="sukunimi">Rintamäki</span>, Anne</a></li>
+    <li data-etunimi="Pia" data-sukunimi="Sillanpää"><a href="edustajat/1527.html"><span class="sukunimi">Sillanpää</span>, Pia</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Kokoomus <span class="lukumaara">2</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Janne" data-sukunimi="Jukkola"><a href="edustajat/1525.html"><span class="sukunimi">Jukkola</span>, Janne</a></li>
+    <li data-etunimi="Paula" data-sukunimi="Risikko"><a href="edustajat/809.html"><span class="sukunimi">Risikko</span>, Paula</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Kristillisdemokraatit <span class="lukumaara">1</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Peter" data-sukunimi="Östman"><a href="edustajat/1141.html"><span class="sukunimi">Östman</span>, Peter</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>RKP <span class="lukumaara">4</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Christoffer" data-sukunimi="Ingo"><a href="edustajat/911821.html"><span class="sukunimi">Ingo</span>, Christoffer</a></li>
+    <li data-etunimi="Anders" data-sukunimi="Norrback"><a href="edustajat/1440.html"><span class="sukunimi">Norrback</span>, Anders</a></li>
+    <li data-etunimi="Mikko" data-sukunimi="Ollikainen"><a href="edustajat/1441.html"><span class="sukunimi">Ollikainen</span>, Mikko</a></li>
+    <li data-etunimi="Joakim" data-sukunimi="Strand"><a href="edustajat/1318.html"><span class="sukunimi">Strand</span>, Joakim<span class="lisa">ministeri</span></a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Keskusta <span class="lukumaara">3</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Antti" data-sukunimi="Kurvinen"><a href="edustajat/1341.html"><span class="sukunimi">Kurvinen</span>, Antti</a></li>
+    <li data-etunimi="Mika" data-sukunimi="Lintilä"><a href="edustajat/583.html"><span class="sukunimi">Lintilä</span>, Mika</a></li>
+    <li data-etunimi="Mikko" data-sukunimi="Savola"><a href="edustajat/1106.html"><span class="sukunimi">Savola</span>, Mikko</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>SDP <span class="lukumaara">2</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Kim" data-sukunimi="Berg"><a href="edustajat/1443.html"><span class="sukunimi">Berg</span>, Kim</a></li>
+    <li data-etunimi="Matias" data-sukunimi="Mäkynen"><a href="edustajat/1469.html"><span class="sukunimi">Mäkynen</span>, Matias</a></li>
+  </ul>
+  </div>
+</section>
+<section class="kortti kirjain" id="vp-10">
+  <h2>Keski-Suomen vaalipiiri <span class="lukumaara">10</span></h2>
+  <div class="piiriryhma">
+  <h3>Perussuomalaiset <span class="lukumaara">2</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Kaisa" data-sukunimi="Garedew"><a href="edustajat/1530.html"><span class="sukunimi">Garedew</span>, Kaisa</a></li>
+    <li data-etunimi="Tomi" data-sukunimi="Immonen"><a href="edustajat/1531.html"><span class="sukunimi">Immonen</span>, Tomi</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Kokoomus <span class="lukumaara">2</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Ville" data-sukunimi="Väyrynen"><a href="edustajat/1528.html"><span class="sukunimi">Väyrynen</span>, Ville</a></li>
+    <li data-etunimi="Sinuhe" data-sukunimi="Wallinheimo"><a href="edustajat/1131.html"><span class="sukunimi">Wallinheimo</span>, Sinuhe</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Keskusta <span class="lukumaara">2</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Petri" data-sukunimi="Honkonen"><a href="edustajat/1331.html"><span class="sukunimi">Honkonen</span>, Petri</a></li>
+    <li data-etunimi="Anne" data-sukunimi="Kalmari"><a href="edustajat/953.html"><span class="sukunimi">Kalmari</span>, Anne</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Vihreät <span class="lukumaara">1</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Bella" data-sukunimi="Forsgrén"><a href="edustajat/1445.html"><span class="sukunimi">Forsgrén</span>, Bella</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>SDP <span class="lukumaara">3</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Riitta" data-sukunimi="Kaarisalo"><a href="edustajat/1380.html"><span class="sukunimi">Kaarisalo</span>, Riitta</a></li>
+    <li data-etunimi="Jani" data-sukunimi="Kokko"><a href="edustajat/1529.html"><span class="sukunimi">Kokko</span>, Jani</a></li>
+    <li data-etunimi="Piritta" data-sukunimi="Rantanen"><a href="edustajat/1447.html"><span class="sukunimi">Rantanen</span>, Piritta</a></li>
+  </ul>
+  </div>
+</section>
+<section class="kortti kirjain" id="vp-11">
+  <h2>Oulun vaalipiiri <span class="lukumaara">18</span></h2>
+  <div class="piiriryhma">
+  <h3>Perussuomalaiset <span class="lukumaara">5</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Pekka" data-sukunimi="Aittakumpu"><a href="edustajat/1452.html"><span class="sukunimi">Aittakumpu</span>, Pekka</a></li>
+    <li data-etunimi="Antti" data-sukunimi="Kangas"><a href="edustajat/1535.html"><span class="sukunimi">Kangas</span>, Antti</a></li>
+    <li data-etunimi="Merja" data-sukunimi="Rasinkangas"><a href="edustajat/911826.html"><span class="sukunimi">Rasinkangas</span>, Merja</a></li>
+    <li data-etunimi="Jenna" data-sukunimi="Simula"><a href="edustajat/1450.html"><span class="sukunimi">Simula</span>, Jenna</a></li>
+    <li data-etunimi="Ville" data-sukunimi="Vähämäki"><a href="edustajat/1136.html"><span class="sukunimi">Vähämäki</span>, Ville</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Kokoomus <span class="lukumaara">3</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Janne" data-sukunimi="Heikkinen"><a href="edustajat/1454.html"><span class="sukunimi">Heikkinen</span>, Janne</a></li>
+    <li data-etunimi="Juha" data-sukunimi="Hänninen"><a href="edustajat/1537.html"><span class="sukunimi">Hänninen</span>, Juha</a></li>
+    <li data-etunimi="Mari-Leena" data-sukunimi="Talvitie"><a href="edustajat/1323.html"><span class="sukunimi">Talvitie</span>, Mari-Leena<span class="lisa">ministeri</span></a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Keskusta <span class="lukumaara">5</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Tuomas" data-sukunimi="Kettunen"><a href="edustajat/1468.html"><span class="sukunimi">Kettunen</span>, Tuomas</a></li>
+    <li data-etunimi="Hanna-Leena" data-sukunimi="Mattila"><a href="edustajat/1382.html"><span class="sukunimi">Mattila</span>, Hanna-Leena</a></li>
+    <li data-etunimi="Timo" data-sukunimi="Mehtälä"><a href="edustajat/1532.html"><span class="sukunimi">Mehtälä</span>, Timo</a></li>
+    <li data-etunimi="Olga" data-sukunimi="Oinas-Panuma"><a href="edustajat/1533.html"><span class="sukunimi">Oinas-Panuma</span>, Olga</a></li>
+    <li data-etunimi="Mikko" data-sukunimi="Polvinen"><a href="edustajat/1536.html"><span class="sukunimi">Polvinen</span>, Mikko</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Vihreät <span class="lukumaara">1</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Jenni" data-sukunimi="Pitko"><a href="edustajat/1449.html"><span class="sukunimi">Pitko</span>, Jenni</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>SDP <span class="lukumaara">2</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Pia" data-sukunimi="Hiltunen"><a href="edustajat/1534.html"><span class="sukunimi">Hiltunen</span>, Pia</a></li>
+    <li data-etunimi="Tytti" data-sukunimi="Tuppurainen"><a href="edustajat/1126.html"><span class="sukunimi">Tuppurainen</span>, Tytti</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Vasemmistoliitto <span class="lukumaara">2</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Jessi" data-sukunimi="Jokelainen"><a href="edustajat/911824.html"><span class="sukunimi">Jokelainen</span>, Jessi</a></li>
+    <li data-etunimi="Hanna" data-sukunimi="Sarkkinen"><a href="edustajat/1312.html"><span class="sukunimi">Sarkkinen</span>, Hanna</a></li>
+  </ul>
+  </div>
+</section>
+<section class="kortti kirjain" id="vp-12">
+  <h2>Lapin vaalipiiri <span class="lukumaara">6</span></h2>
+  <div class="piiriryhma">
+  <h3>Perussuomalaiset <span class="lukumaara">2</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Kaisa" data-sukunimi="Juuso"><a href="edustajat/1455.html"><span class="sukunimi">Juuso</span>, Kaisa</a></li>
+    <li data-etunimi="Sara" data-sukunimi="Seppänen"><a href="edustajat/1538.html"><span class="sukunimi">Seppänen</span>, Sara</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Kokoomus <span class="lukumaara">1</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Heikki" data-sukunimi="Autto"><a href="edustajat/1089.html"><span class="sukunimi">Autto</span>, Heikki</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>Keskusta <span class="lukumaara">2</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Markus" data-sukunimi="Lohi"><a href="edustajat/1149.html"><span class="sukunimi">Lohi</span>, Markus</a></li>
+    <li data-etunimi="Mika" data-sukunimi="Riipi"><a href="edustajat/911827.html"><span class="sukunimi">Riipi</span>, Mika</a></li>
+  </ul>
+  </div>
+  <div class="piiriryhma">
+  <h3>SDP <span class="lukumaara">1</span></h3>
+  <ul class="nimilista">
+    <li data-etunimi="Johanna" data-sukunimi="Ojala-Niemelä"><a href="edustajat/971.html"><span class="sukunimi">Ojala-Niemelä</span>, Johanna</a></li>
+  </ul>
+  </div>
+</section>
+</div>
+</div>
+<p class="lahde">Lähde: Eduskunnan avoin data (<a href="https://creativecommons.org/licenses/by/4.0/deed.fi">CC BY 4.0</a>), luvut laskettu ja koottu aineistosta. <a href="tietoa.html">Tietoa palvelusta ja lähteistä</a>. <a href="tietosuoja.html">Tietosuoja</a>. Perustiedot haettu 8.10.2026, äänestykset ja puheenvuorot 8.10.2026. Sivut koottu 9.10.2026.</p>
+<script>
+(function () {
+  var lomake = document.getElementById('haku');
+  var kentta = document.getElementById('kentta');
+  var tulos = document.getElementById('tulos');
+  // Etusivulla on kaksi listaa (ryhmittäin ja vaalipiireittäin, F1 28.9.2026), joten jokainen edustaja on
+  // sivulla kahdesti. Haku suodattaa molemmat listat, pikalinkit piilotetaan molemmista, ja osumat lasketaan
+  // edustajan sivun osoitteen mukaan vain kerran.
+  var kirjaimet = [].slice.call(document.querySelectorAll('nav.kirjaimet'));
+  // Osiot piilotetaan haun aikana, jos niissä ei ole osumia. Myös vaalipiirin sisäiset ryhmät (.piiriryhma, F4).
+  var osiot = [].slice.call(document.querySelectorAll('.kirjain, .piiriryhma'));
+  var rivit = [].slice.call(document.querySelectorAll('.nimilista li'));
+  var piirit = [].slice.call(document.querySelectorAll('#lista-piirit nav a')).map(function (a) {
+    return { nimi: a.textContent, haku: pelkista(a.textContent) };
+  });
+
+  // Pienet kirjaimet ja ilman tarkkeita, jotta "linden" löytää Lindénin ja "ostman" Östmanin.
+  function pelkista(s) {
+    return s.toLowerCase().normalize('NFD').replace(/\p{M}/gu, '').replace(/\s+/g, ' ').trim();
+  }
+  function hakusanat(etu, suku) {
+    etu = pelkista(etu || ''); suku = pelkista(suku || '');
+    return (etu + ' ' + suku).split(/[ -]/).concat([suku, suku + ' ' + etu, etu + ' ' + suku]);
+  }
+  rivit.forEach(function (r) {
+    r.hakusanat = hakusanat(r.getAttribute('data-etunimi'), r.getAttribute('data-sukunimi'));
+  });
+  // Entiset kansanedustajat (5.10.2026): [nro, etunimi, sukunimi, vuodet] sivulle upotetusta listasta.
+  // Näytetään nykyisten osumien alla omana ryhmänään, enintään 5. Pääpaino pysyy nykyisissä.
+  var entiset = [];
+  try {
+    var ed = document.getElementById('entiset-data');
+    if (ed) entiset = JSON.parse(ed.textContent).map(function (e) {
+      return { nro: e[0], nimi: e[1] + ' ' + e[2], vuodet: e[3], hakusanat: hakusanat(e[1], e[2]) };
+    });
+  } catch (virhe) { entiset = []; }
+
+  function paivita() {
+    var q = pelkista(kentta.value);
+    var osumat = [];
+    var nahty = {};
+    rivit.forEach(function (r) {
+      var osuu = q === '' || r.hakusanat.some(function (s) { return s.indexOf(q) === 0; });
+      r.hidden = !osuu;
+      var osoite = r.querySelector('a').getAttribute('href');
+      if (osuu && !nahty[osoite]) { nahty[osoite] = true; osumat.push(r); }
+    });
+    osiot.forEach(function (o) {
+      o.hidden = !o.querySelector('li:not([hidden])');
+    });
+    kirjaimet.forEach(function (k) { k.hidden = q !== ''; });
+    var eosumat = q === '' ? [] : entiset.filter(function (e) {
+      return e.hakusanat.some(function (s) { return s.indexOf(q) === 0; });
+    });
+    if (q === '') tulos.textContent = '';
+    else if (osumat.length === 0 && eosumat.length) {
+      tulos.textContent = 'Ei osumia nykyisistä kansanedustajista. Entisistä löytyi ' +
+        (eosumat.length === 1 ? 'yksi: napauta nimeä tai paina Enter.' : eosumat.length + '.');
+    }
+    else if (osumat.length === 0) {
+      // Haku etsii vain nimistä. Jos haku on vaalipiirin nimen alku (esim. "oulu"), neuvotaan välilehti.
+      var piiri = piirit.filter(function (p) { return p.haku.indexOf(q) === 0; })[0];
+      tulos.textContent = piiri
+        ? 'Ei osumia nimistä. ' + piiri.nimi + ' on vaalipiiri: valitse listasta Vaalipiireittäin.'
+        : 'Ei osumia. Tarkista kirjoitusasu tai kokeile alkukirjaimia. Haku kattaa nykyiset 200 kansanedustajaa ja ' + entiset.length + ' entistä vuodesta 1995.';
+    }
+    else if (osumat.length === 1) tulos.textContent = 'Yksi osuma. Napauta nimeä tai paina Enter.';
+    else tulos.textContent = osumat.length + ' osumaa.';
+    // Osumat hakukentän alle (navigaatiotesti 1.10.2026): enintään 8 nimeä linkkeinä. Ennen osuma näkyi vain
+    // edustajalistassa noin 1 500 px kentän alapuolella. Elementit createElementillä ja textContentillä (ei innerHTML).
+    var osumalista = document.getElementById('osumat');
+    if (osumalista) {
+      while (osumalista.firstChild) osumalista.removeChild(osumalista.firstChild);
+      if (q !== '' && osumat.length) {
+        osumat.slice(0, 8).forEach(function (r) {
+          var a0 = r.querySelector('a'), li = document.createElement('li'), a = document.createElement('a');
+          a.href = a0.getAttribute('href');
+          a.textContent = (r.getAttribute('data-etunimi') || '') + ' ' + (r.getAttribute('data-sukunimi') || '');
+          if (!a.textContent.trim()) a.textContent = a0.textContent.trim();
+          li.appendChild(a);
+          osumalista.appendChild(li);
+        });
+        if (osumat.length > 8) {
+          var li2 = document.createElement('li');
+          li2.className = 'lisaa';
+          li2.textContent = 'Ja ' + (osumat.length - 8) + ' muuta – kirjoita lisää kirjaimia tai katso lista alempana.';
+          osumalista.appendChild(li2);
+        }
+      }
+      if (eosumat.length) {
+        var otsikko = document.createElement('li');
+        otsikko.className = 'osumaotsikko';
+        otsikko.textContent = 'Entiset kansanedustajat';
+        osumalista.appendChild(otsikko);
+        eosumat.slice(0, 5).forEach(function (e) {
+          var li = document.createElement('li'), a = document.createElement('a');
+          li.className = 'entinen';
+          a.href = 'entiset/' + e.nro + '.html';
+          a.textContent = e.nimi + (e.vuodet ? ', ' + e.vuodet : '');
+          li.appendChild(a);
+          osumalista.appendChild(li);
+        });
+        if (eosumat.length > 5) {
+          var li3 = document.createElement('li');
+          li3.className = 'lisaa';
+          li3.textContent = 'Ja ' + (eosumat.length - 5) + ' muuta entistä – kirjoita lisää kirjaimia.';
+          osumalista.appendChild(li3);
+        }
+      }
+      osumalista.hidden = !(q !== '' && (osumat.length || eosumat.length));
+    }
+    osumat.entiset = eosumat;
+    return osumat;
+  }
+
+  lomake.hidden = false;
+  kentta.addEventListener('input', paivita);
+  lomake.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var osumat = paivita();
+    if (osumat.length === 1) location.href = osumat[0].querySelector('a').getAttribute('href');
+    else if (osumat.length === 0 && osumat.entiset.length === 1) location.href = 'entiset/' + osumat.entiset[0].nro + '.html';
+  });
+})();
+</script>
+</div>
+</body>
+</html>
+
