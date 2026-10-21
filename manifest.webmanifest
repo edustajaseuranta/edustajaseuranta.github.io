@@ -1,0 +1,24 @@
+{
+  "name": "Edustajaseuranta",
+  "short_name": "Edustajat",
+  "description": "Kansanedustajan tiedot yhdellä haulla.",
+  "lang": "fi",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f2f3f5",
+  "theme_color": "#0047ab",
+  "icons": [
+    {
+      "src": "kuvake.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "kuvake-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
