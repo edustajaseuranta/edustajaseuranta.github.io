@@ -1,0 +1,28 @@
+# Edustajaseuranta
+
+> Puolueeton suomenkielinen sivusto, joka näyttää jokaisesta Suomen kansanedustajasta perustiedot, täysistuntoäänestykset vuodesta 1996, aloitteet, vastalauseet ja eriävät mielipiteet, puheenvuorot, lobbaajien ilmoittamat yhteydenotot ja vaalirahoituksen. Kaikki tiedot ovat julkisista lähteistä, ensisijaisesti eduskunnan avoimesta datasta. Sivusto näyttää datan sellaisenaan eikä arvioi edustajia. Tiedot päivitetään viikoittain.
+
+Jokaisella sivulla on lähdemerkintä. Lähteet, menetelmät ja tietojen rajat on kuvattu Tietoa-sivulla.
+
+## Pääsivut
+
+- [Etusivu ja haku](https://edustajaseuranta.fi/): kansanedustajan haku sukunimellä.
+- [Tietoa sivustosta](https://edustajaseuranta.fi/tietoa.html): lähteet, lisenssit, menetelmät ja tietojen rajat.
+- [Tietosuoja](https://edustajaseuranta.fi/tietosuoja.html)
+- [Vaalikausien listat](https://edustajaseuranta.fi/listat-kaudet.html): poissaolot ja ryhmästä poikkeamiset vaalikausittain.
+
+## Sivujen osoitteet
+
+- Nykyisen kansanedustajan kortti: `https://edustajaseuranta.fi/edustajat/NUMERO.html`, jossa NUMERO on eduskunnan henkilönumero.
+- Saman edustajan toimintasivu, lobbaussivu ja äänestykset vaalikausittain: `edustajat/NUMERO-toiminta.html`, `edustajat/NUMERO-lobbaus.html` ja `edustajat/NUMERO-aanet-1995-1999.html` (vaalikausi osoitteessa).
+- Entisen kansanedustajan kortti: `https://edustajaseuranta.fi/entiset/NUMERO.html`.
+- Täysistuntojen äänestykset vuosittain: `https://edustajaseuranta.fi/aanestykset/VAALIKAUSI-VUOSI.html`.
+- Kaikki sivut: [sivustokartta](https://edustajaseuranta.fi/sitemap.xml).
+
+## Lähteet
+
+- Eduskunnan avoin data (CC BY 4.0).
+- Avoimuusrekisteri, Valtiontalouden tarkastusvirasto (CC BY 4.0).
+- Oikeusministeriön vaalien tulospalvelu ja Valtiontalouden tarkastusviraston vaalirahoitusilmoitukset.
+
+Kun käytät tietoja, mainitse alkuperäinen lähde, kuten kunkin sivun lähdemerkinnässä.
